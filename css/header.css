@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.center {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo {
+    justify-content: center;
+}
+
+.logo p {
+    padding: 5rem 0;
+    font-size: 2em;
+}
