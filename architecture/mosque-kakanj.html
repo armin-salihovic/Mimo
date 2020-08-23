@@ -31,6 +31,9 @@
             font-size: 14px;
             color: #555 !important;
         }
+        p {
+            text-align: justify;
+        }
     </style>
 </head>
 <body class="container d-flex flex-column min-vh-100">
@@ -68,15 +71,15 @@
 <main>
     <h1 class="text-dark">Mosque, Kakanj</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur debitis dicta dolorem eaque, fugit in, itaque magnam necessitatibus nulla praesentium quasi sed soluta tenetur ullam veniam voluptas! Corporis culpa cum, cumque doloribus, eveniet hic ipsa iste laudantium magnam, maxime nobis quia sint temporibus veritatis voluptatibus! Amet atque minima reiciendis.</p>
-    <p>location: xx <br>
-        material: xx <br>
-        status: xx <br>
-        dimensions: xx <br>
+    <p>Location: Bosnia & Herzegovina, Kakanj <br>
+        Material: xx <br>
+        Status: xx <br>
+        Dimensions: xx <br>
     </p>
     <hr class="bg-dark">
 
     <div class="pb-3 gallery">
-        <a href="../img/architecture/mosque-kakanj/1.jpg" title="test123">
+        <a href="../img/architecture/mosque-kakanj/1.jpg">
             <img src="../img/architecture/mosque-kakanj/thumbnails/1_thumbnail.jpg"/>
         </a>
         <a href="../img/architecture/mosque-kakanj/2.jpg">
@@ -135,7 +138,8 @@
 <script>
     $(document).ready(function() {
         $(".gallery").justifiedGallery({
-            lastRow: 'center'
+            lastRow: 'center',
+            captions: false
         });
         $('.gallery').magnificPopup({
             delegate: 'a',
