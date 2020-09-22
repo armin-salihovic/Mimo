@@ -1,0 +1,16 @@
+# Redirect non-www to www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^mimo.ba [NC]
+RewriteRule ^(.*)$ http://www.mimo.ba/$1 [L,R=301]
+
+# Redirect index.html to root
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index.html$ /$1 [R=301,L]
+
+# Redirect server IP (140.238.210.120) to the domain (www.mimo.ba)
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^140\.238\.210\.120$
+RewriteRule ^(.*)$ http://www.mimo.ba/$1 [L,R=301]
+
+
