@@ -6,15 +6,18 @@ body {
     position: relative;
 }
 
-body, a, footer, p {
+body, a, footer, p, h1 {
     color: #333333 !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
-p {
-    text-align: center;
-    cursor: default;
-    font-size: 2em;
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 2em !important;
     margin-bottom: 0 !important;
 }
 
