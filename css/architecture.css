@@ -1,0 +1,36 @@
+img {
+    width: 100%;
+}
+h1, h2, .city, footer {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, .city {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.city {
+    font-size: 18px;
+    color: #999;
+}
+main {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+}
+.description {
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        color: black;
+    }
+}
