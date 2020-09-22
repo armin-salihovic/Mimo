@@ -67,8 +67,8 @@
 
 <main class="d-flex flex-column align-items-center">
     <h1 class="pb-5">Art</h1>
-    <p class="text-center">Below is the art selected by Mimo himself. See more at <a href="https://www.facebook.com/mimo.1960" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
-        and <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>.</p>
+    <!--<p class="text-center">Below is the art selected by Mimo himself. See more at <a href="https://www.facebook.com/mimo.1960" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+        and <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>.</p>-->
 
     <h2>2020</h2>
     <div class="pb-3 selected-gallery">
@@ -222,7 +222,10 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $(".selected-gallery").justifiedGallery({ lastRow: 'center' });
+        $(".selected-gallery").justifiedGallery({
+            lastRow: 'center',
+            captions: false
+        });
         $('.selected-gallery').magnificPopup({
             delegate: 'a',
             type: 'image',

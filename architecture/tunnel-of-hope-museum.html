@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -22,16 +21,26 @@
             width: 100%;
         }
         h1 {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             font-size: 26px;
+        }
+        .city {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #999;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
         }
         main {
             font-family: 'Open Sans', sans-serif !important;
             font-size: 14px;
-            color: #555 !important;
         }
-        p {
+        .description {
             text-align: justify;
         }
         footer {
@@ -72,13 +81,25 @@
     </nav>
 </header>
 <main>
-    <h1 class="text-dark">Tunnel of Hope – Museum</h1>
-    <p>During the Siege of Sarajevo, the citizens built a tunnel which linked the besieged city to Bosnian-held territory; the tunnel ran underneath the UN-held airport and enabled the transport of food, aid, supplies and so forth. This proposed project is comprised of a memorial centre and museum which would be found at either side of the tunnel. The museum would house various historical artefacts from the period, whilst parts of the tunnel would be revitalised to inform the public of the actual conditions.</p>
-    <p>location: Bosnia and Herzegovina, Sarajevo <br>
-        material: xx <br>
-        status: xx <br>
-        dimensions: xx <br>
-    </p>
+    <h1 class="text-dark mb-0">Tunnel of Hope – Museum</h1>
+    <p class="city">Sarajevo</p>
+    <div class="row">
+        <div class="col-lg-7 col-md-7 d-flex description">
+            <p>During the Siege of Sarajevo, the citizens built a tunnel which linked the besieged city to Bosnian-held territory; the tunnel ran underneath the UN-held airport and enabled the transport of food, aid, supplies and so forth. This proposed project is comprised of a memorial centre and museum which would be found at either side of the tunnel. The museum would house various historical artefacts from the period, whilst parts of the tunnel would be revitalised to inform the public of the actual conditions.</p>
+        </div>
+        <div class="col-lg-5 col-md-5 d-flex info">
+            <div>
+                <h2>Status</h2>
+                <p>Not realised</p>
+                <h2>Dates</h2>
+                <p>2010 - 2011</p>
+                <h2>Address</h2>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+            </div>
+        </div>
+    </div>
+
+
     <hr class="bg-dark">
 
     <div class="pb-3 gallery">
