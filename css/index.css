@@ -21,6 +21,10 @@ h1 {
     margin-bottom: 0 !important;
 }
 
+p {
+    font-size: 2em !important;
+}
+
 footer {
     bottom: 0;
     position: absolute;
@@ -50,5 +54,10 @@ img {
     }
     nav {
         padding: 1rem 0;
+    }
+
+    h1 {
+        flex-direction: row;
+        width: 100%;
     }
 }
