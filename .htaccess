@@ -1,3 +1,6 @@
+# Error 404 redirect
+ErrorDocument 404 /404.html
+
 # Redirect non-www to www
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^mimo.ba [NC]
