@@ -40,12 +40,27 @@
             justify-content: space-between;
             font-size: 2em !important;
             margin-bottom: 0 !important;
+            text-transform: uppercase;
+        }
+
+        .boop {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 20%;
+            height: 80%;
+            width: 60%;
         }
 
         @media (max-width: 767px) {
             h1 {
                 flex-direction: row;
                 width: 100%;
+            }
+        }
+        @media (max-width: 575px) {
+            .boop {
+                height: 70%;
             }
         }
     </style>
@@ -55,9 +70,9 @@
         <div class="d-flex flex-md-column justify-content-between logo">
             <h1>
                 <span>M</span>
-                <span>I</span>
-                <span>M</span>
-                <span>O</span>
+                <span>i</span>
+                <span>m</span>
+                <span>o</span>
             </h1>
         </div>
         <header>
@@ -83,16 +98,20 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="architecture/index"><img src="img/architecture_thumbnail.jpg" alt="Architecture"></a>
+                    <img src="img/architecture_thumbnail.jpg" alt="Architecture">
+                    <a class="boop" href="architecture/index"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href="art"><img src="img/art_thumbnail.jpg" alt="Art"></a>
+                    <img src="img/art_thumbnail.jpg" alt="Art">
+                    <a class="boop" href="art"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href="design"><img src="img/design_thumbnail.jpg" alt="Design"></a>
+                    <img src="img/design_thumbnail.jpg" alt="Design">
+                    <a class="boop" href="design"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href="sculpture"><img src="img/sculpture_thumbnail.jpg" alt="Sculpture"></a>
+                    <img src="img/sculpture_thumbnail.jpg" alt="Sculpture">
+                    <a class="boop" href="sculpture"></a>
                 </div>
             </div>
 
