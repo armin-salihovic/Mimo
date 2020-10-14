@@ -1,3 +1,19 @@
+body, a, footer, p, h1 {
+    color: #333333 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+img {
+    max-width: 100%;
+}
+.logo {
+    font-size: 2em !important;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 1.5em;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -5,45 +21,65 @@ body {
     min-height: 100vh;
     position: relative;
 }
-
-body, a, footer, p, h1 {
-    color: #333333 !important;
-    font-family: 'Montserrat', sans-serif !important;
-}
-
-p {
-    font-size: 2em !important;
-    margin-bottom: 0 !important;
-}
-
 footer {
     bottom: 0;
     position: absolute;
-    font-size: 8px !important;
 }
-
-#demo {
-    width: 55%;
+.boop {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 80%;
+    width: 60%;
 }
-
-img {
-    width: 100%;
-}
-
 @media (max-width: 767px) {
+    h1 {
+        font-size: 1.17em;
+        line-height: 1.75rem;
+    }
     body {
         align-items: start;
         padding: 1rem 0;
-    }
-    #demo {
-        width: 100%;
     }
     nav a {
         padding: 0.5rem;
         margin-bottom: 0.5rem;
         text-decoration: none !important;
     }
-    nav {
-        padding: 1rem 0;
+    .cat {
+        position: unset;
+        top: unset;
+        right: unset;
+        margin-right: unset;
+    }
+}
+@media (min-width: 768px) {
+    .cat {
+        position: absolute;
+        top: 12.5%;
+        right: 50%;
+        margin-right: -50%;
+    }
+}
+@media (max-height: 800px) {
+    .cat {
+        top: 6.25%;
+    }
+}
+@media (max-height: 600px) {
+    .cat {
+        top: 3.125%;
+    }
+}
+
+@media (max-height: 500px) {
+    .cat {
+        top: 1.5625%;
+    }
+}
+@media (max-width: 575px) {
+    .boop {
+        height: 70%;
     }
 }

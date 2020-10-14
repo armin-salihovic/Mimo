@@ -25,105 +25,82 @@
     <meta property="og:image" content="https://cdn.mimo.ba/img/og-thumbnail.jpg" />
     <meta property="og:description" content="Emir Salihović Mimo is an architect, painter, sculptor, and designer. He teaches at the Academy of Fine Arts in Sarajevo." />
 
-    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
-    <style>
-        h1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-            justify-content: space-between;
-            font-size: 2em !important;
-            margin-bottom: 0 !important;
-            text-transform: uppercase;
-        }
 
-        .boop {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 20%;
-            height: 80%;
-            width: 60%;
-        }
-
-        @media (max-width: 767px) {
-            h1 {
-                flex-direction: row;
-                width: 100%;
-            }
-        }
-        @media (max-width: 575px) {
-            .boop {
-                height: 70%;
-            }
-        }
-    </style>
 </head>
-<body>
-    <div class="container d-flex flex-md-row flex-column justify-content-between pb-5">
-        <div class="d-flex flex-md-column justify-content-between logo">
-            <h1>
-                <span>M</span>
-                <span>i</span>
-                <span>m</span>
-                <span>o</span>
-            </h1>
-        </div>
-        <header>
-            <nav class="h-100 d-flex flex-column justify-content-between align-items-md-start align-items-center">
-                <a href="architecture/index.html">Architecture</a>
-                <a href="art">Art</a>
-                <a href="design">Design</a>
-                <a href="sculpture">Sculpture</a>
-                <a href="about">About</a>
-                <a href="contact">Contact</a>
-            </nav>
-        </header>
-        <div id="demo" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
-            </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://cdn.mimo.ba/img/architecture_thumbnail.jpg" alt="Architecture">
-                    <a class="boop" href="architecture/index"></a>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.mimo.ba/img/art_thumbnail.jpg" alt="Art">
-                    <a class="boop" href="art"></a>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.mimo.ba/img/design_thumbnail.jpg" alt="Design">
-                    <a class="boop" href="design"></a>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.mimo.ba/img/sculpture_thumbnail.jpg" alt="Sculpture">
-                    <a class="boop" href="sculpture"></a>
+<body class="position-relative">
+    <div class="container">
+        <div class="row justify-content-between pb-5">
+            <div class="cat col-12 order-md-first">
+                <h1 class="text-center text-dark p-3">Emir Salihović Mimo<span class="d-none d-sm-inline">: </span><br class="d-sm-none"/>Architect, Painter, Sculptor, and Designer</h1>
+            </div>
+            <div class="col-12 col-md-auto order-first">
+                <div class="logo h-100 d-flex justify-content-between flex-md-column align-items-md-center">
+                    <span>M</span>
+                    <span>i</span>
+                    <span>m</span>
+                    <span>o</span>
                 </div>
             </div>
+            <div class="col-12 col-md-auto pb-3 pb-md-0">
+                <header class="h-100">
+                    <nav class="h-100 d-flex flex-column justify-content-between align-items-md-start align-items-center">
+                        <a href="architecture/index.html">Architecture</a>
+                        <a href="art">Art</a>
+                        <a href="design">Design</a>
+                        <a href="sculpture">Sculpture</a>
+                        <a href="about">About</a>
+                        <a href="contact">Contact</a>
+                    </nav>
+                </header>
+            </div>
+            <div class="col-12 col-md-7">
+                <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://cdn.mimo.ba/img/architecture_thumbnail.jpg" alt="Architecture">
+                            <a class="boop" href="architecture/index"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.mimo.ba/img/art_thumbnail.jpg" alt="Art">
+                            <a class="boop" href="art"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.mimo.ba/img/design_thumbnail.jpg" alt="Design">
+                            <a class="boop" href="design"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.mimo.ba/img/sculpture_thumbnail.jpg" alt="Sculpture">
+                            <a class="boop" href="sculpture"></a>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    <footer class="d-flex justify-content-center p-3"><p>&copy; 2020 Copyright: mimo.ba</p></footer>
+    <footer class="d-flex justify-content-center"><p>&copy; 2020 Copyright: mimo.ba</p></footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
