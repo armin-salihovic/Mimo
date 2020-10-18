@@ -1,4 +1,4 @@
-body, a, footer, p, h1 {
+body, a, footer, p {
     color: #333333 !important;
     font-family: 'Montserrat', sans-serif !important;
 }
@@ -12,6 +12,9 @@ img {
 }
 h1 {
     font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
 }
 
 body {
@@ -35,8 +38,9 @@ footer {
 }
 @media (max-width: 767px) {
     h1 {
-        font-size: 1.17em;
+        font-size: 0.9em;
         line-height: 1.75rem;
+        letter-spacing: unset;
     }
     body {
         align-items: start;
