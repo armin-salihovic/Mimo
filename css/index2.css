@@ -73,15 +73,11 @@ footer {
 }
 @media (max-height: 600px) {
     .cat {
-        top: 3.125%;
+        position: unset;
+        margin-right: unset;
     }
 }
 
-@media (max-height: 500px) {
-    .cat {
-        top: 1.5625%;
-    }
-}
 @media (max-width: 575px) {
     .boop {
         height: 70%;
