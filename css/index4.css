@@ -51,32 +51,32 @@ footer {
         margin-bottom: 0.5rem;
         text-decoration: none !important;
     }
-    .cat {
-        position: unset;
-        top: unset;
-        right: unset;
-        margin-right: unset;
-    }
+    /*.cat {*/
+    /*    position: unset;*/
+    /*    top: unset;*/
+    /*    right: unset;*/
+    /*    margin-right: unset;*/
+    /*}*/
 }
-@media (min-width: 768px) {
-    .cat {
-        position: absolute;
-        top: 12.5%;
-        right: 50%;
-        margin-right: -50%;
-    }
-}
-@media (max-height: 800px) {
-    .cat {
-        top: 6.25%;
-    }
-}
-@media (max-height: 600px) {
-    .cat {
-        position: unset;
-        margin-right: unset;
-    }
-}
+/*@media (min-width: 768px) {*/
+/*    .cat {*/
+/*        position: absolute;*/
+/*        top: 12.5%;*/
+/*        right: 50%;*/
+/*        margin-right: -50%;*/
+/*    }*/
+/*}*/
+/*@media (max-height: 800px) {*/
+/*    .cat {*/
+/*        top: 6.25%;*/
+/*    }*/
+/*}*/
+/*@media (max-height: 600px) {*/
+/*    .cat {*/
+/*        position: unset;*/
+/*        margin-right: unset;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 575px) {
     .boop {
