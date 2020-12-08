@@ -14,8 +14,7 @@ if($_POST['email-message'] == null) {
 
         $header = "From: {$name} <{$email_from}>";
 
-        echo $header;
-        mail($email_to, $subject, $message);
+        mail($email_to, $subject, $message, $header);
     }
 }
 
