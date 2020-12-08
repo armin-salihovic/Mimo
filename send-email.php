@@ -12,7 +12,8 @@ if($_POST['email-message'] == null) {
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
-        $header = "From: {$name} <{$email_from}>";
+        //$header = "From: {$name} <{$email_from}>";
+        $header = "From: {$email_from}";
 
         mail($email_to, $subject, $message, $header);
     }
