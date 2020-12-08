@@ -13,7 +13,7 @@ if($_POST['email-message'] == null) {
         $name = $_POST['name'];
         $from = $_POST['email'];
         $subject = $_POST['subject'];
-        $message = $_POST['message'];
+        $message = nl2br($_POST['message']);
 
         require 'src/Exception.php';
         require 'src/PHPMailer.php';
@@ -24,39 +24,40 @@ if($_POST['email-message'] == null) {
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-            $mail->isSMTP();                                            // Send using SMTP
-            $mail->Host       = SMTP_HOST;                    // Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = SMTP_USERNAME;                     // SMTP username
-            $mail->Password   = SMTP_PASSWORD;                               // SMTP password
-            $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged PHPMailer::ENCRYPTION_STARTTLS
-            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mail->isSMTP();
+            $mail->Host       = SMTP_HOST;
+            $mail->SMTPAuth   = true;
+            $mail->Username   = SMTP_USERNAME;
+            $mail->Password   = SMTP_PASSWORD;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = 587;
 
             //Recipients
             $mail->setFrom(SMTP_USERNAME, $name);
-            $mail->addAddress("info@mimo.ba", "Emir Salihovic Mimo");     // Add a recipient
-//    $mail->addAddress('ellen@example.com');               // Name is optional
+            $mail->addAddress("info@mimo.ba", "Emir Salihovic Mimo");
+
             $mail->addReplyTo($from, $name);
-//    $mail->addCC('cc@example.com');
-//    $mail->addBCC('armin.salihovic@live.com');
-//
-//    // Attachments
-//    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
             // Content
-            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->isHTML(true);
             $mail->Subject = $subject;
             $mail->Body    = $message;
-//            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-
     }
 }
 
+
+// In case I forget
+// create a new file smtp-credentials.php and add
+//      define('SMTP_HOST', '');
+//      define('SMTP_USERNAME', '');
+//      define('SMTP_PASSWORD', '');
+
+// In case there is a problem with PHP mailer visit:
+// https://github.com/PHPMailer/PHPMailer

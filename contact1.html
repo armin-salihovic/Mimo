@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>Contact | Emir Salihović Mimo</title>
@@ -55,6 +56,8 @@
         }
         textarea {
             resize: none;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
         }
 
         .fa-facebook-official, .fa-envelope {
@@ -75,6 +78,17 @@
             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
             box-shadow: 0px 3px 10px rgba(0,0,0,.25);
         }
+
+        main {
+            font-family: "Open Sans",sans-serif;
+        }
+
+        /*button {
+            padding: 0.5rem 0.75rem;
+            background: #343a40;
+            color: white;
+            border: none;
+        }*/
 
     </style>
 </head>
@@ -123,11 +137,11 @@
             <form action="send-email.php" method="post">
                 <div class="form-row">
                     <div class="form-group col-12 col-md-6">
-                        <label for="name">Name</label>
+                        <label for="name">Full name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group col-12 col-md-6">
-                        <label for="email">Your Email</label>
+                        <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
@@ -143,11 +157,11 @@
                     <label for="email-message">Message</label>
                     <input type="text" class="form-control"  id="email-message" name="email-message">
                 </div>
-                <button class="btn btn-primary" type="submit">Send message</button>
+                <button type="submit" class="btn btn-primary text-center">Send message</button>
             </form>
         </div>
     </div>
-    <div class="img-cont pt-3">
+    <div class="img-cont pt-5">
         <img src="https://cdn.mimo.ba/img/atelier.jpg" alt="atelier">
         <p class="position-absolute m-0" style="bottom: 0; right: 0;">photo: Tarik Rizvanović</p>
         <p class="text-center pt-2">Atelier</p>
