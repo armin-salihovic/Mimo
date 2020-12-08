@@ -11,7 +11,7 @@ function checkRequiredField($value) {
 if($_POST['email-message'] == null) {
     if(checkRequiredField($_POST['name']) && checkRequiredField($_POST['email']) && checkRequiredField($_POST['subject']) && checkRequiredField($_POST['message'])) {
         $name = $_POST['name'];
-        $email_from = $_POST['email'];
+        $from = $_POST['email'];
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
@@ -30,14 +30,14 @@ if($_POST['email-message'] == null) {
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
             $mail->Username   = SMTP_USERNAME;                     // SMTP username
             $mail->Password   = SMTP_PASSWORD;                               // SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged PHPMailer::ENCRYPTION_STARTTLS
             $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
             //Recipients
-            $mail->setFrom($email_from, $name);
-            $mail->addAddress('info@mimo.ba', 'Emir Salihovic Mimo');     // Add a recipient
+            $mail->setFrom(SMTP_USERNAME, $name);
+            $mail->addAddress("info@mimo.ba", "Emir Salihovic Mimo");     // Add a recipient
 //    $mail->addAddress('ellen@example.com');               // Name is optional
-//    $mail->addReplyTo('info@example.com', 'Information');
+            $mail->addReplyTo($from, $name);
 //    $mail->addCC('cc@example.com');
 //    $mail->addBCC('armin.salihovic@live.com');
 //
