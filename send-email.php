@@ -12,6 +12,8 @@ $headers = 'From: armin.salihovic@live.com' . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 
+echo "sent!";
+
 //if($_POST['email-message'] == null) {
 //    if(checkRequiredField($_POST['name']) && checkRequiredField($_POST['email']) && checkRequiredField($_POST['subject']) && checkRequiredField($_POST['message'])) {
 //        $email_to = "info@mimo.ba";
