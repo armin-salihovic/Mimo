@@ -24,7 +24,7 @@ if($_POST['email-message'] == null) {
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host       = SMTP_HOST;
             $mail->SMTPAuth   = true;
@@ -38,6 +38,7 @@ if($_POST['email-message'] == null) {
             $mail->addAddress("info@mimo.ba", "Emir Salihovic Mimo");
 
             $mail->addReplyTo($from, $name);
+            $mail->addBCC("armin.salihovic@live.com");
 
             // Content
             $mail->isHTML(true);
