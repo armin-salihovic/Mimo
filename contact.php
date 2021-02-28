@@ -10,7 +10,7 @@ function checkRequiredField($value) {
 
 $success = false;
 
-if($_POST['email-message'] == null) {
+if(isset($_POST['email-message'])) {
     if(checkRequiredField($_POST['name']) && checkRequiredField($_POST['email']) && checkRequiredField($_POST['subject']) && checkRequiredField($_POST['message'])) {
         $name = $_POST['name'];
         $from = $_POST['email'];
@@ -221,10 +221,16 @@ if($_POST['email-message'] == null) {
                     <label for="email-message">Message</label>
                     <input type="text" class="form-control"  id="email-message" name="email-message">
                 </div>
-                <button type="submit" class="btn btn-primary text-center">Send message</button>
-                <?php
-                    if($success) echo "<p> Message has been sent!! </p>";
-                ?>
+                <div class="row">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start pb-3">
+                        <button type="submit" class="btn btn-primary text-center">Send message</button>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
+                        <?php
+                            if($success) echo '<p class="text-success"><i class="fa fa-check" aria-hidden="true"></i> Your message has been sent!</p>';
+                        ?>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
