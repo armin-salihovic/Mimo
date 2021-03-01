@@ -34,6 +34,8 @@ if(isset($_POST['email-message'])) {
             $mail->Password   = SMTP_PASSWORD;
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
+            $mail->CharSet = 'UTF-8';
+            $mail->Encoding = 'base64';
 
             //Recipients
             $mail->setFrom(SMTP_USERNAME, $name);
