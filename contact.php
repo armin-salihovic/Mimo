@@ -236,7 +236,7 @@ if(isset($_POST['email-message'])) {
             </form>
         </div>
     </div>
-    <div class="pt-5">
+    <div class="pt-5 pb-3">
         <img class="position-relative" src="https://cdn.mimo.ba/img/atelier.jpg" alt="atelier">
     </div>
 </main>
