@@ -36,24 +36,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+    <link rel="stylesheet" href="css/design.css">
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-        img {
-            width: 100%;
-        }
-        h1 {
-            text-transform: uppercase;
-            font-size: 2em;
-            letter-spacing: 0.2em;
-        }
-        h2 {
-            font-size: 1.5em;
-            text-transform: uppercase;
-        }
-    </style>
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <header>
@@ -155,20 +139,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $(".gallery").justifiedGallery({
-            lastRow: 'center',
-            captions: false
-        });
-        $('.gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery:{
-                enabled:true
-            }
-        });
-    });
-</script>
+<script src="js/gallery.js"></script>
 </body>
 </html>
