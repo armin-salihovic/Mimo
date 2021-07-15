@@ -107,7 +107,7 @@ if (isset($_POST['email-message'])) {
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>Contact | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact2.css">
 
 </head>
 <body class="container d-flex flex-column min-vh-100">
