@@ -1,12 +1,18 @@
 body {
     font-family: 'Montserrat', sans-serif !important;
 }
-img {
+#atelier {
     width: 100%;
     height: 250px;
     object-fit: cover;
     object-position: 50% 50%;
 }
+
+#boop {
+height: 30px;
+    padding-bottom: 5px;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
