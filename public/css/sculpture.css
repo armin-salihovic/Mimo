@@ -13,3 +13,8 @@ h2 {
     font-size: 1.5em;
     text-transform: uppercase;
 }
+
+.pagination .pagination-link {
+    padding: 1rem 1rem;
+    margin: 0 0.3rem;
+}

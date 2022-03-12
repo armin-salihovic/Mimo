@@ -52,12 +52,6 @@ if($page > 1 && $page < $pages) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
     <link rel="stylesheet" href="{{ asset('css/sculpture.css') }}">
-    <style>
-        .pagination .pagination-link {
-            padding: 1rem 1rem;
-            margin: 0 0.3rem;
-        }
-    </style>
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
