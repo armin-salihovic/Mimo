@@ -8,6 +8,7 @@ Route::get('art', [PageController::class, 'art'])->name('art');
 //Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');
 Route::get('sculpture', [PageController::class, 'sculpture'])->name('sculpture');
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
+Route::post('contact', [PageController::class, 'sendEmail'])->name('contact.send');
 Route::get('design', [PageController::class, 'design'])->name('design');
 Route::get('about', [PageController::class, 'about'])->name('about');
 

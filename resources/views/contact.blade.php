@@ -35,7 +35,7 @@
 <x-header />
 <main>
     <h1 class="text-dark text-center pb-5">Contact</h1>
-    <?php if (!$botSuccess): ?>
+    @if (!$botSuccess)
         <div class="row">
             <div class="col-12 col-lg-5 order-2 order-lg-1"></div>
             <div class="col-12 col-lg-auto order-1 order-lg-2">
@@ -43,8 +43,8 @@
                     to pass the bot check.</p>
             </div>
         </div>
-    <?php endif; ?>
-    <?php if ($success): ?>
+    @endif
+    @if ($success)
         <div class="row">
             <div class="col-12 col-lg-5 order-2 order-lg-1"></div>
             <div class="col-12 col-lg-auto order-1 order-lg-2">
@@ -52,7 +52,7 @@
                     sent!</p>
             </div>
         </div>
-    <?php endif; ?>
+    @endif
 
     <div class="row">
         <div class="col-12 col-lg-5 d-flex align-items-center justify-content-around flex-column flex-sm-row flex-lg-column">
@@ -66,7 +66,8 @@
                         class="text-dark">info@mimo.ba</span></a>
         </div>
         <div class="col-12 col-lg-7">
-            <form method="post">
+            <form method="post" action="{{ route('contact.send') }}">
+                @csrf
                 <div class="form-row">
                     <div class="form-group col-12 col-md-6">
                         <label for="name">Full name</label>

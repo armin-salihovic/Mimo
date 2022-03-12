@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
+
 class PageController extends Controller
 {
     public function index()
@@ -26,7 +29,10 @@ class PageController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        return view('contact', [
+            'success' => false,
+            'botSuccess' => true,
+        ]);
     }
 
     public function about()
@@ -74,5 +80,24 @@ class PageController extends Controller
     public function yugoslavPavilion()
     {
         return view('architecture.yugoslav-pavilion-proposal');
+    }
+
+    public function sendEmail(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+            'city' => 'required',
+        ]);
+
+        if($request->input('city') != 5) {
+            return redirect()->route('contact')->with([
+                'success' => false,
+                'botSuccess' => false,
+            ]);
+        }
+
     }
 }
