@@ -1,3 +1,4 @@
+<?php include('check-state.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +21,8 @@
         <h1 class="text-dark text-center">Error 404</h1>
         <h2 class="text-center">We are sorry, but the page you are looking for does not exist.</h2>
         <p class="text-center">Here are a few links that may be helpful: </p>
-        <a href="index.html">Home</a>
-        <a href="architecture/index.html">Architecture</a>
+        <a href="index.php">Home</a>
+        <a href="architecture/index.php">Architecture</a>
         <a href="art">Art</a>
         <a href="design">Design</a>
         <a href="sculpture">Sculpture</a>

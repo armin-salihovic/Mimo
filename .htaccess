@@ -6,7 +6,7 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^mimo.ba [NC]
 RewriteRule ^(.*)$ http://www.mimo.ba/$1 [L,R=301]
 
-# Redirect index.html to root
+# Redirect index.php to root
 RewriteCond %{THE_REQUEST} ^.*/index\.html
 RewriteRule ^(.*)index.html$ /$1 [R=301,L]
 

@@ -1,3 +1,4 @@
+<?php include('check-state.php') ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,14 +12,14 @@
 
     <meta name="author" content="Armin Salihović">
 
-    <meta property="og:title" content="Mosque, Jablanica | Emir Salihović Mimo" />
+    <meta property="og:title" content='Yugoslav Pavilion proposal | Emir Salihović Mimo' />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.mimo.ba" />
-    <meta property="og:image" content="https://cdn.mimo.ba/img/og-architecture-mosque-jablanica-thumbnail.jpg" />
-    <meta property="og:description" content="Another project made in collaboration with his father, this modernist mosque stands in the centre of Jablanica." />
+    <meta property="og:image" content="https://cdn.mimo.ba/img/og-architecture-yugoslav-pavilion-proposal-thumbnail.jpg" />
+    <meta property="og:description" content="Proposal for the Yugoslavian pavilion for the Seville Expo ‘92." />
 
 
-    <title>Mosque, Jablanica | Emir Salihović Mimo</title>
+    <title>Yugoslav Pavilion proposal | Emir Salihović Mimo</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,7 +36,7 @@
 <body class="container d-flex flex-column min-vh-100">
 <header>
     <nav class="navbar px-0 navbar-expand-sm center">
-        <a class="navbar-brand" href="../index.html"><span class="navbar-text text-dark">MIMO</span></a>
+        <a class="navbar-brand" href="../index.php"><span class="navbar-text text-dark">MIMO</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#this-collapse">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -43,7 +44,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="this-collapse">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="../architecture/index.html">Architecture</a>
+                    <a class="nav-link text-danger" href="../architecture/index.php">Architecture</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../art">Art</a>
@@ -65,65 +66,46 @@
     </nav>
 </header>
 <main>
-    <h1 class="text-dark mb-0">Mosque, Jablanica</h1>
-    <p class="city">Jablanica</p>
+    <h1 class="text-dark mb-0">Yugoslav Pavilion proposal</h1>
+    <p class="city">Seville</p>
     <div class="row">
         <div class="col-lg-7 col-md-7 d-flex description">
-            <p>Another project made in collaboration with his father, this modernist mosque stands in the centre of Jablanica, nestled between socialist-era buildings on one side and Austro-Hungarian structures on the other.</p>
+            <p>Proposal for the Yugoslavian pavilion for the <i>Seville Expo ‘92</i>; the competition was held in 1991 but left unawarded due to the Yugoslav Wars.</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>
                 <h2>Status</h2>
-                <p>Realised</p>
+                <p>Not realised</p>
                 <h2>Dates</h2>
-                <p>2004 - 2012</p>
+                <p>1990</p>
                 <h2>Address</h2>
-                <p>Jablanica, Bosnia and Herzegovina</p>
+                <p>Seville, Spain</p>
             </div>
         </div>
     </div>
 
-
     <div class="pb-3 gallery">
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/1.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/1_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/1.jpg" title="Perspective 1">
+            <img alt="Yugoslav Pavilion proposal - Perspective 1" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/1_thumbnail.jpg"/>
         </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/2.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/2_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/2.jpg" title="Perspective 2">
+            <img alt="Yugoslav Pavilion proposal - Perspective 2" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/2_thumbnail.jpg"/>
         </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/3.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/3_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/3.jpg" title="Perspective 3">
+            <img alt="Yugoslav Pavilion proposal - Perspective 3" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/3_thumbnail.jpg"/>
         </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/4.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/4_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/4.jpg" title="Facade">
+            <img alt="Yugoslav Pavilion proposal - Facade" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/4_thumbnail.jpg"/>
         </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/5.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/5_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/5.jpg" title="Plan">
+            <img alt="Yugoslav Pavilion proposal - Plan" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/5_thumbnail.jpg"/>
         </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/6.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/6_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/7.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/7_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/8.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/8_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/9.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/9_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/10.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/10_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/11.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/11_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-jablanica/12.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/12_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/6.jpg" title="Section">
+            <img alt="Yugoslav Pavilion proposal - Section" src="https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/6_thumbnail.jpg"/>
         </a>
     </div>
 
-    <a class="float-right pb-3" href="../architecture/index.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
+    <a class="float-right pb-3" href="../architecture/index.php"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
 </main>
 <footer class="mt-auto d-flex justify-content-center"><p>&copy; 2020-2022 Emir Salihovic Mimo</p></footer>
 

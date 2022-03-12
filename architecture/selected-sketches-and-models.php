@@ -1,3 +1,4 @@
+<?php include('check-state.php') ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -37,7 +38,7 @@
 <body class="container d-flex flex-column min-vh-100">
 <header>
     <nav class="navbar px-0 navbar-expand-sm center">
-        <a class="navbar-brand" href="../index.html"><span class="navbar-text text-dark">MIMO</span></a>
+        <a class="navbar-brand" href="../index.php"><span class="navbar-text text-dark">MIMO</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#this-collapse">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -45,7 +46,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="this-collapse">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="../architecture/index.html">Architecture</a>
+                    <a class="nav-link text-danger" href="../architecture/index.php">Architecture</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../art">Art</a>
@@ -169,7 +170,7 @@
         </a>
     </div>
 
-    <a class="float-right pb-3" href="../architecture/index.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
+    <a class="float-right pb-3" href="../architecture/index.php"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
 </main>
 <footer class="mt-auto d-flex justify-content-center"><p>&copy; 2020-2022 Emir Salihovic Mimo</p></footer>
 

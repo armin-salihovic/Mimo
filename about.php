@@ -1,3 +1,4 @@
+<?php include('check-state.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
 <body class="container d-flex flex-column min-vh-100">
 <header>
     <nav class="navbar px-0 navbar-expand-sm center">
-        <a class="navbar-brand" href="index.html"><span class="navbar-text text-dark">MIMO</span></a>
+        <a class="navbar-brand" href="index.php"><span class="navbar-text text-dark">MIMO</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#this-collapse">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -39,7 +40,7 @@
 
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="architecture/index.html">Architecture</a>
+                    <a class="nav-link text-dark" href="architecture/index.php">Architecture</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="art">Art</a>

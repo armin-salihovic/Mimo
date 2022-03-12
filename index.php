@@ -1,3 +1,5 @@
+<?php include('check-state.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +45,7 @@
             <div class="col-12 col-md-auto pb-3 pb-md-0">
                 <header class="h-100">
                     <nav class="h-100 d-flex flex-column justify-content-between align-items-md-start align-items-center">
-                        <a href="architecture/index.html">Architecture</a>
+                        <a href="architecture/index.php">Architecture</a>
                         <a href="art">Art</a>
                         <a href="design">Design</a>
                         <a href="sculpture">Sculpture</a>
