@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Mail\MessageSent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -99,5 +101,10 @@ class PageController extends Controller
             ]);
         }
 
+        Mail::to(['info@mimo.ba'])
+            ->bcc(['armin.salihovic@live.com'])
+            ->send(new MessageSent($request));
+
+        return redirect()->back();
     }
 }
