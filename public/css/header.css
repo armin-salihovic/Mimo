@@ -25,3 +25,8 @@ header {
     padding: 5rem 0;
     font-size: 2em;
 }
+
+.nav-active, .nav-active:hover {
+    text-decoration: underline !important;
+    color: #343a40 !important;
+}

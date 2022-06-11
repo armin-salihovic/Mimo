@@ -28,6 +28,7 @@
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>Contact | Emir Salihović Mimo</title>
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact2.css') }}">
 
 </head>

@@ -93,7 +93,7 @@
 {{--zamršeno--}}
 <h2 class="text-center pb-3">Unresolved</h2>
 <div class="gallery pb-5">
-    <a href="https://cdn.mimo.ba/img/sculpture/new/zamrseno/1.JPG" title="Unresolved">
-        <img alt="Unresolved" src="https://cdn.mimo.ba/img/sculpture/new/zamrseno/thumbnails/1_thumbnail.jpg"/>
+    <a href="https://cdn.mimo.ba/img/sculpture/new/zamrseno/1.JPG" title="Unresolved 2021">
+        <img alt="Unresolved 2021" src="https://cdn.mimo.ba/img/sculpture/new/zamrseno/thumbnails/1_thumbnail.jpg"/>
     </a>
 </div>

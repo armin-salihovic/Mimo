@@ -24,14 +24,14 @@
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>About | Emir Salihović Mimo</title>
-
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
 <main>
     <h1 class="text-dark text-center pb-5">About</h1>
-    <div class="row">
+    <div class="row pb-3">
         <div class="col-lg-6">
             <img src="https://cdn.mimo.ba/img/mimo-bw.jpg" alt="Portrait: Emir Salihović Mimo">
         </div>
