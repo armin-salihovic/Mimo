@@ -76,19 +76,19 @@
     </div>
     <h2 class="text-center pb-3">Other</h2>
     <div class="gallery pb-5">
-        <a href="https://cdn.mimo.ba/img/sculpture/other/1.jpg" title="A Sick Tree 2016">
-            <img alt="Sculpture A Sick Tree" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/1_thumbnail.jpg"/>
+        <a href="https://cdn.mimo.ba/img/sculpture/other/1.jpg" title="Sick Tree 2016">
+            <img alt="A Sick Tree 2016" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/1_thumbnail.jpg"/>
         </a>
         <a href="https://cdn.mimo.ba/img/sculpture/other/2.jpg" title="Laid Tree 2015">
-            <img alt="Sculpture Laid Tree" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/2_thumbnail.jpg"/>
+            <img alt="Laid Tree 2015" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/2_thumbnail.jpg"/>
         </a>
         <a href="https://cdn.mimo.ba/img/sculpture/other/3.jpg" title="Paper Sculpture 2010">
-            <img alt="Sculpture Paper Sculpture" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/3_thumbnail.jpg"/>
+            <img alt="Paper Sculpture 2010" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/3_thumbnail.jpg"/>
         </a>
         <a href="https://cdn.mimo.ba/img/sculpture/other/4.jpg" title="A Bird 1997">
-            <img alt="Sculpture A Bird" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/4_thumbnail.jpg"/>
+            <img alt="A Bird 1997" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/4_thumbnail.jpg"/>
         </a>
         <a href="https://cdn.mimo.ba/img/sculpture/other/5.jpg" title="Around The World">
-            <img alt="Sculpture Around The World" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/5_thumbnail.jpg"/>
+            <img alt="Around The World" src="https://cdn.mimo.ba/img/sculpture/other/thumbnails/5_thumbnail.jpg"/>
         </a>
     </div>
