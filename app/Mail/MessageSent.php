@@ -32,7 +32,8 @@ class MessageSent extends Mailable
     {
         return $this->view('emails.message-sent')
             ->subject($this->request->subject)
-            ->from($this->request->email, $this->request->name)
+            ->from(config('mail.from.address'), $this->request->name)
+            ->replyTo($this->request->address)
             ->with([
                 'content' => $this->request->message
             ]);
