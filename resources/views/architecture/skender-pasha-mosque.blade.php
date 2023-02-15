@@ -38,8 +38,9 @@
     <h1 class="text-dark mb-0">Skender Pasha Mosque</h1>
     <p class="city">Sarajevo</p>
     <div class="row">
-        <div class="col-lg-7 col-md-7 d-flex description">
+        <div class="col-lg-7 col-md-7 description">
             <p>This mosque was chosen to be built as part of a larger urban-architectural project which encompasses the entire neighbourhood of Skenderija in central Sarajevo. The wheels are in motion, but the mosque is yet to be constructed. There was otherwise a mosque in the area which was demolished in the middle of the last century; the architect chose to design this version with a more modern aesthetic.</p>
+            <p>Co-author - Prof. Dr Hamdija Salihović</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>

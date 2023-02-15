@@ -38,8 +38,9 @@
     <h1 class="text-dark mb-0">Mosque, Jablanica</h1>
     <p class="city">Jablanica</p>
     <div class="row">
-        <div class="col-lg-7 col-md-7 d-flex description">
+        <div class="col-lg-7 col-md-7 description">
             <p>Another project made in collaboration with his father, this modernist mosque stands in the centre of Jablanica, nestled between socialist-era buildings on one side and Austro-Hungarian structures on the other.</p>
+            <p>Co-author - Prof. Dr Hamdija Salihović</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>

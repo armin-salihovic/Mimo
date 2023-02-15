@@ -39,8 +39,9 @@
     <h1 class="text-dark mb-0">Tunnel of Hope – Museum</h1>
     <p class="city">Sarajevo</p>
     <div class="row">
-        <div class="col-lg-7 col-md-7 d-flex description">
+        <div class="col-lg-7 col-md-7 description">
             <p>During the Siege of Sarajevo, the citizens built a tunnel which linked the besieged city to Bosnian-held territory; the tunnel ran underneath the UN-held airport and enabled the transport of food, aid, supplies and so forth. This proposed project is comprised of a memorial centre and museum which would be found at either side of the tunnel. The museum would house various historical artefacts from the period, whilst parts of the tunnel would be revitalised to inform the public of the actual conditions.</p>
+            <p>Co-author - Prof. Dr Hamdija Salihović</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>

@@ -39,6 +39,25 @@
 <main>
     <h1 class="text-dark text-center pb-5">Design</h1>
 
+    <h2 class="text-center pb-3">Chandelier - Mosque, Jablanica</h2>
+    <div class="gallery pb-5">
+        <a href="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/1.jpg" title="Chandelier for Mosque, Jablanica">
+            <img alt="Chandelier for Mosque, Jablanica" src="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/1_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/2.jpg" title="Chandelier for Mosque, Jablanica">
+            <img alt="Chandelier for Mosque, Jablanica" src="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/2_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/3.jpg" title="Chandelier for Mosque, Jablanica">
+            <img alt="Chandelier for Mosque, Jablanica" src="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/3_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/4.jpg" title="Chandelier for Mosque, Jablanica">
+            <img alt="Chandelier for Mosque, Jablanica" src="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/4_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/5.jpg" title="Chandelier for Mosque, Jablanica">
+            <img alt="Chandelier for Mosque, Jablanica" src="https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/5_thumbnail.jpg"/>
+        </a>
+    </div>
+
     <h2 class="text-center pb-3">Chairs</h2>
     <div class="gallery pb-5">
         <a href="https://cdn.mimo.ba/img/design/chairs/1.jpg" title="Tsuki 2020">

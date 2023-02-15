@@ -40,8 +40,9 @@
     <h1 class="text-dark mb-0">Monument and Memorial Centre, Žuč</h1>
     <p class="city">Sarajevo</p>
     <div class="row">
-        <div class="col-lg-7 col-md-7 d-flex description">
+        <div class="col-lg-7 col-md-7 description">
             <p>A monument and museum commemorating the fallen soldiers and fighters of the Battles of Žuč, which took place from 1992 to 1995. Crucial battles were fought at this locality in defence of the city during the Siege of Sarajevo.</p>
+            <p>Co-author - Prof. Dr Hamdija Salihović</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>

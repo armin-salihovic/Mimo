@@ -39,8 +39,9 @@
     <h1 class="text-dark mb-0">Primary School, Šip</h1>
     <p class="city">Sarajevo</p>
     <div class="row">
-        <div class="col-lg-7 col-md-7 d-flex description">
+        <div class="col-lg-7 col-md-7 description">
             <p>An unrealised project conceptualised in a modernistic style for a post-war neighbourhood on the periphery of Sarajevo.</p>
+            <p>Co-author - Prof. Dr Hamdija Salihović</p>
         </div>
         <div class="col-lg-5 col-md-5 d-flex info">
             <div>
