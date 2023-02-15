@@ -3,8 +3,10 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
+use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class MessageSent extends Mailable
@@ -24,18 +26,42 @@ class MessageSent extends Mailable
     }
 
     /**
-     * Build the message.
+     * Get the message envelope.
      *
-     * @return $this
+     * @return \Illuminate\Mail\Mailables\Envelope
      */
-    public function build()
+    public function envelope()
     {
-        return $this->view('emails.message-sent')
-            ->subject($this->request->subject)
-            ->from(config('mail.from.address'), $this->request->name)
-            ->replyTo($this->request->address)
-            ->with([
-                'content' => $this->request->message
-            ]);
+        return new Envelope(
+            from: new Address(config('mail.from.address'), $this->request->name),
+            replyTo: $this->request->email,
+            subject: $this->request->subject,
+        );
+    }
+
+    /**
+     * Get the message content definition.
+     *
+     * @return \Illuminate\Mail\Mailables\Content
+     */
+    public function content()
+    {
+        return new Content(
+            html: 'emails.message-sent',
+            text: 'emails.message-sent-text',
+            with: [
+                'content' => $this->request->message,
+            ],
+        );
+    }
+
+    /**
+     * Get the attachments for the message.
+     *
+     * @return array
+     */
+    public function attachments()
+    {
+        return [];
     }
 }
