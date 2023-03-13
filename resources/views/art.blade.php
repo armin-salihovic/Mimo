@@ -94,6 +94,118 @@
         <a href="https://cdn.mimo.ba/img/art/2020/117.JPG" title="Oil on canvas, 100x70cm, 2018.">
             <img alt="Oil on canvas, 100x70cm, 2018." src="https://cdn.mimo.ba/img/art/2020/thumbnails/117_thumbnail.jpg"/>
         </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/118.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/118_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/119.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/119_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/120.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/120_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/121.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/121_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/122.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/122_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/123.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/123_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/124.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/124_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/125.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/125_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/126.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/126_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/127.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/127_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/128.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/128_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/129.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/129_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/130.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/130_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/131.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/131_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/132.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/132_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/133.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/133_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/134.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/134_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/135.jpg" title="Oil on cardboard, 60x100cm, 2022.">
+            <img alt="Oil on cardboard, 60x100cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/135_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/136.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/136_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/137.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/137_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/138.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/138_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/139.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/139_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/140.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/140_thumbnail.jpg"/>
+        </a>
+{{--        duplicate--}}
+{{--        <a href="https://cdn.mimo.ba/img/art/2020/141.jpg" title="Oil on canvas, 100x70cm, 2018.">--}}
+{{--            <img alt="Oil on canvas, 100x70cm, 2018." src="https://cdn.mimo.ba/img/art/2020/thumbnails/141_thumbnail.jpg"/>--}}
+{{--        </a>--}}
+        <a href="https://cdn.mimo.ba/img/art/2020/142.jpg" title="Oil on cardboard, 20x100cm, 2022.">
+            <img alt="Oil on cardboard, 20x100cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/142_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/143.jpg" title="Oil on canvas, 50x100cm, 2022.">
+            <img alt="Oil on canvas, 50x100cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/143_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/144.jpg" title="Oil on canvas and cardboard, 60x120cm, 2022.">
+            <img alt="Oil on canvas and cardboard, 60x120cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/144_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/145.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/145_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/146.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/146_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/147.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/147_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/148.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/148_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/149.jpg" title="Oil on cardboard, 100x70cm, 2022.">
+            <img alt="Oil on cardboard, 100x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/149_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/150.jpg" title="Oil on canvas, 50x70cm, 2022.">
+            <img alt="Oil on canvas, 50x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/150_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/151.jpg" title="Oil on canvas, 50x70cm, 2022.">
+            <img alt="Oil on canvas, 50x70cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/151_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/152.jpg" title="Oil on canvas and cardboard, 100x100cm, 2022.">
+            <img alt="Oil on canvas and cardboard, 100x100cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/152_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/153.jpg" title="Oil on canvas, 200x200cm, 2022.">
+            <img alt="Oil on canvas, 200x200cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/153_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2020/154.jpg" title="Oil on canvas, 160x230cm, 2022.">
+            <img alt="Oil on canvas, 160x230cm, 2022." src="https://cdn.mimo.ba/img/art/2020/thumbnails/154_thumbnail.jpg"/>
+        </a>
     </div>
 
     <h2>2010</h2>
@@ -136,6 +248,12 @@
         </a>
         <a href="https://cdn.mimo.ba/img/art/2010/58.JPG" title="Oil on canvas, 30x20cm, 2012.">
             <img alt="Oil on canvas, 30x20cm, 2012." src="https://cdn.mimo.ba/img/art/2010/thumbnails/58_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2010/158.jpg" title="Oil on canvas, 70x100cm, 2018.">
+            <img alt="Oil on canvas, 30x20cm, 2012." src="https://cdn.mimo.ba/img/art/2010/thumbnails/158_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2010/159.jpg" title="Oil on canvas, 200x190cm, 2019.">
+            <img alt="Oil on canvas, 200x190cm, 2019." src="https://cdn.mimo.ba/img/art/2010/thumbnails/159_thumbnail.jpg"/>
         </a>
     </div>
 
@@ -206,6 +324,15 @@
         </a>
         <a href="https://cdn.mimo.ba/img/art/2000/73.jpg" title="Oil on wood, 60x10cm, 2001.">
             <img alt="Oil on wood, 60x10cm, 2001." src="https://cdn.mimo.ba/img/art/2000/thumbnails/73_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2000/155.jpg" title="Oil on canvas, 100x70cm, 2007.">
+            <img alt="Oil on canvas, 100x70cm, 2007." src="https://cdn.mimo.ba/img/art/2000/thumbnails/155_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2000/156.jpg" title="Oil on canvas, 100x70cm, 2008.">
+            <img alt="Oil on canvas, 100x70cm, 2008." src="https://cdn.mimo.ba/img/art/2000/thumbnails/156_thumbnail.jpg"/>
+        </a>
+        <a href="https://cdn.mimo.ba/img/art/2000/157.jpg" title="Oil on wood, 60x90cm, 2004.">
+            <img alt="Oil on wood, 60x90cm, 2004." src="https://cdn.mimo.ba/img/art/2000/thumbnails/157_thumbnail.jpg"/>
         </a>
     </div>
 
