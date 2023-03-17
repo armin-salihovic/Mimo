@@ -25,14 +25,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/architecture-index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/architecture-index1.css') }}">
 
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
 <main>
-    <h1 class="text-center pb-5">Architecture</h1>
+    <x-title>Architecture</x-title>
     <div class="row">
         <div class="col-lg-3 col-md-6 d-flex justify-content-center">
             <a class="d-flex flex-column align-items-center" href="{{ route('monument-zuc') }}">

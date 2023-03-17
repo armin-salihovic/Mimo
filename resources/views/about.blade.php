@@ -24,22 +24,20 @@
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>About | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about1.css') }}">
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
 <main>
-    <h1 class="text-dark text-center pb-5">About</h1>
-    <div class="row pb-3">
-        <div class="col-lg-6">
-            <img src="https://cdn.mimo.ba/img/mimo-bw.jpg" alt="Portrait: Emir Salihović Mimo">
-        </div>
-        <div class="col-lg-6">
-            <p class="text-dark">Born 1960 in Sarajevo, Bosnia and Herzegovina. Graduated Architecture in 1984. Major works include the monument and memorial centre atop the locality Žuč (currently under construction) in Sarajevo and mosques in Jablanica and Kakanj. Various private home designs have also encompassed interior and furniture design. Pursuits in the fine arts have led to several regional exhibitions in abstract painting. Professor at the Academy of Fine Arts in Sarajevo.</p>
-            <p class="text-dark">This page is dedicated to the various artistic and architectural works and concepts undertaken by Emir Salihović Mimo.</p>
-        </div>
+    <x-title>Emir Salihović Mimo</x-title>
+
+    <div class="mb-5 d-flex justify-content-center">
+        <img class="portrait" src="https://cdn.mimo.ba/img/mimo-portrait.jpg" alt="Emir Salihović Mimo Portrait">
     </div>
+
+    <p class="text-dark">Born 1960 in Sarajevo, Bosnia and Herzegovina. Graduated Architecture in 1984. Major works include the monument and memorial centre atop the locality Žuč (currently under construction) in Sarajevo and mosques in Jablanica and Kakanj. Various private home designs have also encompassed interior and furniture design. Pursuits in the fine arts have led to several regional exhibitions in abstract painting. Professor at the Academy of Fine Arts in Sarajevo.</p>
+    <p class="text-dark mb-5">This page is dedicated to the various artistic and architectural works and concepts undertaken by Emir Salihović Mimo.</p>
 </main>
 
 <x-footer />

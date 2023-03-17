@@ -28,14 +28,15 @@
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <title>Contact | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact3.css') }}">
 
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
 <main>
-    <h1 class="text-dark text-center pb-5">Contact</h1>
+    <x-title>Contact</x-title>
+
     @if (!$botSuccess)
         <div class="row">
             <div class="col-12 col-lg-5 order-2 order-lg-1"></div>

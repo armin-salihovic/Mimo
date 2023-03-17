@@ -20,7 +20,7 @@
     <meta property="og:description" content="Items of furniture and decoration designed by Emir Salihović Mimo." />
 
     <title>Design | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,13 +31,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
-    <link rel="stylesheet" href="{{ asset('css/design.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/design1.css') }}">
 
 </head>
 <body class="container d-flex flex-column min-vh-100">
 <x-header />
 <main>
-    <h1 class="text-dark text-center pb-5">Design</h1>
+    <x-title>Design</x-title>
 
     <h2 class="text-center pb-3">Chandelier - Mosque, Jablanica</h2>
     <div class="gallery pb-5">

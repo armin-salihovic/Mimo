@@ -1,0 +1,32 @@
+body, footer, h1 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+img {
+    width: 100%;
+}
+
+main {
+    line-height: 2.2;
+    font-family: "Open Sans", sans-serif;
+}
+
+.portrait {
+    width: 50%;
+}
+
+
+@media (max-width: 991px) {
+    .portrait {
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .portrait {
+        width: 100%;
+    }
+
+    main {
+        line-height: 2;
+    }
+}

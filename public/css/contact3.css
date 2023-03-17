@@ -13,13 +13,6 @@ height: 30px;
     padding-bottom: 5px;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 2em;
-}
-
 textarea {
     resize: none;
     white-space: pre-wrap;

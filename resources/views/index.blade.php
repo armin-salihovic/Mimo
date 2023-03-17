@@ -29,9 +29,6 @@
 <body class="position-relative">
 <div class="container">
     <div class="row justify-content-between pb-5">
-        <!--            <div class="cat col-12 order-md-first">-->
-        <!--                <h1 class="text-center p-2 text-primary">Emir Salihović Mimo<br><span class="text-muted">Architect, Painter, Sculptor, and Designer</span></h1>-->
-        <!--            </div>-->
         <div class="col-12 col-md-auto order-first">
             <div class="logo h-100 d-flex justify-content-between flex-md-column align-items-md-center">
                 <span>M</span>
@@ -110,7 +107,7 @@
                 "postalCode": "71000"
             },
             "email": "info@mimo.ba",
-            "image": "https://cdn.mimo.ba/img/mimo-bw.jpg",
+            "image": "https://cdn.mimo.ba/img/mimo-portrait.jpg",
             "jobTitle": "Professor at The Academy of Fine Arts in Sarajevo",
             "name": "Emir Salihović",
             "alumniOf": "Faculty of Architecture | University of Sarajevo",

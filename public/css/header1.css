@@ -30,3 +30,24 @@ header {
     text-decoration: underline !important;
     color: #343a40 !important;
 }
+
+/* title */
+
+.title {
+    letter-spacing: 0.2em;
+    font-size: 2em !important;
+}
+
+@media (max-width: 1199px) {
+    .title {
+        letter-spacing: 0.1em;
+        font-size: 1.75em !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 1.6em !important;
+    }
+}
+

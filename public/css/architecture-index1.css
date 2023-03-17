@@ -1,11 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-h1 {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 2em;
-}
 img {
     max-width: 100%;
     -webkit-box-shadow: 5px 5px 10px 0 rgba(108,117,125,1);
