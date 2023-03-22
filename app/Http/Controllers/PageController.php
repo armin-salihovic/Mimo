@@ -16,7 +16,33 @@ class PageController extends Controller
 
     public function art()
     {
-        return view('art');
+        return view('art.index');
+    }
+
+
+    public function art2020()
+    {
+        return view('art.2020');
+    }
+
+    public function art2010()
+    {
+        return view('art.2010');
+    }
+
+    public function art2000()
+    {
+        return view('art.2000');
+    }
+
+    public function art1990()
+    {
+        return view('art.1990');
+    }
+
+    public function art1980()
+    {
+        return view('art.1980');
     }
 
     public function sculpture()

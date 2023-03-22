@@ -1,41 +1,91 @@
+@php
+    $meta = [
+       "title" => "Mosque, Kakanj | Emir Salihović Mimo",
+       "description" => "The mosque is located in the centre of Kakanj.",
+       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-mosque-kakanj-thumbnail.jpg",
+    ];
 
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178775511-1"></script>
-    <script src="{{ asset('js/googletag.js') }}"></script>
+    $gallery = [
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/1.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/1_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/2.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/2_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/3.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/3_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/4.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/4_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/5.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/5_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/6.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/6_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/7.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/7_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/8.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/8_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/9.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/9_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/10.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/10_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/11.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/11_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/12.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/12_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/13.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/13_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/14.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/14_thumbnail.jpg",
+        ],
+        [
+            "img" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/15.jpg",
+            "title" => "Mosque, Kakanj",
+            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/15_thumbnail.jpg",
+        ],
+    ];
+@endphp
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<x-layout :meta="$meta">
 
-    <meta name="author" content="Armin Salihović">
-
-    <meta property="og:title" content="Mosque, Kakanj | Emir Salihović Mimo" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mimo.ba" />
-    <meta property="og:image" content="https://cdn.mimo.ba/img/og-architecture-mosque-kakanj-thumbnail.jpg" />
-    <meta property="og:description" content="The mosque is located in the centre of Kakanj." />
-
-
-    <title>Mosque, Kakanj | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
-    <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
-
-    <link rel="stylesheet" href="{{ asset('css/architecture.css') }} ">
-</head>
-<body class="container d-flex flex-column min-vh-100">
-<x-header />
-<main>
     <h1 class="text-dark mb-0">Mosque, Kakanj</h1>
     <p class="city">Kakanj</p>
     <div class="row">
@@ -54,64 +104,12 @@
         </div>
     </div>
 
-
-    <div class="pb-3 gallery">
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/1.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/1_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/2.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/2_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/3.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/3_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/4.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/4_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/5.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/5_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/6.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/6_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/7.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/7_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/8.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/8_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/9.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/9_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/10.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/10_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/11.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/11_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/12.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/12_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/13.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/13_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/14.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/14_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/mosque-kakanj/15.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/mosque-kakanj/thumbnails/15_thumbnail.jpg"/>
-        </a>
-    </div>
+    <x-gallery-render-single :gallery="$gallery" />
 
     <a class="float-right pb-3" href="{{ route('architecture') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
-</main>
-<x-footer />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
-<script src="{{ asset('js/gallery.js') }}"></script>
-</body>
-</html>
+    @push('meta')
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="{{ asset('css/architecture.css') }} ">
+    @endpush
+</x-layout>

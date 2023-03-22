@@ -1,41 +1,137 @@
+@php
+    $meta = [
+       "title" => 'Multi-Religious Complex: "Little Jerusalem" | Emir Salihović Mimo',
+       "description" => "Multireligious Spiritual and Cultural Centre – A concept for the present-day European Jerusalem.",
+       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-little-jerusalem-thumbnail.jpg",
+    ];
 
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178775511-1"></script>
-    <script src="{{ asset('js/googletag.js') }}"></script>
+    $gallery = [
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/1.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/1_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/2.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/2_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/3.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/3_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/4.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/4_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/5.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/5_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/6.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/6_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/7.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/7_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/8.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/8_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/9.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/9_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/10.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/10_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/11.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/11_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/12.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/12_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/13.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/13_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/14.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/14_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/15.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/15_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/16.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/16_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/17.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/17_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/18.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/18_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/19.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/19_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/20.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/20_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/21.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/21_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/22.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/22_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/23.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/23_thumbnail.jpg",
+    ],
+    [
+        "img" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/24.jpg",
+        "title" => 'Multi-Religious Complex: "Little Jerusalem"',
+        "thumb" => "https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/24_thumbnail.jpg",
+    ],
+];
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@endphp
 
-    <meta name="author" content="Armin Salihović">
+<x-layout :meta="$meta">
 
-    <meta property="og:title" content='Multi-Religious Complex: "Little Jerusalem" | Emir Salihović Mimo' />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mimo.ba" />
-    <meta property="og:image" content="https://cdn.mimo.ba/img/og-architecture-little-jerusalem-thumbnail.jpg" />
-    <meta property="og:description" content="Multireligious Spiritual and Cultural Centre – A concept for the present-day European Jerusalem." />
-
-    <title>Multi-Religious Complex: "Little Jerusalem" | Emir Salihović Mimo</title>
-    <link rel="stylesheet" href="{{ asset('css/header1.css') }}">
-    <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
-
-    <link rel="stylesheet" href="{{ asset('css/architecture.css') }} ">
-
-</head>
-<body class="container d-flex flex-column min-vh-100">
-<x-header />
-<main>
     <h1 class="text-dark mb-0">Multi-Religious Complex: "Little Jerusalem"</h1>
     <p class="city">Sarajevo</p>
     <div class="row">
@@ -57,91 +153,13 @@
         </div>
     </div>
 
-
-    <div class="pb-3 gallery">
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/1.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/1_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/2.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/2_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/3.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/3_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/4.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/4_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/5.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/5_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/6.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/6_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/7.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/7_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/8.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/8_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/9.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/9_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/10.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/10_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/11.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/11_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/12.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/12_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/13.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/13_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/14.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/14_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/15.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/15_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/16.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/16_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/17.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/17_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/18.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/18_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/19.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/19_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/20.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/20_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/21.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/21_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/22.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/22_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/23.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/23_thumbnail.jpg"/>
-        </a>
-        <a href="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/24.jpg">
-            <img src="https://cdn.mimo.ba/img/architecture/multi-religious-complex-little-jerusalem/thumbnails/24_thumbnail.jpg"/>
-        </a>
-    </div>
+    <x-gallery-render-single :gallery="$gallery" />
 
     <a class="float-right pb-3" href="{{ route('architecture') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> return</a>
-</main>
-<x-footer />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
-<script src="{{ asset('js/gallery.js') }}"></script>
-</body>
-</html>
+    @push('meta')
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="{{ asset('css/architecture.css') }} ">
+    @endpush
+
+</x-layout>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178775511-1"></script>
@@ -20,22 +20,21 @@
     <meta property="og:description" content="Emir Salihović Mimo is an architect, painter, sculptor, and designer. He teaches at the Academy of Fine Arts in Sarajevo." />
 
     <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/index4.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index5.css') }}">
 
 </head>
 <body class="position-relative">
 <div class="container">
     <div class="row justify-content-between pb-5">
         <div class="col-12 col-md-auto order-first">
-            <div class="logo h-100 d-flex justify-content-between flex-md-column align-items-md-center">
+            <h1 class="logo h-100 d-flex justify-content-between flex-md-column align-items-md-center">
                 <span>M</span>
                 <span>i</span>
                 <span>m</span>
                 <span>o</span>
-            </div>
+            </h1>
         </div>
         <div class="col-12 col-md-auto pb-3 pb-md-0">
             <header class="h-100">

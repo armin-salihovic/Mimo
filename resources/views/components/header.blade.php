@@ -12,7 +12,7 @@
                     <a class="nav-link {{ Request::segment(1) === 'architecture' ? 'nav-active' : 'text-dark' }}" href="{{ route('architecture') }}">Architecture</a>
                 </li>
                 <li class="nav-item pr-3">
-                    <a class="nav-link {{ Route::is('art') ? 'nav-active' : 'text-dark' }}" href="{{ route('art') }}">Art</a>
+                    <a class="nav-link {{ Route::is('art.*', 'art') ? 'nav-active' : 'text-dark' }}" href="{{ route('art') }}">Art</a>
                 </li>
                 <li class="nav-item pr-3">
                     <a class="nav-link {{ Route::is('design') ? 'nav-active' : 'text-dark' }}" href="{{ route('design') }}">Design</a>

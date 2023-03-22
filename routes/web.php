@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('art', [PageController::class, 'art'])->name('art');
+Route::get('art/2020', [PageController::class, 'art2020'])->name('art.2020');
+Route::get('art/2010', [PageController::class, 'art2010'])->name('art.2010');
+Route::get('art/2000', [PageController::class, 'art2000'])->name('art.2000');
+Route::get('art/1990', [PageController::class, 'art1990'])->name('art.1990');
+Route::get('art/1980', [PageController::class, 'art1980'])->name('art.1980');
+
 //Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');
 Route::get('sculpture', [PageController::class, 'sculpture'])->name('sculpture');
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
