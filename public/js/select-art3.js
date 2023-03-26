@@ -43,6 +43,7 @@ function initSwiperMobile() {
 function initSwiperDesktop() {
     swiperType = 'desktop';
     swiper = new Swiper('.my-swiper', {
+        speed: 1000,
         loop: true,
         lazy: true,
         pagination: {
