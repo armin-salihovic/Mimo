@@ -3,7 +3,7 @@
 $art2010 = [
     [
         "img" => "https://cdn.mimo.ba/img/art/2010/29.JPG",
-        "title" => "Acril on canvas, 70x100cm, 2011.",
+        "title" => "Acrylic on canvas, 79.5x60cm, 2011.",
         "thumb" => "https://cdn.mimo.ba/img/art/2010/thumbnails/29_thumbnail.jpg",
         "year" => 2011,
     ],
@@ -38,7 +38,7 @@ $art2010 = [
 
     [
         "img" => "https://cdn.mimo.ba/img/art/2010/63.JPG",
-        "title" => "Oil on canvas, 90x60cm, 2018.",
+        "title" => "Oil on canvas, 100x70cm, 2018.",
         "thumb" => "https://cdn.mimo.ba/img/art/2010/thumbnails/63_thumbnail.jpg",
         "year" => 2018,
     ],

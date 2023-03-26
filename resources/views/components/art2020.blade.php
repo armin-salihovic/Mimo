@@ -3,7 +3,7 @@
 $art2020 = [
 
     [
-        "img" => "https://cdn.mimo.ba/img/art/2020/98.JPG",
+        "img" => "https://cdn.mimo.ba/img/art/2020/98.jpg",
         "title" => "Green Third | Oil on canvas, 191x110cm, 2020.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/98_thumbnail.jpg",
         "year" => 2020,
@@ -38,8 +38,8 @@ $art2020 = [
     ],
 
     [
-        "img" => "https://cdn.mimo.ba/img/art/2020/103.JPG",
-        "title" => "Rails | Oil on canvas, 80x60cm, 2020.",
+        "img" => "https://cdn.mimo.ba/img/art/2020/103.jpg",
+        "title" => "Rails | Oil on canvas, 79x59cm, 2020.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/103_thumbnail.jpg",
         "year" => 2020,
     ],
@@ -73,15 +73,15 @@ $art2020 = [
     ],
 
     [
-        "img" => "https://cdn.mimo.ba/img/art/2020/111.JPG",
-        "title" => "Crossed | Oil on canvas, 80x40cm, 2020.",
+        "img" => "https://cdn.mimo.ba/img/art/2020/111.jpg",
+        "title" => "Crossed | Oil on canvas, 59.5x29.5cm, 2020.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/111_thumbnail.jpg",
         "year" => 2020,
     ],
 
     [
-        "img" => "https://cdn.mimo.ba/img/art/2020/112.JPG",
-        "title" => "Dog | Oil on canvas, 80x40cm, 2020.",
+        "img" => "https://cdn.mimo.ba/img/art/2020/112.jpg",
+        "title" => "Dog | Oil on canvas, 60x30cm, 2020.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/112_thumbnail.jpg",
         "year" => 2020,
     ],
@@ -277,7 +277,7 @@ $art2020 = [
 
     [
         "img" => "https://cdn.mimo.ba/img/art/2020/143.jpg",
-        "title" => "Oil on canvas, 50x100cm, 2022.",
+        "title" => "Oil on cardboard, 100.5x52cm, 2022.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/143_thumbnail.jpg",
         "year" => 2022,
     ],
@@ -340,7 +340,7 @@ $art2020 = [
 
     [
         "img" => "https://cdn.mimo.ba/img/art/2020/152.jpg",
-        "title" => "Oil on canvas and cardboard, 100x100cm, 2022.",
+        "title" => "Oil on canvas and cardboard, 142x142cm, 2022.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/152_thumbnail.jpg",
         "year" => 2022,
     ],

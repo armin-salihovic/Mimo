@@ -23,8 +23,8 @@ $art1980 = [
     ],
 
     [
-        "img" => "https://cdn.mimo.ba/img/art/1980/51.JPG",
-        "title" => "Oil on canvas, 100x70cm, 1989.",
+        "img" => "https://cdn.mimo.ba/img/art/1980/51.jpg",
+        "title" => "Oil on canvas, 79x55cm, 1989.",
         "thumb" => "https://cdn.mimo.ba/img/art/1980/thumbnails/51_thumbnail.jpg",
         "year" => 1989,
     ],

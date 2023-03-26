@@ -57,7 +57,7 @@ $art2000 = [
     ],
     [
         "img" => "https://cdn.mimo.ba/img/art/2000/37.JPG",
-        "title" => "Oil on wood, 40x60cm, 2006.",
+        "title" => "Combined technique, 60x40cm, 2006.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/37_thumbnail.jpg",
         "year" => 2006,
     ],
@@ -80,7 +80,7 @@ $art2000 = [
         "year" => 2007,
     ],
     [
-        "img" => "https://cdn.mimo.ba/img/art/2000/110.JPG",
+        "img" => "https://cdn.mimo.ba/img/art/2000/110.jpg",
         "title" => "Curl | Oil on canvas, 80x40cm, 2007.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/110_thumbnail.jpg",
         "year" => 2007,
@@ -93,7 +93,7 @@ $art2000 = [
     ],
     [
         "img" => "https://cdn.mimo.ba/img/art/2000/60.JPG",
-        "title" => "Oil on canvas, 40x30cm, 2004.",
+        "title" => "Oil on canvas, 54.5x46cm, 2004.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/60_thumbnail.jpg",
         "year" => 2004,
     ],
@@ -147,7 +147,7 @@ $art2000 = [
     ],
     [
         "img" => "https://cdn.mimo.ba/img/art/2000/157.jpg",
-        "title" => "Oil on wood, 60x90cm, 2004.",
+        "title" => "Oil on wood, 87x55cm, 2004.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/157_thumbnail.jpg",
         "year" => 2004,
     ],

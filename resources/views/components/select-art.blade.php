@@ -74,7 +74,7 @@ $selectArt = [
         "year" => 2011,
     ],
     [
-        "img" => "https://cdn.mimo.ba/img/art/2000/110.JPG",
+        "img" => "https://cdn.mimo.ba/img/art/2000/110.jpg",
         "title" => "Curl | Oil on canvas, 80x40cm, 2007.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/110_thumbnail.jpg",
         "year" => 2007,
@@ -87,7 +87,7 @@ $selectArt = [
     ],
     [
         "img" => "https://cdn.mimo.ba/img/art/2000/37.JPG",
-        "title" => "Oil on wood, 40x60cm, 2006.",
+        "title" => "Combined technique, 60x40cm, 2006.",
         "thumb" => "https://cdn.mimo.ba/img/art/2000/thumbnails/37_thumbnail.jpg",
         "year" => 2006,
     ],
