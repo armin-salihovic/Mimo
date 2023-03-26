@@ -169,54 +169,12 @@ $selectArt = [
 @endphp
 
 @push('meta')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.css" integrity="sha512-Ze01E5cRDy3ZSlrfq1xOjnVVuKh8GOC0AUCdBU6bgPQY5qoWzTKqijsLRm1ZONCH7ydBsOz+Z+9jLwz+97MGaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <style>
-
-            body {
-                font-family: 'Montserrat', sans-serif !important;
-            }
-
-            .flex-center {
-                display: flex;
-                justify-content: center;
-            }
-
-            .swiper-desktop {
-                width: 100%;
-                height: 500px;
-            }
-
-            .swiper-img {
-                height: 100%;
-            }
-
-            .swiper-slide {
-
-            }
-
-            .swiper-mobile {
-                width: 100%;
-                height: 600px;
-            }
-
-            .swiper-mobile .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
-                top: 6% !important;
-            }
-
-            .swiper-button-prev, .swiper-button-next {
-                color: #111;
-            }
-
-            .swiper-button-prev::after, .swiper-button-next::after {
-                --swiper-navigation-size: 30px;
-            }
-
-        </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('css/select-art.css') }}">
 @endpush
 
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js" integrity="sha512-J0i98QZsJc12MkNEyDbinrKKoe7Jiw0rtryAXBesZrVwRkaqgP9QNCPyo5sMZ2jfiJQb+9RIE4I3xNl8fFqQIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('js/select-art.js') }}"></script>
 @endpush
 
