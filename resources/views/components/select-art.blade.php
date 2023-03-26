@@ -170,45 +170,36 @@ $selectArt = [
 
 @push('meta')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.css" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset('css/select-art.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select-art1.css') }}">
 @endpush
 
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js" referrerpolicy="no-referrer"></script>
-    <script src="{{ asset('js/select-art1.js') }}"></script>
+    <script src="{{ asset('js/select-art2.js') }}"></script>
 @endpush
 
-<!-- Slider main container -->
-<div class="d-none d-md-block swiper swiper-desktop">
+<div id="img-title-mobile" class="pb-1 d-md-none"></div>
+
+<div class="swiper my-swiper">
     <div class="swiper-wrapper">
         @foreach($selectArt as $art)
             <div class="swiper-slide">
-                <div class="flex-center swiper-img">
-                    <img style="height: 100%; display: block" src="{{ $art['img'] }}" alt="" title="{{ $art['title'] }}">
+                <div class="swiper-slide__img-wrapper">
+                    <img src="{{ $art['img'] }}"
+                         loading="lazy"
+                         alt="{{ $art['title'] }}"
+                         title="{{ $art['title'] }}">
                 </div>
+                <div class="swiper-lazy-preloader"></div>
             </div>
         @endforeach
-
     </div>
 
     <div class="swiper-pagination"></div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="d-none d-md-block swiper-button-prev"></div>
+    <div class="d-none d-md-block swiper-button-next"></div>
 
 </div>
 
-<div id="img-title" class="pt-1 pb-1"></div>
-
-<div class="d-block d-md-none swiper swiper-mobile">
-    <div class="swiper-wrapper">
-        @foreach($selectArt as $art)
-            <div class="swiper-slide">
-                <div class="">
-                    <img style="width: 100%" src="{{ $art['img'] }}" alt="" title="{{ $art['title'] }}">
-                </div>
-            </div>
-        @endforeach
-    </div>
-    <div class="swiper-pagination"></div>
-</div>
+<div id="img-title-desktop" class="pt-1 pb-5 d-none d-md-block"></div>
