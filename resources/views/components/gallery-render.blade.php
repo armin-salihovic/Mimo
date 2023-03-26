@@ -37,5 +37,5 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
-    <script src="{{ asset('js/gallery.js') }}"></script>
+    <script src="{{ asset('js/gallery1.js') }}"></script>
 @endpush

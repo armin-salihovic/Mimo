@@ -175,7 +175,7 @@ $selectArt = [
 
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js" referrerpolicy="no-referrer"></script>
-    <script src="{{ asset('js/select-art.js') }}"></script>
+    <script src="{{ asset('js/select-art1.js') }}"></script>
 @endpush
 
 <!-- Slider main container -->
