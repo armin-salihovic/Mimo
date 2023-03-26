@@ -14,10 +14,6 @@ $meta = [
 
     <x-select-art />
 
-    @push('meta')
-        <link rel="stylesheet" href="{{ asset('css/art1.css') }}">
-    @endpush
-
 </x-layout>
 
 

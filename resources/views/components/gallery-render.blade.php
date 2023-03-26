@@ -16,7 +16,7 @@
 
         <h2>{{ $art['year'] }}</h2>
 
-        <div class="pb-5 gallery">
+        <div class="pb-5 gallery justified-gallery">
         @foreach($gallery as $art2)
             @if($art['year'] === $art2['year'])
                 <a href="{{ $art2['img'] }}" title="{{ $art2['title'] }}">

@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $(".gallery").justifiedGallery({
+        rowHeight : 200,
+        margins: 8,
         lastRow: 'center',
         captions: false
     }).on('jg.complete', function () {

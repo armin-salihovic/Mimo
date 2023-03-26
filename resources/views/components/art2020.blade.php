@@ -1,12 +1,6 @@
 @php
 
 $art2020 = [
-    [
-        "img" => "https://cdn.mimo.ba/img/art/2020/97.JPG",
-        "title" => "Oil on canvas, 100x70cm, 2018.",
-        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/97_thumbnail.jpg",
-        "year" => 2018,
-    ],
 
     [
         "img" => "https://cdn.mimo.ba/img/art/2020/98.JPG",
@@ -111,13 +105,6 @@ $art2020 = [
         "title" => "Disintegrated | Oil on canvas, 100x70cm, 2020.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/116_thumbnail.jpg",
         "year" => 2020,
-    ],
-
-    [
-        "img" => "https://cdn.mimo.ba/img/art/2020/117.JPG",
-        "title" => "Oil on canvas, 100x70cm, 2018.",
-        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/117_thumbnail.jpg",
-        "year" => 2018,
     ],
 
     [
@@ -370,6 +357,167 @@ $art2020 = [
         "title" => "Oil on canvas, 160x230cm, 2022.",
         "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/154_thumbnail.jpg",
         "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/248.jpg",
+        "title" => "Oil on cardboard, 70x70cm, 2020.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/248_thumbnail.jpg",
+        "year" => 2020,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/249.jpg",
+        "title" => "Oil on canvas, 80x40cm, 2020.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/249_thumbnail.jpg",
+        "year" => 2020,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/250.jpg",
+        "title" => "Oil on canvas, 80x40cm, 2020.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/250_thumbnail.jpg",
+        "year" => 2020,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/251.jpg",
+        "title" => "Oil on canvas, 89.5x59.5cm, 2020.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/251_thumbnail.jpg",
+        "year" => 2020,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/252.jpg",
+        "title" => "Oil on canvas, 150x100cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/252_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/253.jpg",
+        "title" => "Oil on wood, 108x40cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/253_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/254.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/254_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/255.jpg",
+        "title" => "Oil on canvas, 30x30cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/255_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/256.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/256_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/257.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/257_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/258.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/258_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/259.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/259_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/260.jpg",
+        "title" => "Oil on canvas, 70x100cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/260_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/261.jpg",
+        "title" => "Oil on canvas, 150x100cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/261_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/262.jpg",
+        "title" => "Oil on canvas, 70x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/262_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/263.jpg",
+        "title" => "Oil on canvas, 138.5x98.5cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/263_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/264.jpg",
+        "title" => "Oil on wood, 99.5x50cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/264_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/265.jpg",
+        "title" => "Oil on canvas, 149x68.5cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/265_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/266.jpg",
+        "title" => "Oil on canvas, 119x84.5cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/266_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/267.jpg",
+        "title" => "Oil on canvas, 150x100cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/267_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/268.jpg",
+        "title" => "Oil on canvas, 120x120cm, 2022.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/268_thumbnail.jpg",
+        "year" => 2022,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/269.jpg",
+        "title" => "Oil on cardboard, 100.5x103cm, 2023.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/269_thumbnail.jpg",
+        "year" => 2023,
+    ],
+
+    [
+        "img" => "https://cdn.mimo.ba/img/art/2020/270.jpg",
+        "title" => "Oil on canvas, 150x149cm, 2023.",
+        "thumb" => "https://cdn.mimo.ba/img/art/2020/thumbnails/270_thumbnail.jpg",
+        "year" => 2023,
     ],
 ];
 
