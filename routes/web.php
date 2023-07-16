@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,6 @@ Route::get('about', [PageController::class, 'about'])->name('about');
 
 Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');
 
-
 Route::prefix('architecture')->group(function () {
     Route::get('/', [PageController::class, 'architecture'])->name('architecture');
     Route::get('monument-and-memorial-centre-zuc', [PageController::class, 'monumentZuc'])->name('monument-zuc');
@@ -34,3 +34,5 @@ Route::prefix('architecture')->group(function () {
     Route::get('yugoslav-pavilion-proposal', [PageController::class, 'yugoslavPavilion'])->name('yugoslav-pavilion');
 });
 
+Route::get('news', [NewsController::class, 'index'])->name('news');
+Route::get('news/{news}', [NewsController::class, 'show'])->name('news.show');
