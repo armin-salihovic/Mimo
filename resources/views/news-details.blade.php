@@ -1,13 +1,14 @@
-<x-main-layout title="New Details">
-    <x-slot name="meta">
-        <meta property="og:image" content="" />
-        <meta property="og:description" content="" />
-        <meta name="description" content="">
+@php
+    $meta = [
+       "title" => "$news->title | Emir Salihović Mimo",
+       "description" => $news->description,
+       "thumbnail" => "https://cdn.mimo.ba/img/og-about-thumbnail.jpg",
+    ];
+@endphp
 
+<x-main-layout :meta="$meta">
+    @push('styles')
         <style>
-            main {
-                font-family: adobe-garamond-pro, serif;
-            }
             .title {
                 font-weight: 400;
                 font-style: normal;
@@ -24,7 +25,7 @@
                 font-weight: 400;
             }
         </style>
-    </x-slot>
+    @endpush
 
     <div class="mt-14 max-w-2xl mx-auto px-6 md:px-0">
         <p class="text-sm uppercase pb-5 font-mono text-red-500">Analysis</p>

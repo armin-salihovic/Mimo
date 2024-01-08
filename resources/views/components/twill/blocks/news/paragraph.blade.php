@@ -1,3 +1,3 @@
-<div class="max-w-2xl mx-auto px-6 md:px-0">
-    <div class="paragraph text-xl mb-8">{!! $block->input('text') !!}</div>
+<div class="">
+    <div class="px-4 sm:px-6 mb-8 text-lg">{!! $block->input('text') !!}</div>
 </div>

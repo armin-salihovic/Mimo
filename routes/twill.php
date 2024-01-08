@@ -6,3 +6,5 @@ use A17\Twill\Facades\TwillRoutes;
 // TwillRoutes::module('posts');
 
 TwillRoutes::module('news');
+TwillRoutes::module('architectures');
+TwillRoutes::module('art');

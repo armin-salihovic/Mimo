@@ -75,7 +75,7 @@ class PageController extends Controller
 
     public function monumentZuc()
     {
-        return view('architecture.monument-and-memorial-centre-zuc');
+        return view('architecture.architecture-details');
     }
     public function mosqueJablanica()
     {

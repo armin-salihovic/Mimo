@@ -1,16 +1,30 @@
 <?php
 
+use App\Http\Controllers\ArchitectureController;
+use App\Http\Controllers\ArtController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
-Route::get('art', [PageController::class, 'art'])->name('art');
-Route::get('art/2020s', [PageController::class, 'art2020'])->name('art.2020');
-Route::get('art/2010s', [PageController::class, 'art2010'])->name('art.2010');
-Route::get('art/2000s', [PageController::class, 'art2000'])->name('art.2000');
-Route::get('art/1990s', [PageController::class, 'art1990'])->name('art.1990');
-Route::get('art/1980s', [PageController::class, 'art1980'])->name('art.1980');
+Route::get('art', [ArtController::class, 'index'])->name('art');
+
+Route::get('art/2020s', [ArtController::class, 'art2020'])->name('art.2020');
+Route::get('art/2020s/{serial_number}', [ArtController::class, 'art2020show']);
+
+Route::get('art/2010s', [ArtController::class, 'art2010'])->name('art.2010');
+Route::get('art/2010s/{serial_number}', [ArtController::class, 'art2010show']);
+
+Route::get('art/2000s', [ArtController::class, 'art2000'])->name('art.2000');
+Route::get('art/2000s/{serial_number}', [ArtController::class, 'art2000show']);
+
+Route::get('art/1990s', [ArtController::class, 'art1990'])->name('art.1990');
+Route::get('art/1990s/{serial_number}', [ArtController::class, 'art1990show']);
+
+Route::get('art/1980s', [ArtController::class, 'art1980'])->name('art.1980');
+Route::get('art/1980s/{serial_number}', [ArtController::class, 'art1980show']);
+
+Route::get('art/{serial_number}', [ArtController::class, 'show'])->name('art.show');
 
 //Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');
 Route::get('sculpture', [PageController::class, 'sculpture'])->name('sculpture');
@@ -22,7 +36,8 @@ Route::get('about', [PageController::class, 'about'])->name('about');
 Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');
 
 Route::prefix('architecture')->group(function () {
-    Route::get('/', [PageController::class, 'architecture'])->name('architecture');
+    Route::get('/', [ArchitectureController::class, 'index'])->name('architecture');
+    Route::get('{architecture}', [ArchitectureController::class, 'show'])->name('architecture.show');
     Route::get('monument-and-memorial-centre-zuc', [PageController::class, 'monumentZuc'])->name('monument-zuc');
     Route::get('mosque-jablanica', [PageController::class, 'mosqueJablanica'])->name('mosque-jablanica');
     Route::get('mosque-kakanj', [PageController::class, 'mosqueKakanj'])->name('mosque-kakanj');

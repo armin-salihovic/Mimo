@@ -26,7 +26,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         TwillNavigation::addLink(
+            NavigationLink::make()->forModule('architectures')
+        );
+        TwillNavigation::addLink(
             NavigationLink::make()->forModule('news')
+        );
+        TwillNavigation::addLink(
+            NavigationLink::make()->forModule('art')
         );
     }
 }

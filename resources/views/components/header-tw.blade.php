@@ -53,13 +53,12 @@ $links = [
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div x-data="{ open: false }" id="nav-desktop" class="relative bg-white mb-5 sticky top-0 z-20 border-b-2 border-gray-100 transition ease-in-out duration-300 delay-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
-            <div class="flex justify-start lg:w-0 lg:flex-1">
+    <div class="mx-auto container px-4 sm:px-6">
+        <div class="flex items-center justify-between py-6 md:justify-start">
+            <div class="flex justify-start lg:w-1/4">
                 <a href="{{ route('home') }}">
                     <span class="sr-only">Your Company</span>
                     <span class="h-8 w-auto sm:h-10 text-xl text-slate-900 logo">MIMO</span>
-{{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">--}}
                 </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
@@ -71,19 +70,11 @@ $links = [
                     </svg>
                 </button>
             </div>
-            <nav class="hidden space-x-10 md:flex">
+            <nav class="hidden space-x-10 md:flex lg:w-2/4">
                 @foreach($links as $link)
                     <a href="{{ route($link['route']) }}" class="text-sm uppercase font-medium text-black-500 hover:underline {{ Route::is($link['route']) ? 'underline' : '' }}">{{ $link['name'] }}</a>
                 @endforeach
             </nav>
-            <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                <a href="#">
-                    <i class="fa fa-facebook-official text-xl mr-3" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-instagram text-xl" aria-hidden="true"></i>
-                </a>
-            </div>
         </div>
     </div>
 
@@ -119,10 +110,6 @@ $links = [
                     <nav class="grid gap-y-8">
                         @foreach($links as $link)
                         <a href="{{ route($link['route']) }}" class="-m-3 flex items-center p-3 hover:bg-gray-50">
-                            <!-- Heroicon name: outline/chart-bar -->
-{{--                            <svg class="h-6 w-6 flex-shrink-0 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">--}}
-{{--                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />--}}
-{{--                            </svg>--}}
                             <span class="text-sm font-medium text-gray-900 uppercase">{{ $link['name'] }}</span>
                         </a>
                         @endforeach
@@ -132,28 +119,10 @@ $links = [
             <div class="space-y-6 py-6 px-5">
                 <a href="#" class="-m-3 flex items-center p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/chart-bar -->
-                    <i class="fa fa-facebook-official text-xl" aria-hidden="true"></i>
-                    <span class="ml-3 text-base font-medium text-gray-900">Facebook</span>
-                </a>
-                <a href="#" class="-m-3 flex items-center p-3 hover:bg-gray-50">
-                    <!-- Heroicon name: outline/chart-bar -->
                     <i class="fa fa-instagram text-xl" aria-hidden="true"></i>
 
                     <span class="ml-3 text-base font-medium text-gray-900">Instagram</span>
                 </a>
-{{--                <div class="grid grid-cols-2 gap-y-4 gap-x-8">--}}
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Pricing</a>--}}
-
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Docs</a>--}}
-
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Help Center</a>--}}
-
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Guides</a>--}}
-
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Events</a>--}}
-
-{{--                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Security</a>--}}
-{{--                </div>--}}
             </div>
         </div>
     </div>
