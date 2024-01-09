@@ -4,14 +4,24 @@ namespace App\Http\Controllers;
 
 
 use App\Mail\MessageSent;
+use App\Repositories\ArtRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
+    private ArtRepository $repository;
+
+    public function __construct(ArtRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
     public function index()
     {
-        return view('index');
+        $arts = $this->repository->getFeaturedArt();
+
+        return view('index-experimental', compact('arts'));
     }
 
     public function art()

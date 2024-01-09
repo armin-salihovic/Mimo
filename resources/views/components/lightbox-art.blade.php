@@ -102,6 +102,7 @@
             if(rewrite) window.history.pushState({}, "Mimo", getBaseUrl());
             opened = false;
             lightbox.classList.remove('active-first');
+            scrollUnlock();
         }
 
         lightboxCloseBtn.addEventListener("click", () => {
@@ -128,6 +129,7 @@
             load(item);
             preload(index);
             setInfo(item);
+            scrollLock();
             activeItem = item;
             if(rewrite) rewriteUrl(item);
         }
@@ -287,6 +289,14 @@
             }
         }
 
+        function scrollLock() {
+            document.body.classList.add('noscroll');
+        }
+
+        function scrollUnlock() {
+            document.body.classList.remove('noscroll');
+        }
+
         // active first
 
         function setActiveItemIndex() {
@@ -315,6 +325,8 @@
 @push('styles')
     {{--    <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}" />--}}
     <style>
+        .noscroll { overflow: hidden; }
+
         /* General lighbox styles */
 
         .lightbox {

@@ -66,7 +66,9 @@
 <x-main-layout :meta="$meta">
 
     <div class="container mx-auto px-6">
-        <h1 class="text-2xl my-12 sm:text-4xl lg:text-5xl md:my-24 uppercase">Architecture</h1>
+        <div class="flex justify-center">
+            <h1 class="text-2xl my-12 sm:text-4xl lg:text-5xl md:my-24 uppercase">Architecture</h1>
+        </div>
         @foreach($architectures as $architecture)
             <x-architecture-listbox :item="$architecture" />
         @endforeach
