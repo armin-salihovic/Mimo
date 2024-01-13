@@ -194,4 +194,6 @@ return [
         // ...
     ])->toArray(),
 
+    'cdn_endpoint' => env('CDN_ENDPOINT'),
+
 ];

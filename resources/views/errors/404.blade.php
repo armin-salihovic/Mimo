@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
-    <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
+    <link rel="icon" href="{{ config('app.cdn_endpoint') }}/img/favicon.png">
     <title>Page not found | Emir Salihović Mimo</title>
 
     <link rel="stylesheet" href="{{ asset('css/404.css') }}">
@@ -16,7 +16,7 @@
 <body>
 <main>
     <div class="container d-flex align-items-center flex-column">
-        <img src="https://cdn.mimo.ba/img/architecture/selected-sketches-and-models/Sketch,%201991.jpg" alt="Sketch, 1991.">
+        <img src="{{ config('app.cdn_endpoint') }}/img/architecture/selected-sketches-and-models/Sketch,%201991.jpg" alt="Sketch, 1991.">
         <h1 class="text-dark text-center">Error 404</h1>
         <h2 class="text-center">We are sorry, but the page you are looking for does not exist.</h2>
         <p class="text-center">Here are a few links that may be helpful: </p>

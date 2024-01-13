@@ -2,39 +2,39 @@
     $meta = [
        "title" => "Yugoslav Pavilion proposal | Emir Salihović Mimo",
        "description" => "Proposal for the Yugoslavian pavilion for the Seville Expo ‘92.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-yugoslav-pavilion-proposal-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-architecture-yugoslav-pavilion-proposal-thumbnail.jpg",
     ];
 
     $gallery = [
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/1.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/1.jpg",
             "title" => "Yugoslav Pavilion proposal - Perspective 1",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/1_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/1_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/2.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/2.jpg",
             "title" => "Yugoslav Pavilion proposal - Perspective 2",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/2_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/2_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/3.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/3.jpg",
             "title" => "Yugoslav Pavilion proposal - Perspective 3",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/3_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/3_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/4.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/4.jpg",
             "title" => "Yugoslav Pavilion proposal - Facade",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/4_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/4_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/5.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/5.jpg",
             "title" => "Yugoslav Pavilion proposal - Plan",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/5_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/5_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/6.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/6.jpg",
             "title" => "Yugoslav Pavilion proposal - Section",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/yugoslav-pavilion-proposal/thumbnails/6_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/yugoslav-pavilion-proposal/thumbnails/6_thumbnail.jpg",
         ],
     ];
 @endphp

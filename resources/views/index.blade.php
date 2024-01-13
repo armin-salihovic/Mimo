@@ -16,10 +16,10 @@
     <meta property="og:title" content="Emir Salihović Mimo" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.mimo.ba" />
-    <meta property="og:image" content="https://cdn.mimo.ba/img/og-thumbnail.jpg" />
+    <meta property="og:image" content="{{ config('app.cdn_endpoint') }}/img/og-thumbnail.jpg" />
     <meta property="og:description" content="Emir Salihović Mimo is an architect, painter, sculptor, and designer. He teaches at the Academy of Fine Arts in Sarajevo." />
 
-    <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
+    <link rel="icon" href="{{ config('app.cdn_endpoint') }}/img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/index5.css') }}">
@@ -62,19 +62,19 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://cdn.mimo.ba/img/architecture_thumbnail.jpg" alt="Architecture">
+                        <img src="{{ config('app.cdn_endpoint') }}/img/architecture_thumbnail.jpg" alt="Architecture">
                         <a class="boop" href="{{ route('architecture') }}"></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://cdn.mimo.ba/img/art_thumbnail.jpg" alt="Art">
+                        <img src="{{ config('app.cdn_endpoint') }}/img/art_thumbnail.jpg" alt="Art">
                         <a class="boop" href="{{ route('art') }}"></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://cdn.mimo.ba/img/design_thumbnail.jpg" alt="Design">
+                        <img src="{{ config('app.cdn_endpoint') }}/img/design_thumbnail.jpg" alt="Design">
                         <a class="boop" href="{{ route('design') }}"></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://cdn.mimo.ba/img/sculpture_thumbnail.jpg" alt="Sculpture">
+                        <img src="{{ config('app.cdn_endpoint') }}/img/sculpture_thumbnail.jpg" alt="Sculpture">
                         <a class="boop" href="{{ route('sculpture') }}"></a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                 "postalCode": "71000"
             },
             "email": "info@mimo.ba",
-            "image": "https://cdn.mimo.ba/img/mimo-portrait.jpg",
+            "image": "{{ config('app.cdn_endpoint') }}/img/mimo-portrait.jpg",
             "jobTitle": "Professor at The Academy of Fine Arts in Sarajevo",
             "name": "Emir Salihović",
             "alumniOf": "Faculty of Architecture | University of Sarajevo",

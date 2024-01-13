@@ -2,7 +2,7 @@
     $meta = [
        "title" => "Contact | Emir Salihović Mimo",
        "description" => "Follow Emir Salihović Mimo on Facebook and Instagram. Email at info@mimo.ba.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-contact-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-contact-thumbnail.jpg",
     ];
 @endphp
 
@@ -91,7 +91,7 @@
         </div>
     </div>
     <div class="pt-5 pb-3">
-        <img class="position-relative" id="atelier" src="https://cdn.mimo.ba/img/atelier.jpg" alt="atelier">
+        <img class="position-relative" id="atelier" src="{{ config('app.cdn_endpoint') }}/img/atelier.jpg" alt="atelier">
     </div>
 
     @push('meta')

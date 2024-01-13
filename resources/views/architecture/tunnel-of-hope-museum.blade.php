@@ -2,69 +2,69 @@
     $meta = [
        "title" => "Tunnel of Hope – Museum | Emir Salihović Mimo",
        "description" => "Proposed project is comprised of a memorial centre and museum.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-tunnel-of-hope-museum-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-architecture-tunnel-of-hope-museum-thumbnail.jpg",
     ];
 
     $gallery = [
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/1.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/1.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/1_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/1_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/2.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/2.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/2_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/2_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/3.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/3.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/3_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/3_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/4.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/4.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/4_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/4_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/5.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/5.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/5_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/5_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/6.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/6.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/6_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/6_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/7.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/7.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/7_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/7_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/8.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/8.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/8_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/8_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/9.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/9.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/9_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/9_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/10.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/10.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/10_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/10_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/11.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/11.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/11_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/11_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/12.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/12.jpg",
             "title" => "Tunnel of Hope – Museum",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/tunnel-of-hope-museum/thumbnails/12_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/tunnel-of-hope-museum/thumbnails/12_thumbnail.jpg",
         ],
 
     ];

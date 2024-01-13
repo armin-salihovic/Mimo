@@ -2,69 +2,69 @@
     $meta = [
        "title" => "Mosque, Jablanica | Emir Salihović Mimo",
        "description" => "Project made in collaboration with his father, this modernist mosque stands in the centre of Jablanica.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-mosque-jablanica-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-architecture-mosque-jablanica-thumbnail.jpg",
     ];
 
     $gallery = [
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/1.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/1.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/1_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/1_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/2.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/2.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/2_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/2_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/3.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/3.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/3_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/3_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/4.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/4.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/4_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/4_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/5.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/5.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/5_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/5_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/6.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/6.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/6_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/6_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/7.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/7.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/7_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/7_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/8.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/8.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/8_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/8_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/9.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/9.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/9_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/9_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/10.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/10.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/10_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/10_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/11.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/11.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/11_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/11_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/12.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/12.jpg",
             "title" => "Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/mosque-jablanica/thumbnails/12_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/mosque-jablanica/thumbnails/12_thumbnail.jpg",
         ],
     ];
 @endphp

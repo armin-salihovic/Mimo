@@ -2,69 +2,69 @@
     $meta = [
        "title" => "Monument and Memorial Centre, Žuč | Emir Salihović Mimo",
        "description" => "A monument and museum commemorating the fallen soldiers and fighters of the Battles of Žuč.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-zuc-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-architecture-zuc-thumbnail.jpg",
     ];
 
     $gallery = [
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/1.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/1.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/1_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/1_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/2.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/2.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/2_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/2_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/3.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/3.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/3_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/3_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/4.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/4.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/4_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/4_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/5.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/5.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/5_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/5_thumbnail.jpg",
         ],
 //        [
-//            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/6.jpg",
+//            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/6.jpg",
 //            "title" => "Monument and Memorial Centre, Žuč",
-//            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/6_thumbnail.jpg",
+//            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/6_thumbnail.jpg",
 //        ],
 //        [
-//            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/7.jpg",
+//            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/7.jpg",
 //            "title" => "Monument and Memorial Centre, Žuč",
-//            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/7_thumbnail.jpg",
+//            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/7_thumbnail.jpg",
 //        ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/12.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/12.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/12_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/12_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/8.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/8.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/8_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/8_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/9.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/9.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/9_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/9_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/10.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/10.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/10_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/10_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/11.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/11.jpg",
             "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/11_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/monument-and-memorial-centre-zuc/thumbnails/11_thumbnail.jpg",
         ],
     ];
 @endphp

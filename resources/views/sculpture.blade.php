@@ -20,7 +20,7 @@ if($page > 1 && $page < $pages) {
 $meta = [
     "title" => "Sculpture | Emir Salihović Mimo",
     "description" => "A variety of sculptures and three-dimensional works designed by Emir Salihović Mimo.",
-    "thumbnail" => "https://cdn.mimo.ba/img/og-sculpture-thumbnail.jpg",
+    "thumbnail" => config('app.cdn_endpoint') . "/img/og-sculpture-thumbnail.jpg",
 ];
 
 ?>

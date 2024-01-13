@@ -2,39 +2,39 @@
     $meta = [
        "title" => "Primary School, Šip | Emir Salihović Mimo",
        "description" => "An unrealised project conceptualised in a modernistic style for a post-war neighbourhood on the periphery of Sarajevo.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-primary-school-sip-thumbnail.jpg",
+       "thumbnail" => config('app.cdn_endpoint') . "/img/og-architecture-primary-school-sip-thumbnail.jpg",
     ];
 
     $gallery = [
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/1.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/1.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/1_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/1_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/2.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/2.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/2_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/2_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/3.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/3.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/3_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/3_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/4.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/4.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/4_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/4_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/5.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/5.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/5_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/5_thumbnail.jpg",
         ],
         [
-            "img" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/6.jpg",
+            "img" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/6.jpg",
             "title" => "Primary School, Šip",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/primary-school-sip/thumbnails/6_thumbnail.jpg",
+            "thumb" => config('app.cdn_endpoint') . "/img/architecture/primary-school-sip/thumbnails/6_thumbnail.jpg",
         ],
     ];
 
