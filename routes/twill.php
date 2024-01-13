@@ -8,3 +8,5 @@ use A17\Twill\Facades\TwillRoutes;
 TwillRoutes::module('news');
 TwillRoutes::module('architectures');
 TwillRoutes::module('art');
+TwillRoutes::module('designs');
+TwillRoutes::module('sculptures');

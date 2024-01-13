@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ArtRepository;
+use App\Services\SettingService;
+use App\Traits\Seo;
 use Illuminate\Http\Request;
 
 class ArtController extends Controller
 {
+    use Seo;
+
     private ArtRepository $repository;
+    private $settings;
 
     public function __construct(ArtRepository $repository)
     {
@@ -16,6 +21,7 @@ class ArtController extends Controller
 
     public function index()
     {
+        $this->settings = SettingService::getSettings('art.page');
         return $this->artView($this->repository->getFeaturedArt());
     }
 
@@ -24,31 +30,38 @@ class ArtController extends Controller
         $art = $this->repository->getBySerialNumber($serial_number);
         abort_if(!$art, 404);
 
+        $this->setTitle($serial_number);
+
         return $this->artView($this->repository->getFeaturedArt(), $art);
     }
 
     public function art1980()
     {
+        $this->settings = SettingService::getSettings('art-1980.page');
         return $this->artDecadeView('get1980sArt');
     }
 
     public function art1990()
     {
+        $this->settings = SettingService::getSettings('art-1990.page');
         return $this->artDecadeView('get1990sArt');
     }
 
     public function art2000()
     {
+        $this->settings = SettingService::getSettings('art-2000.page');
         return $this->artDecadeView('get2000sArt');
     }
 
     public function art2010()
     {
+        $this->settings = SettingService::getSettings('art-2010.page');
         return $this->artDecadeView('get2010sArt');
     }
 
     public function art2020()
     {
+        $this->settings = SettingService::getSettings('art-2020.page');
         return $this->artDecadeView('get2020sArt');
     }
 
@@ -83,6 +96,7 @@ class ArtController extends Controller
             'arts' => $arts,
             'artLinks' => $this->getArtLinks(),
             'art' => $art,
+            'meta' => $this->getMetadata(),
         ]);
     }
 
@@ -93,6 +107,7 @@ class ArtController extends Controller
         if($serial_number) {
             $art = $this->repository->getBySerialNumber($serial_number);
             abort_if(!$art, 404);
+            $this->setTitle($serial_number);
         }
 
         $arts = $this->repository->{$artMethod}();
@@ -101,6 +116,7 @@ class ArtController extends Controller
             'arts' => $arts,
             'artLinks' => $this->getArtLinks(),
             'art' => $art,
+            'meta' => $this->getMetadata(),
         ]);
     }
 

@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 
 use App\Mail\MessageSent;
 use App\Repositories\ArtRepository;
+use App\Services\SettingService;
+use App\Traits\Seo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
+    use Seo;
+
     private ArtRepository $repository;
+    private $settings;
 
     public function __construct(ArtRepository $repository)
     {
@@ -21,38 +26,13 @@ class PageController extends Controller
     {
         $arts = $this->repository->getFeaturedArt();
 
-        return view('index-experimental', compact('arts'));
-    }
+        $this->settings = SettingService::getSettings("home.page");
 
-    public function art()
-    {
-        return view('art.index');
-    }
-
-
-    public function art2020()
-    {
-        return view('art.2020');
-    }
-
-    public function art2010()
-    {
-        return view('art.2010');
-    }
-
-    public function art2000()
-    {
-        return view('art.2000');
-    }
-
-    public function art1990()
-    {
-        return view('art.1990');
-    }
-
-    public function art1980()
-    {
-        return view('art.1980');
+        return view('index-experimental', [
+            'arts' => $arts,
+            'meta' => $this->getMetadata(false),
+            'featuredImages' => $this->settings['children'] ?? [],
+        ]);
     }
 
     public function sculpture()
@@ -76,48 +56,6 @@ class PageController extends Controller
     public function about()
     {
         return view('about');
-    }
-
-    public function architecture()
-    {
-        return view('architecture.index');
-    }
-
-    public function monumentZuc()
-    {
-        return view('architecture.architecture-details');
-    }
-    public function mosqueJablanica()
-    {
-        return view('architecture.mosque-jablanica');
-    }
-    public function mosqueKakanj()
-    {
-        return view('architecture.mosque-kakanj');
-    }
-    public function multiReligionComplex()
-    {
-        return view('architecture.multi-religious-complex-little-jerusalem');
-    }
-    public function schoolSip()
-    {
-        return view('architecture.primary-school-sip');
-    }
-    public function selectedArch()
-    {
-        return view('architecture.selected-sketches-and-models');
-    }
-    public function skenderPasha()
-    {
-        return view('architecture.skender-pasha-mosque');
-    }
-    public function tunneOfHope()
-    {
-        return view('architecture.tunnel-of-hope-museum');
-    }
-    public function yugoslavPavilion()
-    {
-        return view('architecture.yugoslav-pavilion-proposal');
     }
 
     public function sendEmail(Request $request)

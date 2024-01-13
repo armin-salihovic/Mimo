@@ -103,6 +103,11 @@
             opened = false;
             lightbox.classList.remove('active-first');
             scrollUnlock();
+            let lastSegment = '';
+            if(window.location.pathname.split("/").pop() !== 'art') {
+                lastSegment = window.location.pathname.split("/").pop();
+            }
+            document.title = 'Art ' + lastSegment;
         }
 
         lightboxCloseBtn.addEventListener("click", () => {
@@ -132,6 +137,7 @@
             scrollLock();
             activeItem = item;
             if(rewrite) rewriteUrl(item);
+            document.title = item.dataset.sn;
         }
 
         // creates a figure which wraps the image
@@ -339,7 +345,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            z-index: 20;
+            z-index: 50;
             padding: calc(3vw + 20px) 2vw 3vw;
         }
 
@@ -486,7 +492,7 @@
             width: 30px;
         }
 
-        /* Responsive design */
+        /* Responsive designs */
 
         @media (max-width: 575px) {
             .lightbox-controls {

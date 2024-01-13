@@ -33,7 +33,7 @@ $links = [
     ],
     [
         'name' => 'Design',
-        'route' => 'design'
+        'route' => 'designs'
     ],
     [
         'name' => 'About',

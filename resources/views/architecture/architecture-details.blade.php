@@ -128,9 +128,4 @@
     </div>
 
     <x-lightbox />
-
-    @push('meta')
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-        <link rel="stylesheet" href="{{ asset('css/architecture.css') }} ">
-    @endpush
 </x-main-layout>

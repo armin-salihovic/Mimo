@@ -55,10 +55,29 @@
         });
 
         const figure = createFigure(child);
+        const imgContainer = createImgContainer();
         const img = createImg(child);
-        figure.appendChild(img);
+        const title = createH3TitleElement(child);
+
+        figure.appendChild(imgContainer);
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(title);
+
         lightboxList.appendChild(figure);
     });
+
+    function createImgContainer() {
+        const element = document.createElement("div");
+        element.classList.add("lightbox-item-container");
+        return element;
+    }
+    function createH3TitleElement(child) {
+        const element = document.createElement("h3");
+        element.classList.add("lightbox-item-title");
+        element.innerHTML = child.title;
+        return element;
+    }
+
 
     const lightboxItems = document.querySelectorAll(".lightbox-item");
 
@@ -68,6 +87,7 @@
         lightbox.classList.remove("active");
         activeItem.dataset.active = false;
         currentIndex = null;
+        scrollUnlock();
     });
 
     controlsPrevious.addEventListener("click", () => {
@@ -89,6 +109,7 @@
         item.dataset.active = true;
         load(item);
         preload(index);
+        scrollLock();
         activeItem = item;
     }
 
@@ -111,10 +132,12 @@
     function load(item) {
         if (item === null) return;
 
+        const imgElement = item.getElementsByTagName('img')[0];
+
         // load image
-        if (item.firstChild.dataset.loaded !== true) {
-            item.firstChild.src = item.firstChild.dataset.src;
-            item.firstChild.dataset.loaded = true;
+        if (imgElement.dataset.loaded !== true) {
+            imgElement.src = imgElement.dataset.src;
+            imgElement.dataset.loaded = true;
         }
     }
 
@@ -164,6 +187,14 @@
         touchendX = e.changedTouches[0].screenX;
         checkDirection();
     });
+
+    function scrollLock() {
+        document.body.classList.add('noscroll');
+    }
+
+    function scrollUnlock() {
+        document.body.classList.remove('noscroll');
+    }
 
 </script>
 @endpush

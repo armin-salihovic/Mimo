@@ -1,4 +1,4 @@
-<x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks">
+<x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks" :meta="$meta">
     <x-slot name="gallery">
         <div class="flex flex-col lg:flex-row">
             <div class="w-full px-4 md:pl-6 lg:pr-0 lg:pl-6 lg:w-1/4 pb-6 lg:pb-0 flex justify-center lg:justify-start">

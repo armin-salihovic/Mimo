@@ -1,11 +1,3 @@
-@php
-    $meta = [
-       "title" => "$news->title | Emir Salihović Mimo",
-       "description" => $news->description,
-       "thumbnail" => "https://cdn.mimo.ba/img/og-about-thumbnail.jpg",
-    ];
-@endphp
-
 <x-main-layout :meta="$meta">
     @push('styles')
         <style>

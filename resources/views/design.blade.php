@@ -1,140 +1,38 @@
-@php
-    $meta = [
-       "title" => "Design | Emir Salihović Mimo",
-       "description" => "Items of furniture and decoration designed by Emir Salihović Mimo.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-design-thumbnail.jpg",
-    ];
+<x-main-layout :meta="$meta">
+    <x-lightbox />
 
-    $chandelierMosqueJablanica = [
-        [
-            "img" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/1.jpg",
-            "title" => "Chandelier for Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/1_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/2.jpg",
-            "title" => "Chandelier for Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/2_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/3.jpg",
-            "title" => "Chandelier for Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/3_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/4.jpg",
-            "title" => "Chandelier for Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/4_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/5.jpg",
-            "title" => "Chandelier for Mosque, Jablanica",
-            "thumb" => "https://cdn.mimo.ba/img/design/chandelier-mosque-jablanica/thumbnails/5_thumbnail.jpg",
-        ],
-    ];
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <h1 class="px-4 text-3xl my-12 sm:text-4xl lg:text-5xl md:my-24 uppercase">Design</h1>
+        </div>
 
-   $chairs = [
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/1.jpg",
-        "title" => "Tsuki 2020",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/1_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/2.jpg",
-        "title" => "Silmukka 2020",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/2_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/3.jpg",
-        "title" => "Wallander 2019",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/3_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/4.jpg",
-        "title" => "Uchu 2019",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/4_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/5.jpg",
-        "title" => "Hoiru 2019",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/5_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/6.jpg",
-        "title" => "Hakucho 2018",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/6_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/7.jpg",
-        "title" => "Tauko 2018",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/7_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/12.jpg",
-        "title" => "Rokka 2017",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/12_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/10.jpg",
-        "title" => "Vakka 2017",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/10_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/chairs/11.jpg",
-        "title" => "Tori 2016",
-        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/11_thumbnail.jpg",
-    ],
-//    [
-//        "img" => "https://cdn.mimo.ba/img/design/chairs/8.jpg",
-//        "title" => "Momi 2016",
-//        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/8_thumbnail.jpg",
-//    ],//
-//    [
-//        "img" => "https://cdn.mimo.ba/img/design/chairs/20.jpg",
-//        "title" => "Lu 2020",
-//        "thumb" => "https://cdn.mimo.ba/img/design/chairs/thumbnails/20_thumbnail.jpg",
-//    ],
-];
+        <div id="gallery">
+            @foreach($designs as $design)
 
-$lamps = [
-    [
-        "img" => "https://cdn.mimo.ba/img/design/lamps/1.jpg",
-        "title" => "Lamp: wood and rice paper 1985",
-        "thumb" => "https://cdn.mimo.ba/img/design/lamps/thumbnails/1_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/lamps/2.jpg",
-        "title" => "Lamp: wood and rice paper 1985",
-        "thumb" => "https://cdn.mimo.ba/img/design/lamps/thumbnails/2_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/lamps/3.jpg",
-        "title" => "Lamp: wood and rice paper 1985",
-        "thumb" => "https://cdn.mimo.ba/img/design/lamps/thumbnails/3_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/lamps/4.jpg",
-        "title" => "Lamp: wood and rice paper 1985",
-        "thumb" => "https://cdn.mimo.ba/img/design/lamps/thumbnails/4_thumbnail.jpg",
-    ],
-    [
-        "img" => "https://cdn.mimo.ba/img/design/lamps/5.jpg",
-        "title" => "Lamp: wood and rice paper 1985",
-        "thumb" => "https://cdn.mimo.ba/img/design/lamps/thumbnails/5_thumbnail.jpg",
-    ],
-];
+                    <div class="flex flex-col lg:flex-row mb-24">
+                        <x-gallery-title :title="$design->title" />
 
-@endphp
+                        <div class="w-full lg:w-3/4">
+                            <div class="px-4 lg:pl-3 lg:pr-6 mb-4 h-full">
+                                <div class="columns-1 md:columns-2 lg:columns-3">
+                                    @foreach($design->imagesAsArrays('images') as $image)
+                                            <a class="gallery-item"
+                                               href="{{ $image['src'] }}"
+                                               title="{{ $image['alt'] }}"
+                                            >
+                                                <x-image-art class="mb-4"
+                                                             :alt="$image['alt']"
+                                                             :img="$image['src']"
+                                                />
+                                            </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            @endforeach
+        </div>
 
-<x-layout :meta="$meta" main-class="text-center">
-    <x-title>Design</x-title>
+    </div>
+</x-main-layout>
 
-    <x-gallery-render-single title="Chandelier - Mosque, Jablanica" :gallery="$chandelierMosqueJablanica" />
-    <x-gallery-render-single title="Chairs" :gallery="$chairs" />
-    <x-gallery-render-single title="Lamps" :gallery="$lamps" />
-
-    @push('meta')
-        <link rel="stylesheet" href="{{ asset('css/design1.css') }}">
-    @endpush
-
-</x-layout>

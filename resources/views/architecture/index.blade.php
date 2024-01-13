@@ -1,10 +1,4 @@
 @php
-    $meta = [
-       "title" => "Architecture | Emir Salihović Mimo",
-       "description" => "A selection of architectural designs and concepts by Emir Salihović Mimo.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-thumbnail.jpg",
-    ];
-
     $data = [
         [
             'title' => 'Monument and Memorial Centre, Žuč',
@@ -64,7 +58,6 @@
 @endphp
 
 <x-main-layout :meta="$meta">
-
     <div class="container mx-auto px-6">
         <div class="flex justify-center">
             <h1 class="text-2xl my-12 sm:text-4xl lg:text-5xl md:my-24 uppercase">Architecture</h1>
@@ -73,5 +66,4 @@
             <x-architecture-listbox :item="$architecture" />
         @endforeach
     </div>
-
 </x-main-layout>

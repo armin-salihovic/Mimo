@@ -1,3 +1,5 @@
+.noscroll { overflow: hidden; }
+
 /* General lighbox styles */
 
 .lightbox {
@@ -10,7 +12,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 20;
+  z-index: 50;
   padding: calc(3vw + 20px) 3vw;
 }
 
@@ -70,6 +72,10 @@
   box-sizing: border-box;
   margin: 0 calc(3vw + 13px);
   cursor: grab;
+
+    display: flex; /* Add display: flex to center items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 .lightbox-item {
@@ -94,7 +100,7 @@
 
 .lightbox-item-img {
   height: 100%;
-  width: 100%;
+  /*width: 100%;*/
   object-position: 50% 50%;
   object-fit: contain;
 }
@@ -153,7 +159,7 @@
   width: 30px;
 }
 
-/* Responsive design */
+/* Responsive designs */
 
 @media (max-width: 575px) {
   .lightbox-controls {
@@ -167,4 +173,25 @@
     transition: transform 250ms cubic-bezier(0.2, 0.6, 0.3, 1),
       opacity 250ms cubic-bezier(0.2, 0.6, 0.3, 1);
   }
+
+  .lightbox-item-title {
+      font-size: 14px;
+      bottom: -30px;
+  }
+}
+
+.lightbox-item-container {
+    position: relative;
+    height: 100%;
+    display: flex; /* Add display: flex to center items horizontally */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.lightbox-item-title {
+    position: absolute;
+    bottom: -40px;
+    font-size: 24px;
+    z-index: 100;
 }

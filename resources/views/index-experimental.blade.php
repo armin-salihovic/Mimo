@@ -1,10 +1,4 @@
 @php
-    $meta = [
-       "title" => "Emir Salihović Mimo",
-       "description" => "Emir Salihović Mimo is an architect, painter, sculptor, and designer. He teaches at the Academy of Fine Arts in Sarajevo.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-thumbnail.jpg",
-    ];
-
     $links = [
         [
             'name' => 'Architecture',
@@ -16,7 +10,7 @@
         ],
         [
             'name' => 'Design',
-            'route' => 'design'
+            'route' => 'designs'
         ],
         [
             'name' => 'Sculpture',
@@ -38,7 +32,6 @@
 @endphp
 
 <x-main-layout :show-header="false" :meta="$meta">
-
     @push('styles')
         <style>
             .slideshow-container {
@@ -179,11 +172,37 @@
                 </div>
                 <div class="w-full lg:w-1/2">
                         <div class="slideshow-container">
-                            @foreach($arts as $index => $art)
-                                <div class="mySlides">
-                                    <img src="{{ $art->image('image', 'featured') }}" alt="Slide {{ $index + 1 }}">
-                                    <div class="slideshow-overlay">Some text {{ $loop->iteration }}</div>
-                                </div>
+                            @foreach($featuredImages as $art)
+
+                            @php
+                                $img = $art['block']->image('home_featured_image');
+                                switch ($art['content']['featured_image_type']) {
+                                    case "Architecture":
+                                        $route = route('architecture');
+                                        break;
+                                    case "Sculpture":
+                                        $route = route('sculpture');
+                                        break;
+                                    case "Design":
+                                        $route = route('designs');
+                                        break;
+                                    case "Art":
+                                        $route = route('art');
+                                        break;
+                                    default:
+                                        $route = route('art');
+                                }
+                            @endphp
+                                <a href="{{ $route }}">
+                                    <div class="mySlides">
+                                        <img data-type="{{ $art['content']['featured_image_type'] }}"
+                                             src="{{ $img . '&width=768' }}"
+                                             alt="Slide {{ $art['block']->imageAltText('home_featured_image') }}"
+                                             srcset=""
+                                        >
+                                        <div class="slideshow-overlay">{{ $art['content']['featured_image_type'] }}</div>
+                                    </div>
+                                </a>
                             @endforeach
                             <!-- Add more images as needed -->
                         </div>

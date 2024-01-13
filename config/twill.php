@@ -25,6 +25,22 @@ return [
                     ],
                 ],
             ],
+            'home_featured_image' => [
+                'default' => [
+                    [
+                        'name' => 'default',
+                        'ratio' => 16 / 9,
+                    ],
+                ],
+            ],
+            'thumbnail' => [
+                'default' => [
+                    [
+                        'name' => 'default',
+                        'ratio' => 16 / 9,
+                    ],
+                ],
+            ],
         ]
     ],
     'media_library' => [

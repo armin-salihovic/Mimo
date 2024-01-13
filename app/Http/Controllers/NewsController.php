@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\News;
 use App\Repositories\NewsRepository;
+use App\Services\SettingService;
+use App\Traits\Seo;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+    use Seo;
+
+    private $settings;
+
     public function __construct(NewsRepository $repository)
     {
         $this->repository = $repository;
@@ -15,9 +20,12 @@ class NewsController extends Controller
 
     public function index()
     {
-        $news = $this->repository->allNews();
+        $this->settings = SettingService::getSettings('news.page');
 
-        return view('news', compact('news'));
+        return view('news', [
+            'news' => $this->repository->allNews(),
+            'meta' => $this->getMetadata(),
+        ]);
     }
 
     public function show($slug)
@@ -26,6 +34,13 @@ class NewsController extends Controller
 
         if (!$news) abort(404);
 
-        return view('news-details', compact('news'));
+        return view('news-details', [
+            'news' => $news,
+            'meta' => [
+                'title' => $news->title . ' | Emir Salihović Mimo',
+                'description' => $news->description,
+                'thumbnail' => $news->image('cover') . '&width=750',
+            ]
+        ]);
     }
 }

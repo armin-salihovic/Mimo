@@ -1,14 +1,8 @@
 @php
-    $meta = [
-       "title" => "Monument and Memorial Centre, Žuč | Emir Salihović Mimo",
-       "description" => "A monument and museum commemorating the fallen soldiers and fighters of the Battles of Žuč.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-zuc-thumbnail.jpg",
-    ];
-
     $seen = [];
 @endphp
 
-<x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks">
+<x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks" :meta="$meta">
     <x-slot name="gallery">
         <div id="gallery">
             @foreach($arts as $art)
@@ -17,9 +11,7 @@
                         $seen[] = $art->year;
                     @endphp
                     <div class="flex flex-col lg:flex-row mb-24">
-                        <div class="lg:w-1/4 w-full px-4 lg:pr-0 lg:pl-6 lg:w-1/4 pb-6 lg:pb-0 flex justify-center lg:justify-start">
-                            <h2 class="text-2xl lg:text-5xl font-bold">{{ $art->year }}</h2>
-                        </div>
+                        <x-gallery-title :title="$art->year" />
 
                         <div class="w-full lg:w-3/4">
                             <div class="px-4 lg:pl-3 lg:pr-6 mb-4 h-full">

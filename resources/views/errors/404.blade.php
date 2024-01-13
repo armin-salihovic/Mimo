@@ -23,7 +23,7 @@
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('architecture') }}">Architecture</a>
         <a href="{{ route('art') }}">Art</a>
-        <a href="{{ route('design') }}">Design</a>
+        <a href="{{ route('designs') }}">Design</a>
         <a href="{{ route('sculpture') }}">Sculpture</a>
         <a href="{{ route('about') }}">About</a>
         <a href="{{ route('contact') }}">Contact</a>
