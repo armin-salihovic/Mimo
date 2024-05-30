@@ -34,7 +34,7 @@ class Architecture extends Model implements Sortable
             'default' => [
                 [
                     'name' => 'default',
-                    'ratio' => 16 / 9,
+                    'ratio' => 4 / 5,
                 ],
             ],
             'mobile' => [
