@@ -32,6 +32,7 @@ Route::get('sculpture', [SculptureController::class, 'index'])->name('sculpture'
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'sendEmail'])->name('contact.send');
 Route::get('designs', [DesignController::class, 'index'])->name('designs');
+Route::get('designs/{slug}', [DesignController::class, 'show'])->name('designs.show');
 Route::get('about', [PageController::class, 'about'])->name('about');
 
 Route::get('architecture', [PageController::class, 'architecture'])->name('architecture');

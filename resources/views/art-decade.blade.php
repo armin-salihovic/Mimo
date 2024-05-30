@@ -10,11 +10,11 @@
                     @php
                         $seen[] = $art->year;
                     @endphp
-                    <div class="flex flex-col lg:flex-row mb-24">
+                    <div class="flex flex-col mb-24 px-6">
                         <x-gallery-title :title="$art->year" />
 
-                        <div class="w-full lg:w-3/4">
-                            <div class="px-4 lg:pl-3 lg:pr-6 mb-4 h-full">
+                        <div class="w-full">
+                            <div class=" h-full">
                                 <div class="columns-1 md:columns-2 lg:columns-3">
                                     @foreach($arts as $art2)
                                         @if($art->year === $art2->year)

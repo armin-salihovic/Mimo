@@ -318,6 +318,7 @@
         function init() {
             setActiveItemIndex();
             preload(currentIndex);
+            scrollLock();
             opened = true;
         }
 

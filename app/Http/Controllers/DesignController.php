@@ -23,11 +23,20 @@ class DesignController extends Controller
     {
         $designs = $this->repository->all();
 
-        $this->settings = SettingService::getSettings('design.page');
+//        $this->settings = SettingService::getSettings('design.page');
 
         return view('design', [
             'designs' => $designs,
             'meta' => $this->getMetadata()
         ]);
+    }
+
+    public function show($slug)
+    {
+        $design = $this->repository->forSlug($slug);
+
+        if (!$design) abort(404);
+
+        return view('design-details', compact('design'));
     }
 }

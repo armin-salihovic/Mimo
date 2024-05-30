@@ -1,11 +1,11 @@
 <x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks" :meta="$meta">
     <x-slot name="gallery">
-        <div class="flex flex-col lg:flex-row">
-            <div class="w-full px-4 md:pl-6 lg:pr-0 lg:pl-6 lg:w-1/4 pb-6 lg:pb-0 flex justify-center lg:justify-start">
+        <div class="flex flex-col">
+            <div class="w-full px-6 text-center mb-24">
                 <h2 class="text-2xl lg:text-5xl">Selected Paintings</h2>
             </div>
-            <div class="w-full lg:w-3/4">
-                <div class="px-4 lg:pl-3 lg:pr-6 mb-4 h-full">
+            <div class="w-full">
+                <div class="px-6 mb-4 h-full">
                     <div id="gallery" class="columns-1 md:columns-2 lg:columns-3">
                         @foreach($arts as $art)
                             <a class="gallery-item"

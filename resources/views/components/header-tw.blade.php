@@ -52,18 +52,18 @@ $links = [
 
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div x-data="{ open: false }" id="nav-desktop" class="relative bg-white mb-5 sticky top-0 z-20 border-b-2 border-gray-100 transition ease-in-out duration-300 delay-200">
-    <div class="mx-auto container px-4 sm:px-6">
+<div x-data="{ open: false }" id="nav-desktop" class="relative bg-white sticky top-0 z-20 border-b-2 border-gray-100 transition ease-in-out duration-300 delay-200">
+    <div class="mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="{{ route('home') }}">
                     <span class="sr-only">Your Company</span>
-                    <span class="h-8 w-auto sm:h-10 text-xl text-slate-900 logo">MIMO</span>
+                    <span class="h-8 w-auto sm:h-10 text-xl text-neutral-900 logo">MIMO</span>
 {{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">--}}
                 </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
-                <button @click="open = ! open" id="mob-menu" type="button" class="inline-flex items-center justify-center bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                <button @click="open = ! open" id="mob-menu" type="button" class="inline-flex items-center justify-center bg-white p-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-950 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                     <span class="sr-only">Open menu</span>
                     <!-- Heroicon name: outline/bars-3 -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -73,10 +73,10 @@ $links = [
             </div>
             <nav class="hidden space-x-10 md:flex">
                 @foreach($links as $link)
-                    <a href="{{ route($link['route']) }}" class="text-sm uppercase font-medium text-black-500 hover:underline {{ Route::is($link['route']) ? 'underline' : '' }}">{{ $link['name'] }}</a>
+                    <a href="{{ route($link['route']) }}" class="text-sm uppercase font-medium text-neutral-900 hover:underline {{ Route::is($link['route']) ? 'underline' : '' }}">{{ $link['name'] }}</a>
                 @endforeach
             </nav>
-            <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 text-neutral-900">
 {{--                <a href="#">--}}
 {{--                    <i class="fa fa-facebook-official text-xl mr-3" aria-hidden="true"></i>--}}
 {{--                </a>--}}
