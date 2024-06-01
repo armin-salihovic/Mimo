@@ -11,7 +11,7 @@
         </style>
     @endpush
 
-    <h1 class="max-w-7xl mx-auto uppercase text-3xl title pb-10 mb-10 text-center mt-10">Latest News</h1>
+        <x-page-title title="News" />
 
     @foreach($news as $newsPost)
         <x-news-box :news="$newsPost" />

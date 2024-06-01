@@ -6,12 +6,7 @@
     @endif
 
     <div class="mx-auto">
-        <div class="py-24">
-            <div class=" mx-auto">
-                <h1 class="px-4 text-3xl sm:text-4xl lg:text-7xl md:my-24 uppercase text-center text-neutral-900 font-bold tracking-wider">
-                    Art</h1>
-            </div>
-        </div>
+        <x-page-title title="Art" />
         <div class="w-full flex justify-center">
             <div class="px-4 text-lg md:text-3xl flex gap-4 lg:gap-16 mb-12 lg:mb-24">
                 @foreach($artLinks as $link)

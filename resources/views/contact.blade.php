@@ -8,21 +8,16 @@
 
 <x-main-layout :meta="$meta">
     <div class="mx-auto">
-        <div class="py-24">
-            <div class=" mx-auto  w-1/3">
-                <h1 class="px-4 text-3xl sm:text-4xl lg:text-7xl md:my-24 uppercase text-center text-neutral-900 font-bold tracking-wider">Contact</h1>
-            </div>
-        </div>
+        <x-page-title title="Contact" />
 
         <div class="flex flex-col lg:flex-row lg:gap-10 pb-48">
             <div class="w-full lg:w-8/12 order-2">
                 <div id="app"></div>
             </div>
             <div class="w-full lg:w-5/12 order-1 px-6 mb-12 text-lg md:text-xl">
-                <p class="mb-12 text-3xl">If you have any questions or comments for Mimo, please reach out via email, phone, WhatsApp or Viber, or send a message using the contact form.</p>
+                <p class="mb-12 text-3xl">If you have any questions or comments for Mimo, please reach out via email, or send a message using the contact form.</p>
                 <div class="flex flex-col text-3xl">
                     <a class="uppercase pb-1" href="mailto:info@mimo.ba">info@mimo.ba</a>
-                    <div>+49 1522 2378953</div>
                 </div>
             </div>
         </div>

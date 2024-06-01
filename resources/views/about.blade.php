@@ -14,13 +14,9 @@
 @endphp
 
 <x-main-layout :meta="$meta">
-    <div class="mx-auto">
-        <div class="py-24">
-            <div class=" mx-auto">
-                <h1 class="px-4 text-3xl sm:text-4xl lg:text-7xl md:my-24 uppercase text-center text-neutral-900 font-bold tracking-wider">Emir Salihovic Mimo</h1>
-            </div>
-        </div>
-        <div class="mb-24 text-3xl px-6">
+        <x-page-title title="Emir Salihovic Mimo" />
+
+        <div class="mb-24 text-lg leading-8 lg:text-3xl px-6 lg:leading-10 lg:px-64">
             <p class="text-dark mb-10">Born 1960 in Sarajevo, Bosnia and Herzegovina. Graduated Architecture in 1984. Major works include the monument and memorial centre atop the locality Žuč (currently under construction) in Sarajevo and mosques in Jablanica and Kakanj. Various private home designs have also encompassed interior and furniture design. Pursuits in the fine arts have led to several regional exhibitions in abstract painting. Professor at the Academy of Fine Arts in Sarajevo.</p>
             <p class="text-dark mb-5">This page is dedicated to the various artistic and architectural works and concepts undertaken by Emir Salihović Mimo.</p>
         </div>

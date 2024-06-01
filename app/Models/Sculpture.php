@@ -52,6 +52,18 @@ class Sculpture extends Model implements Sortable
                     'ratio' => 16 / 9,
                 ],
             ],
+            'index' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 21 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 1,
+                ],
+            ],
         ],
     ];
 

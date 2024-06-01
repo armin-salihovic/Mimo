@@ -59,17 +59,14 @@
 
 <x-main-layout :meta="$meta">
     <div class="mx-auto px-6">
-        <div class="py-24">
-            <div class=" mx-auto">
-                <h1 class="px-4 text-3xl sm:text-4xl lg:text-7xl md:my-36 uppercase text-center text-neutral-900 font-bold tracking-wider">
-                    Architecture</h1>
-            </div>
-        </div>
+
+        <x-page-title title="Architecture" />
+
 {{--        <div class="flex justify-center">--}}
 {{--            <h1 class="text-2xl my-12 sm:text-4xl lg:text-5xl md:my-24 uppercase">Architecture</h1>--}}
 {{--        </div>--}}
 {{--        <div class="flex flex-col-reverse md:flex-row gap-24 pb-24 ">--}}
-        <div class="md:px-16 lg:px-24">
+        <div class="">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-16 lg:gap-24">
                 @foreach($architectures as $architecture)
                     <x-architecture-listbox :item="$architecture" />

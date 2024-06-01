@@ -1,3 +1,3 @@
-<div class="">
-    <div class="mb-8 text-lg">{!! $block->input('text') !!}</div>
+<div class="mb-4">
+    <div class="text-xl leading-7 lg:leading-10">{!! $block->input('text') !!}</div>
 </div>
