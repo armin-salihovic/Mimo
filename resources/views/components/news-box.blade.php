@@ -1,16 +1,20 @@
-<div class="px-6">
-    <div class="max-w-5xl m-auto flex gap-6 border-b pb-9 mb-9">
-        <figure class="w-2/4 sm:w-1/4">
-            <a href="{{ route('news.show', $news->slug) }}">
-                <img src="{{ $news->image('cover') }}" alt="{{ $news->imageAltText('cover') }}">
-            </a>
-        </figure>
-        <div class="w-2/4 sm:w-3/4">
-            <a href="{{ route('news.show', $news->slug) }}">
-                <h2 class="text-base sm:text-2xl md:text-3xl leading-4 mb-3">{{ $news->title }}</h2>
-            </a>
-            <p class="text-sm md:text-base text-neutral-500 mb-3 hidden sm:block">{{ $news->description }}</p>
-            <time class="font-mono uppercase text-xs md:text-sm text-red-500 font-bold">{{ $news->getDate() }}</time>
+<div class="pb-10 md:pb-8">
+    <a href="{{ route('news.show', $news->slug) }}">
+        <div class="flex flex-row gap-4">
+            <div class="w-1/4 md:w-2/5 lg:mr-16">
+                <img class="hidden md:block" src="{{ $news->image('cover') }}" alt="{{ $news->imageAltText('cover') }}">
+                <img class="md:hidden" src="{{ $news->image('cover', 'mobile') }}" alt="{{ $news->imageAltText('cover') }}">
+            </div>
+            <div class="w-3/4 md:w-3/5">
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl md:pb-8">{{ $news->title }}</h2>
+                        <h3 class="text-lg md:text-xl lg:text-2xl text-gray-700 hidden sm:block">{{ $news->description }}</h3>
+                    </div>
+                    <time class="font-mono uppercase text-xs md:text-sm text-gray-700 font-bold">{{ $news->getDate() }}</time>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </a>
 </div>

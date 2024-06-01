@@ -13,9 +13,11 @@
 
         <x-page-title title="News" />
 
-    @foreach($news as $newsPost)
-        <x-news-box :news="$newsPost" />
-    @endforeach
+        <div class="px-4 sm:px-6 mb-16">
+            @foreach($news as $newsPost)
+                <x-news-box :news="$newsPost" />
+            @endforeach
+        </div>
 
 </x-main-layout>
 
