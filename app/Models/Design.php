@@ -48,7 +48,13 @@ class Design extends Model implements Sortable
             'default' => [
                 [
                     'name' => 'default',
-                    'ratio' => 2/3,
+                    'ratio' => 4 / 5,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 1,
                 ],
             ],
         ],

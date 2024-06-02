@@ -24,7 +24,7 @@ class CreateDesignsTables extends Migration
         });
 
         Schema::create('design_slugs', function (Blueprint $table) {
-            createDefaultSlugsTableFields($table, 'designs');
+            createDefaultSlugsTableFields($table, 'design');
         });
 
 
