@@ -44,56 +44,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function registerEvents() {
     document.getElementById('name').addEventListener('input', function (event) {
-        console.log('name is here')
         emailData.name = event.target.value;
         validateName();
         renderNameErrors();
     });
 
     document.getElementById('email').addEventListener('input', function (event) {
-        console.log('email is here')
         emailData.email = event.target.value;
         renderEmailErrors();
     });
 
     document.getElementById('subject').addEventListener('input', function (event) {
-        console.log('subject is here')
         emailData.subject = event.target.value;
         validateSubject();
         renderSubjectErrors()
     });
 
     document.getElementById('message').addEventListener('input', function (event) {
-        console.log('message is here')
         emailData.message = event.target.value;
         validateMessage();
         renderMessageErrors()
     });
 
     document.getElementById('submit').addEventListener('click', function (event) {
-        console.log('here');
-        sendEmail();
-        checkForErrors();
-        renderApp();
+        sendEmail().then(r => {
+            checkForErrors();
+            renderApp();
+        });
+
     });
 
     document.getElementById('name').addEventListener('focus', function() {
-        console.log('focused')
     });
 
     document.getElementById('email').addEventListener('focus', function() {
-        console.log('focused')
     });
 
     document.getElementById('subject').addEventListener('focus', function() {
-        console.log('focused')
     });
 
     document.getElementById('message').addEventListener('focus', function() {
-        console.log('focused')
     });
 }
-
 
 const renderNameErrors = () => validations.name.errors ? `<small class="text-red-500">${ validations.name.message }</small>` : ``;
 const renderEmailErrors = () => validations.email.errors ? `<small class="text-red-500">${ validations.email.message }</small>` : ``;
@@ -113,7 +105,6 @@ function setFields() {
 }
 
 function renderApp() {
-    console.log('rendered')
     const appElement = document.getElementById('app');
 
     appElement.innerHTML = `
@@ -121,6 +112,7 @@ function renderApp() {
             <div class="mb-10 3xl:mb-12 4xl:mb-20 w-full flex flex-col sm:flex-row">
                 <div class="flex flex-col w-full sm:w-1/2 mb-10 sm:mb-0 sm:pr-5 3xl:pr-7 4xl:pr-10">
                     <input id="name" class="${validations.name.errors ? 'border-red-500' : 'border-black focus:border-green-400'} py-2 3xl:py-2.5 4xl:py-4 border-b text-gray-600 placeholder-gray-400 outline-none" id="name" type="text" placeholder="Name">
+                    ${renderNameErrors()}
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 sm:pl-5 3xl:pl-7 4xl:pl-10">
                     <input id="email" class="${validations.email.errors ? 'border-red-500' : 'border-black focus:border-green-400'} py-2 3xl:py-2.5 4xl:py-4 border-b text-gray-600 placeholder-gray-400 outline-none" id="email" type="email" placeholder="Email">
@@ -191,29 +183,42 @@ function validateMessage() {
 }
 
 function closeMessageBox() {
-    const messageBoxElement = document.getElementById('message-box');
-    messageBoxElement.style.display = 'none';
+    const messageBoxElement = document.getElementById('msgBox');
+    messageBoxElement.classList.remove('message-box__opened');
 }
 
-function sendEmail() {
-    console.log(validations.name)
-    console.log(emailData);
+async function sendEmail() {
     submitted = true;
 
     if (validateForm() || sending) return;
 
     sending = true;
 
-    // Your fetch logic goes here
+    sending = false;
+    submitted = false;
 
-    // Simulating async operation
-    setTimeout(() => {
-        sending = false;
-        submitted = false;
-        openMessageBox('success', 'Message Sent!', ['Thanks for reaching out!', 'I\'ll get back to you as soon as possible! :)']);
-        clearEmailData();
-        renderApp(); // Re-render the app after successful submission
-    }, 2000);
+    try {
+        const response = await fetch('http://mimo.test/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(emailData)
+        });
+
+        if (response.ok) {
+            openMessageBox('success', 'Message Sent!', ['Thanks for reaching out!', 'We\'ll get back to you as soon as possible!']);
+            clearEmailData();
+            renderApp();
+        } else {
+            openMessageBox('fail', 'Unexpected Server Error', ['Oops... This is embarrassing... :(', `Please email me directly at <a class="underline" target="_blank" rel="noreferrer" href="mailto:info@mimo.ba}">info@mimo.ba</a>`]);
+            renderApp();
+        }
+
+    } catch (error) {
+        openMessageBox('fail', 'Unexpected Server Error', ['Oops... This is embarrassing... :(', `Please email me directly at <a class="underline" target="_blank" rel="noreferrer" href="mailto:info@mimo.ba}">info@mimo.ba</a>`]);
+        renderApp();
+    }
 }
 
 const formHasErrors = () => validations.name.errors || validations.subject.errors || validations.message.errors || validations.email.errors;
@@ -236,6 +241,54 @@ function validateEmail() {
         validations.email.errors = true;
         validations.email.message = 'Email is required';
     } else if (!emailInput.value.match(emailRegex)) {
+        validations.email.message = 'Please enter a valid email';
         validations.email.errors = true;
+    } else {
+        validations.email.errors = false;
     }
 }
+
+function clearEmailData() {
+    emailData.name = '';
+    emailData.email = '';
+    emailData.subject = '';
+    emailData.message = '';
+
+    validations.name.errors = false;
+    validations.email.errors = false;
+    validations.subject.errors = false;
+    validations.message.errors = false;
+}
+
+function openMessageBox(type, title, messages) {
+    var msgBox = document.getElementById('msgBox');
+    var msgBoxTitle = document.getElementById('msgBoxTitle');
+    var msgBoxMsgs = document.getElementById('msgBoxMsgs');
+    msgBox.classList.add('message-box__opened');
+
+    if (type === 'success') {
+        msgBox.classList.add('bg-green-800');
+    } else {
+        msgBox.classList.add('bg-red-800');
+    }
+
+    msgBoxTitle.innerHTML = title;
+
+    var messagesString = '';
+    for (const message of messages) {
+        messagesString += `<p class="text-white text-base md:text-lg 3xl:text-2xl 4xl:text-3xl">${message}</p>`;
+
+    }
+    msgBoxMsgs.innerHTML = messagesString;
+}
+
+// protected
+
+var emailAddressEl = document.getElementById('email-address')
+emailAddressEl.innerHTML = `<a class="pb-1" href="mailto:info@mimo.ba">info@mimo.ba</a>`;
+
+var contactPage = document.getElementById('contactPage')
+contactPage.addEventListener('click', (el) => {
+    closeMessageBox();
+})
+

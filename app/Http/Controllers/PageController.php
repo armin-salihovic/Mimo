@@ -65,20 +65,12 @@ class PageController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'message' => 'required',
-            'city' => 'required',
         ]);
-
-        if($request->input('city') != 5) {
-            return redirect()->route('contact')->with([
-                'success' => false,
-                'botSuccess' => false,
-            ]);
-        }
 
         Mail::to(['info@mimo.ba'])
             ->bcc(['armin.salihovic@live.com'])
             ->send(new MessageSent($request));
 
-        return redirect()->back();
+        return response()->json('OK!');
     }
 }
