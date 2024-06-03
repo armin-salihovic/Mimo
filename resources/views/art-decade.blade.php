@@ -20,7 +20,7 @@
                                         @if($art->year === $art2->year)
                                             <a class="gallery-item"
                                                href="{{ $art2->image('image', 'free') }}"
-                                               title="some title"
+                                               title="{{ $art2->imageAltText('image') }}"
                                                data-year="{{ $art2->year }}"
                                                data-width="{{ $art2->width }}"
                                                data-height="{{ $art2->height }}"

@@ -49,6 +49,12 @@ class Architecture extends Model implements Sortable
                     'ratio' => 0,
                 ],
             ],
+            'wide' => [
+                [
+                    'name' => 'wide',
+                    'ratio' => 21 / 9,
+                ],
+            ],
         ],
         'images' => [
             'default' => [
