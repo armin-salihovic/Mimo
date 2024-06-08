@@ -92,7 +92,7 @@ class Architecture extends Model implements Sortable
                 'alt' => $this->imageAltText($role, $media),
                 'caption' => $this->imageCaption($role, $media),
                 'video' => $this->imageVideo($role, $media),
-                'lqip'  => $this->lowQualityImagePlaceholder($role, $crop)
+                'lqip'  => $media->pivot->lqip_data,
             ];
         }
 

@@ -15,4 +15,5 @@
     alt="{{ $alt ?? '' }}"
     loading="lazy"
     src="{{ $img }}"
+    style="{{ $aspectRatio ? 'aspect-ratio: ' . $aspectRatio : '' }};"
 />

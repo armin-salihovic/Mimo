@@ -7,21 +7,28 @@
 @endphp
 
 <x-main-layout :meta="$meta">
-    <x-lightbox />
+    <x-lightbox/>
+    <x-lazy-loading />
     <div class="mx-auto">
         <x-page-title :title="$design->title"/>
-        <div class="px-4 sm:px-6">
-            <div id="gallery" class="columns-1 md:columns-2 lg:columns-3">
+        <div class="py-24 px-4 sm:px-6">
+            <div id="gallery" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 @foreach($design->imagesAsArrays('images') as $image)
-                    <a class="gallery-item"
-                       href="{{ $image['src'] }}"
-                       title="{{ $image['alt'] }}"
+                    <div
+                        class="blur-div"
+                        style="background-image: url({{ $image['lqip'] }})"
                     >
-                        <x-image-art class="mb-4"
-                                     :alt="$image['alt']"
-                                     :img="$image['src']"
-                        />
-                    </a>
+                        <a class="gallery-item"
+                           href="{{ $image['src'] }}"
+                           title="{{ $image['alt'] }}"
+                        >
+                            <x-image-art class=""
+                                         :alt="$image['alt']"
+                                         :img="$image['src']"
+                                         aspect-ratio="16/9"
+                            />
+                        </a>
+                    </div>
                 @endforeach
             </div>
         </div>
