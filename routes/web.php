@@ -29,6 +29,7 @@ Route::get('art/1980s/{serial_number}', [ArtController::class, 'art1980show']);
 Route::get('art/{serial_number}', [ArtController::class, 'show'])->name('art.show');
 
 Route::get('sculpture', [SculptureController::class, 'index'])->name('sculpture');
+Route::get('sculpture/{slug}', [SculptureController::class, 'show'])->name('sculpture.show');
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'sendEmail'])->name('contact.send');
 Route::get('designs', [DesignController::class, 'index'])->name('designs');

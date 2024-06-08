@@ -31,4 +31,13 @@ class SculptureController extends Controller
             'meta' => $this->getMetadata()
         ]);
     }
+
+    public function show($slug)
+    {
+        $sculpture = $this->repository->forSlug($slug);
+
+        if (!$sculpture) abort(404);
+
+        return view('sculpture-details', compact('sculpture'));
+    }
 }
