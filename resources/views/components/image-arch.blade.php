@@ -8,4 +8,5 @@
 {{--    "--}}
 {{--    sizes="(min-width: 768px) 400px, 100vw"--}}
     src="{{ $img }}"
+    style="aspect-ratio: {{ $aspectRatio }};"
 />

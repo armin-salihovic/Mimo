@@ -6,11 +6,11 @@
             background-position: center;
         }
 
-        .blur-div.loaded > img {
+        .blur-div.loaded img {
             opacity: 1;
         }
 
-        .blur-div > img {
+        .blur-div img {
             opacity: 0;
             transition: opacity 200ms ease-in-out;
         }
