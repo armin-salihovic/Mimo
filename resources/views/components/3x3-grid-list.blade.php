@@ -14,44 +14,8 @@
     $collection = $items;
 @endphp
 
-@push('styles')
-
-    <style>
-        .blur-div {
-            background-size: cover;
-            background-position: center;
-        }
-
-        .blur-div.loaded > img {
-            opacity: 1;
-        }
-
-        .blur-div > img {
-            opacity: 0;
-            transition: opacity 200ms ease-in-out;
-        }
-    </style>
-@endpush
-
-@push('scripts')
-    <script>
-        const blurDivs = document.querySelectorAll('.blur-div')
-        blurDivs.forEach(div => {
-            const img = div.querySelector('img')
-
-            function loaded() {
-                div.classList.add('loaded')
-            }
-
-            if (img.complete) {
-                loaded();
-            } else {
-                img.addEventListener('load', loaded)
-            }
-        })
-    </script>
-@endpush
 <x-scroll-to-top />
+<x-lazy-loading />
 <div class="py-24 px-4 sm:px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24 {{ $remainder !== 0 ? 'mb-24' : ''}}">
         @foreach($collection as $item)

@@ -13,7 +13,7 @@
 
         <x-page-title title="News" />
 
-        <div class="px-4 sm:px-6 mb-16">
+        <div class="py-24 px-4 sm:px-6">
             @foreach($news as $newsPost)
                 <x-news-box :news="$newsPost" />
             @endforeach
