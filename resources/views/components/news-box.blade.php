@@ -2,8 +2,32 @@
     <a href="{{ route('news.show', $news->slug) }}">
         <div class="flex flex-row gap-4">
             <div class="w-1/4 md:w-2/5 lg:mr-16">
-                <img class="hidden md:block" src="{{ $news->image('cover') }}" alt="{{ $news->imageAltText('cover') }}">
-                <img class="md:hidden" src="{{ $news->image('cover', 'mobile') }}" alt="{{ $news->imageAltText('cover') }}">
+                <div  class="md:hidden">
+                    <div
+                        class="blur-div"
+                        style="background-image: url({{ $news->lowQualityImagePlaceholder('cover', 'mobile') }})"
+                    >
+                        <img
+                            src="{{ $news->image('cover', 'mobile') }}"
+                            alt="{{ $news->imageAltText('cover') }}"
+                            loading="lazy"
+                            style="aspect-ratio: 1/1;"
+                        >
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div
+                        class="blur-div"
+                        style="background-image: url({{ $news->lowQualityImagePlaceholder('cover')  }})"
+                    >
+                        <img
+                            src="{{ $news->image('cover') }}"
+                            alt="{{ $news->imageAltText('cover') }}"
+                            loading="lazy"
+                            style="aspect-ratio: 16/9;"
+                        >
+                    </div>
+                </div>
             </div>
             <div class="w-3/4 md:w-3/5">
                 <div class="flex flex-col justify-between h-full">

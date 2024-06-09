@@ -1,4 +1,5 @@
 <x-main-layout :meta="$meta">
+    <x-lazy-loading />
     @push('styles')
         <style>
             .title {
