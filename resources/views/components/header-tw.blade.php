@@ -80,7 +80,7 @@ $links = [
 {{--                <a href="#">--}}
 {{--                    <i class="fa fa-facebook-official text-xl mr-3" aria-hidden="true"></i>--}}
 {{--                </a>--}}
-                <a href="#">
+                <a href="https://www.instagram.com/mimoarchitect/">
                     <i class="fa fa-instagram text-xl" aria-hidden="true"></i>
                 </a>
             </div>
