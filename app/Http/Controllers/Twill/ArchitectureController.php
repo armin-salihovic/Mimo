@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Twill;
 use A17\Twill\Models\Contracts\TwillModelContract;
 use A17\Twill\Services\Forms\Fields\BlockEditor;
 use A17\Twill\Services\Forms\Fields\Medias;
+use A17\Twill\Services\Forms\Fields\Wysiwyg;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
@@ -34,6 +35,14 @@ class ArchitectureController extends BaseModuleController
         );
 
         $form->add(
+            Wysiwyg::make()
+                ->name('intro')
+                ->toolbarOptions([ [ 'header' => [1, 2, false] ], 'ordered', 'bullet' ])
+                ->maxLength(600)
+                ->note('Intro')
+        );
+
+        $form->add(
             Input::make()->name('status')->label('Status')
         );
 
@@ -55,10 +64,10 @@ class ArchitectureController extends BaseModuleController
                 ->label(twillTrans('Cover image'))
         );
 
-        $form->add(
-            BlockEditor::make()
-                ->blocks(['app-image', 'arch-paragraph'])
-        );
+//        $form->add(
+//            BlockEditor::make()
+//                ->blocks(['app-image', 'arch-paragraph'])
+//        );
 
         $form->add(
             Medias::make()

@@ -17,7 +17,7 @@ class CreateArchitecturesTables extends Migration
 
             // your generated model and form include a description field, to get you started, but feel free to get rid of it if you don't need it
             $table->text('description')->nullable();
-
+            $table->text('intro')->nullable();
             $table->string('status')->nullable();
             $table->string('location')->nullable();
             $table->integer('start_year')->nullable();

@@ -23,6 +23,7 @@ class Architecture extends Model implements Sortable
         'end_year',
         'status',
         'position',
+        'intro',
     ];
 
     public $slugAttributes = [

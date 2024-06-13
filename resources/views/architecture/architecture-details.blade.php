@@ -88,6 +88,14 @@
     </script>
 @endpush
 
+@push('styles')
+    <style>
+        .custom-wysiwyg > p {
+            margin-bottom: 1rem;
+        }
+    </style>
+@endpush
+
 <x-main-layout :meta="$meta">
     <x-lazy-loading />
     <x-scroll-to-top />
@@ -110,7 +118,7 @@
                             @endif
                         </h2>
                     </div>
-                    <div>{!! $architecture->renderBlocks() !!}</div>
+                    <div class="text-xl leading-7 lg:leading-10 custom-wysiwyg">{!! $architecture->intro !!}</div>
                 </div>
             </div>
             <div id="arch-gallery" class="w-full pb-32 lg:pb-64">
