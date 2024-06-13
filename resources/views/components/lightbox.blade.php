@@ -78,6 +78,27 @@
         return element;
     }
 
+    function setTitlePosition() {
+        const containerHeight = activeItem.querySelectorAll('.lightbox-item-container')[0].offsetHeight;
+        const [width, height] = getContainedSize(activeItem.getElementsByTagName('img')[0]);
+
+        const titlePx = (containerHeight + height)/2 + 10;
+        const title = activeItem.getElementsByTagName('h3')[0];
+
+        title.style.top = titlePx + 'px';
+    }
+
+    function getContainedSize(img) {
+        const ratio = img.naturalWidth/img.naturalHeight
+        let width = img.height*ratio
+        let height = img.height
+        if (width > img.width) {
+            width = img.width
+            height = img.width/ratio
+        }
+        return [width, height]
+    }
+
 
     const lightboxItems = document.querySelectorAll(".lightbox-item");
 
@@ -111,7 +132,16 @@
         preload(index);
         scrollLock();
         activeItem = item;
+
+        const imgElement = item.getElementsByTagName('img')[0];
+        imgElement.onload = () => {
+            setTitlePosition();
+        };
     }
+
+    onresize = () => {
+        setTitlePosition();
+    };
 
     // creates a figure which wraps the image
     function createFigure(child) {

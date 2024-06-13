@@ -175,8 +175,7 @@
   }
 
   .lightbox-item-title {
-      font-size: 14px;
-      bottom: -30px;
+      font-size: 16px !important;
   }
 }
 
@@ -191,7 +190,6 @@
 
 .lightbox-item-title {
     position: absolute;
-    bottom: -40px;
     font-size: 24px;
     z-index: 100;
 }
