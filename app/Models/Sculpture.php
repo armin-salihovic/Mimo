@@ -49,7 +49,7 @@ class Sculpture extends Model implements Sortable
             'default' => [
                 [
                     'name' => 'default',
-                    'ratio' => 16 / 9,
+                    'ratio' => 4 / 5, // 16/9 for the other design
                 ],
             ],
             'index' => [
