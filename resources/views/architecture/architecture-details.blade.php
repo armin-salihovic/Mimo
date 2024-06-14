@@ -129,8 +129,8 @@
                                 class="blur-div"
                                 style="background-image: url({{ $img['mobile']['lqip'] }})"
                             >
-                                <a class="gallery-item" href="{{ $img['default']['src'] }}" title="{{$img['mobile']['alt']}}">
-                                    <x-image-arch class="" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']" aspect-ratio="1/1" />
+                                <a class="gallery-item h-full" href="{{ $img['free']['src'] }}" title="{{$img['mobile']['alt']}}">
+                                    <x-image-arch class="h-full" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']" aspect-ratio="1/1" />
                                 </a>
                             </div>
                         @endforeach

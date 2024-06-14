@@ -14,6 +14,10 @@ use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
 class ArchitectureController extends BaseModuleController
 {
+    protected $indexOptions = [
+        'reorder' => true,
+    ];
+
     protected $moduleName = 'architectures';
     /**
      * This method can be used to enable/disable defaults. See setUpController in the docs for available options.
