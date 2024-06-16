@@ -24,7 +24,7 @@ class ArchitectureController extends Controller
 
         $this->settings = SettingService::getSettings('architecture.page');
 
-        return view('architecture.index', [
+        return view('pages.architecture.index', [
             'architectures' => $architectures,
             'meta' => $this->getMetadata()
         ]);
@@ -36,6 +36,6 @@ class ArchitectureController extends Controller
 
         if (!$architecture) abort(404);
 
-        return view('architecture.architecture-details', compact('architecture'));
+        return view('pages.architecture.details', compact('architecture'));
     }
 }

@@ -28,26 +28,16 @@ class PageController extends Controller
 
         $this->settings = SettingService::getSettings("home.page");
 
-        return view('index-experimental', [
+        return view('pages.home', [
             'arts' => $arts,
             'meta' => $this->getMetadata(false),
             'featuredImages' => $this->settings['children'] ?? [],
         ]);
     }
 
-    public function sculpture()
-    {
-        return view('sculpture');
-    }
-
-    public function design()
-    {
-        return view('design');
-    }
-
     public function contact()
     {
-        return view('contact', [
+        return view('pages.contact', [
             'success' => false,
             'botSuccess' => true,
         ]);
@@ -55,7 +45,7 @@ class PageController extends Controller
 
     public function about()
     {
-        return view('about');
+        return view('pages.about');
     }
 
     public function sendEmail(Request $request)

@@ -25,7 +25,7 @@ class DesignController extends Controller
 
 //        $this->settings = SettingService::getSettings('design.page');
 
-        return view('design', [
+        return view('pages.design.index', [
             'designs' => $designs,
             'meta' => $this->getMetadata()
         ]);
@@ -37,6 +37,6 @@ class DesignController extends Controller
 
         if (!$design) abort(404);
 
-        return view('design-details', compact('design'));
+        return view('pages.design.details', compact('design'));
     }
 }

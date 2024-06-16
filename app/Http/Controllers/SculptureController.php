@@ -26,7 +26,7 @@ class SculptureController extends Controller
 
         $this->settings = SettingService::getSettings('sculpture.page');
 
-        return view('sculpture', [
+        return view('pages.sculpture.index', [
             'sculptures' => $sculptures,
             'meta' => $this->getMetadata()
         ]);
@@ -38,6 +38,6 @@ class SculptureController extends Controller
 
         if (!$sculpture) abort(404);
 
-        return view('sculpture-details', compact('sculpture'));
+        return view('pages.sculpture.details', compact('sculpture'));
     }
 }

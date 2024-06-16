@@ -92,7 +92,7 @@ class ArtController extends Controller
 
     private function artView($arts, $art = null)
     {
-        return view('art', [
+        return view('pages.art.index', [
             'arts' => $arts,
             'artLinks' => $this->getArtLinks(),
             'art' => $art,
@@ -112,7 +112,7 @@ class ArtController extends Controller
 
         $arts = $this->repository->{$artMethod}();
 
-        return view('art-decade', [
+        return view('pages.art.decade', [
             'arts' => $arts,
             'artLinks' => $this->getArtLinks(),
             'art' => $art,

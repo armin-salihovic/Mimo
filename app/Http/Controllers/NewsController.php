@@ -22,7 +22,7 @@ class NewsController extends Controller
     {
         $this->settings = SettingService::getSettings('news.page');
 
-        return view('news', [
+        return view('pages.news.index', [
             'news' => $this->repository->allNews(),
             'meta' => $this->getMetadata(),
         ]);
@@ -34,7 +34,7 @@ class NewsController extends Controller
 
         if (!$news) abort(404);
 
-        return view('news-details', [
+        return view('pages.news.details', [
             'news' => $news,
             'meta' => [
                 'title' => $news->title . ' | Emir Salihović Mimo',
