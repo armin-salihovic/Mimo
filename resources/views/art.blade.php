@@ -2,7 +2,7 @@
     <x-slot name="gallery">
         <div class="flex flex-col">
             <div class="w-full px-6 text-center mb-24">
-                <h2 class="text-2xl lg:text-5xl">Selected Paintings</h2>
+                <h2 class="text-2xl lg:text-5xl">Selected Works</h2>
             </div>
             <div class="w-full">
                 <div class="px-6 mb-4 h-full">

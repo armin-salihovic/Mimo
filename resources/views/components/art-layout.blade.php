@@ -1,4 +1,6 @@
 <x-main-layout :meta="$meta">
+    <x-scroll-to-top />
+
     @if(isset($art))
         <x-lightbox-art-active-first :art="$art" :arts="$arts"/>
     @else
@@ -6,13 +8,19 @@
     @endif
 
     <div class="mx-auto">
-        <x-page-title title="Art" />
-        <div class="w-full flex justify-center">
-            <div class="px-4 text-lg md:text-3xl flex gap-4 lg:gap-16 mb-12 lg:mb-24">
-                @foreach($artLinks as $link)
-                    <a href="{{ $link['route'] }}">{{ $link['name'] }}</a>
-                @endforeach
-            </div>
+        <x-page-title
+            title="Art"
+            :subtitle="Route::currentRouteName() !== 'art' ? $artLinks[Route::currentRouteName()] : null"
+        />
+
+        <div class="hidden w-full lg:flex justify-center px-4 text-lg md:text-3xl flex gap-4 lg:gap-16 mb-12 lg:mb-24">
+            @foreach($artLinks as $route => $name)
+                <a href="{{ route($route) }}" class="{{ Route::currentRouteName() === $route ? 'underline underline-offset-8' : '' }}">{{ $name }}</a>
+            @endforeach
+        </div>
+        <div class="w-full flex justify-center lg:hidden px-4 text-lg md:text-3xl flex gap-4 lg:gap-16 mb-12 lg:mb-24">
+            <a href="{{ route('art') }}" class="{{ Route::currentRouteName() === 'art' ? 'underline underline-offset-8' : '' }}">{{ $artLinks['art'] }}</a>
+            <x-art-decade-choose :art-links="$artLinks" :exclude="['art']" default="Decades"/>
         </div>
         {{ $gallery }}
     </div>

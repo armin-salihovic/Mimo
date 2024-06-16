@@ -52,7 +52,7 @@ $links = [
 
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div x-data="{ open: false }" id="nav-desktop" class="relative bg-white sticky top-0 z-20 border-b-2 border-gray-100 transition ease-in-out duration-300 delay-200">
+<div x-data="{ open: false }" id="nav-desktop" class="relative bg-white sticky top-0 z-[60] border-b-2 border-gray-100 transition ease-in-out duration-300 delay-200">
     <div class="mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">

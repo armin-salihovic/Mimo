@@ -123,11 +123,18 @@ class ArtController extends Controller
     private function getArtLinks(): array
     {
         return [
-            ['route' => route('art.2020'), 'name' => '2020s'],
-            ['route' => route('art.2010'), 'name' => '2010s'],
-            ['route' => route('art.2000'), 'name' => '2000s'],
-            ['route' => route('art.1990'), 'name' => '1990s'],
-            ['route' => route('art.1980'), 'name' => '1980s'],
+            'art' => 'Selected Works',
+            'art.2020' => '2020s',
+            'art.2010' => '2010s',
+            'art.2000' => '2000s',
+            'art.1990' => '1990s',
+            'art.1980' => '1980s',
+//            ['route' => 'art', 'name' => 'Selected Works'],
+//            ['route' => 'art.2020', 'name' => '2020s'],
+//            ['route' => 'art.2010', 'name' => '2010s'],
+//            ['route' => 'art.2000', 'name' => '2000s'],
+//            ['route' => 'art.1990', 'name' => '1990s'],
+//            ['route' => 'art.1980', 'name' => '1980s'],
         ];
     }
 }

@@ -22,19 +22,21 @@
             background: white;
             position: fixed;
             bottom: 16px;
-            right:32px;
-            width:50px;
-            height:50px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            border: #999 1px solid;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:32px;
-            color:#1f1f1f;
+            font-size: 32px;
+            color: #1f1f1f;
             text-decoration: none;
-            opacity:0;
+            opacity: 0;
             pointer-events: none;
             transition: all .4s;
+            z-index: 40;
         }
 
         .to-top.active {
