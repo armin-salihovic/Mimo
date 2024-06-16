@@ -1,7 +1,7 @@
 <div id="lightbox" class="lightbox {{ isset($activeFirst) && $activeFirst ? 'active-first' : '' }}">
     <div class="h-full flex flex-col md:flex-row">
         <div class="w-full md:w-1/3 relative flex items-center">
-            <div class="absolute z-10 pt-96 md:pt-0">
+            <div class="absolute z-[200] pt-96 md:pt-0">
                 <div class="text-xl md:text-xl flex gap-24 md:mb-0 md:top-[268%]">
                     <div class="flex flex-col">
                         <h3>Year</h3>
@@ -346,7 +346,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            z-index: 50;
+            z-index: 200;
             padding: calc(3vw + 20px) 2vw 3vw;
         }
 
@@ -452,7 +452,7 @@
             height: 100%;
             pointer-events: none;
             box-sizing: border-box;
-            z-index: 50;
+            z-index: 200;
         }
 
         .lightbox-controls__previous,
@@ -460,7 +460,7 @@
             width: 50%;
             display: flex;
             align-items: center;
-            z-index: 50;
+            z-index: 200;
             pointer-events: auto;
         }
 
@@ -486,7 +486,7 @@
             display: flex;
             justify-content: space-between;
             padding: 1.5vw 1.5vw 0;
-            z-index: 70;
+            z-index: 200;
         }
 
         .lightbox-close {

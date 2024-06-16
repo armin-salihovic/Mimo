@@ -2,8 +2,6 @@
     $seen = [];
 @endphp
 <x-art-layout :arts="$arts" :art="$art ?? null" :art-links="$artLinks" :meta="$meta">
-    <x-lazy-loading />
-
     <x-slot name="gallery">
         <div id="gallery">
             @foreach($arts as $art)
@@ -19,10 +17,7 @@
                                 <div class="columns-1 md:columns-2 lg:columns-3">
                                     @foreach($arts as $art2)
                                         @if($art->year === $art2->year)
-                                            <div
-                                                class="blur-div"
-                                                style="background-image: url({{ $art2->lowQualityImagePlaceholder('image', 'free') }})"
-                                            >
+                                            <x-lazy-loading-wrapper :lqip="$art2->lowQualityImagePlaceholder('image', 'free')">
                                                 <a class="gallery-item"
                                                    href="{{ $art2->image('image', 'free') }}"
                                                    title="{{ $art2->imageAltText('image') }}"
@@ -35,10 +30,10 @@
                                                     <x-image-art class="mb-4"
                                                                  :alt="$art2->imageAltText('image')"
                                                                  :img="$art2->image('image', 'free')"
-                                                                 aspect-ratio="{{$art2->imageAsArray('image', 'free')['width']}}/{{$art2->imageAsArray('image', 'free')['height']}}"
+                                                                 :aspect-ratio="$art2->getAspectRatioFormatted('image', 'free')"
                                                     />
                                                 </a>
-                                            </div>
+                                            </x-lazy-loading-wrapper>
                                         @endif
                                     @endforeach
                                 </div>

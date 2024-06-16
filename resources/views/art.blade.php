@@ -8,20 +8,23 @@
                 <div class="px-6 mb-4 h-full">
                     <div id="gallery" class="columns-1 md:columns-2 lg:columns-3">
                         @foreach($arts as $art)
-                            <a class="gallery-item"
-                               href="{{ $art->image('image', 'free') }}"
-                               title="some title"
-                               data-year="{{ $art->year }}"
-                               data-width="{{ $art->width }}"
-                               data-height="{{ $art->height }}"
-                               data-status="{{ $art->status }}"
-                               data-sn="{{ $art->serial_number }}"
-                            >
-                                <x-image-art class="mb-4"
-                                             :alt="$art->imageAltText('image')"
-                                             :img="$art->image('image', 'free')"
-                                />
-                            </a>
+                            <x-lazy-loading-wrapper :lqip="$art->lowQualityImagePlaceholder('image', 'free')">
+                                <a class="gallery-item"
+                                   href="{{ $art->image('image', 'free') }}"
+                                   title="some title"
+                                   data-year="{{ $art->year }}"
+                                   data-width="{{ $art->width }}"
+                                   data-height="{{ $art->height }}"
+                                   data-status="{{ $art->status }}"
+                                   data-sn="{{ $art->serial_number }}"
+                                >
+                                    <x-image-art class="mb-4"
+                                                 :alt="$art->imageAltText('image')"
+                                                 :img="$art->image('image', 'free')"
+                                                 :aspect-ratio="$art->getAspectRatioFormatted('image', 'free')"
+                                    />
+                                </a>
+                            </x-lazy-loading-wrapper>
                         @endforeach
                     </div>
                 </div>

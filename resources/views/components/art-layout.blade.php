@@ -1,6 +1,6 @@
 <x-main-layout :meta="$meta">
     <x-scroll-to-top />
-
+    <x-lazy-loading />
     @if(isset($art))
         <x-lightbox-art-active-first :art="$art" :arts="$arts"/>
     @else

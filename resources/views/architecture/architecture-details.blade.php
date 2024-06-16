@@ -97,8 +97,8 @@
 @endpush
 
 <x-main-layout :meta="$meta">
-    <x-lazy-loading />
-    <x-scroll-to-top />
+    <x-lazy-loading/>
+    <x-scroll-to-top/>
     <div class="mx-auto px-6">
         <div class="">
             <div class="py-32 lg:py-64" id="intro-content">
@@ -125,19 +125,16 @@
                 <div class="mb-4">
                     <div id="gallery" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         @foreach($architecture->imagesAsArraysWithCrops('images') as $img)
-                            <div
-                                class="blur-div"
-                                style="background-image: url({{ $img['mobile']['lqip'] }})"
-                            >
+                            <x-lazy-loading-wrapper :lqip="$img['mobile']['lqip']">
                                 <a class="gallery-item h-full" href="{{ $img['free']['src'] }}" title="{{$img['mobile']['alt']}}">
-                                    <x-image-arch class="h-full" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']" aspect-ratio="1/1" />
+                                    <x-image-arch class="h-full" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']" aspect-ratio="1/1"/>
                                 </a>
-                            </div>
+                            </x-lazy-loading-wrapper>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <x-lightbox />
+        <x-lightbox/>
     </div>
 </x-main-layout>

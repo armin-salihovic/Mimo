@@ -59,4 +59,11 @@ class Art extends Model implements Sortable
             ],
         ],
     ];
+
+    public function getAspectRatioFormatted(string $role, string $crop): string
+    {
+        $width = $this->imageAsArray('image', 'free')['width'];
+        $height = $this->imageAsArray('image', 'free')['height'];
+        return "$width/$height";
+    }
 }

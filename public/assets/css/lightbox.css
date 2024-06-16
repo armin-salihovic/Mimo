@@ -12,7 +12,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 50;
+  z-index: 200;
   padding: calc(3vw + 20px) 3vw;
 }
 
@@ -118,7 +118,7 @@
   height: 100%;
   pointer-events: none;
   box-sizing: border-box;
-  z-index: 50;
+  z-index: 200;
 }
 
 .lightbox-controls__previous,
@@ -126,7 +126,7 @@
   width: 50%;
   display: flex;
   align-items: center;
-  z-index: 50;
+  z-index: 200;
   pointer-events: auto;
 }
 
@@ -152,7 +152,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 1.5vw 1.5vw 0;
-  z-index: 70;
+  z-index: 200;
 }
 
 .lightbox-close {
@@ -191,5 +191,5 @@
 .lightbox-item-title {
     position: absolute;
     font-size: 24px;
-    z-index: 100;
+    z-index: 200;
 }

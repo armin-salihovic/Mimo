@@ -8,16 +8,13 @@
 
 <x-main-layout :meta="$meta">
     <x-lightbox/>
-    <x-lazy-loading />
+    <x-lazy-loading/>
     <div class="mx-auto">
         <x-page-title :title="$design->title"/>
         <div class="py-24 px-4 sm:px-6">
             <div id="gallery" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 @foreach($design->imagesAsArrays('images') as $image)
-                    <div
-                        class="blur-div"
-                        style="background-image: url({{ $image['lqip'] }})"
-                    >
+                    <x-lazy-loading-wrapper :lqip="$image['lqip']">
                         <a class="gallery-item"
                            href="{{ $image['src'] }}"
                            title="{{ $image['alt'] }}"
@@ -28,7 +25,7 @@
                                          aspect-ratio="16/9"
                             />
                         </a>
-                    </div>
+                    </x-lazy-loading-wrapper>
                 @endforeach
             </div>
         </div>
