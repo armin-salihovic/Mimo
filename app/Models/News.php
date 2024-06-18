@@ -48,4 +48,10 @@ class News extends Model implements Sortable
         return date('F d, Y', strtotime($this->publish_start_date));
     }
 
+    public function getAspectRatioFormatted(string $role, string $crop = 'default'): string
+    {
+        $width = $this->imageAsArray($role, $crop)['width'];
+        $height = $this->imageAsArray($role, $crop)['height'];
+        return "$width/$height";
+    }
 }

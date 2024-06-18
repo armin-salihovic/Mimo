@@ -1,4 +1,6 @@
 <x-main-layout :meta="$meta">
+    <x-lazy-loading />
+    <x-scroll-to-top />
     @push('styles')
         <style>
             .title {
@@ -26,14 +28,20 @@
     </div>
 
     <div class="max-w-6xl mx-auto">
-        <img src="{{ $news->image('cover') }}" alt="{{ $news->imageAltText('cover') }}">
+        <x-lazy-loading-wrapper :lqip="$news->lowQualityImagePlaceholder('cover')">
+            <img
+                src="{{ $news->image('cover') }}"
+                alt="{{ $news->imageAltText('cover') }}"
+                loading="lazy"
+                style="aspect-ratio: {{ $news->getAspectRatioFormatted('cover') }};"
+            >
+        </x-lazy-loading-wrapper>
         <figcaption class="text-xs text-neutral-500 font-mono mt-2 px-6 lg:px-0">Getty; The Atlantic</figcaption>
     </div>
 
     <div class="mt-14 uppercase font-mono px-6 md:px-0 text-sm max-w-2xl mx-auto mb-9">
         <div class="border-b pb-9 flex justify-between">
             <time>{{ $news->getDate() }}</time>
-{{--            <time>September 14, 2022, 6 AM ET</time>--}}
             <x-share-dropdown></x-share-dropdown>
         </div>
     </div>

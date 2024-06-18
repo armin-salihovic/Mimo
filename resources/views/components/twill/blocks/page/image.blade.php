@@ -1,7 +1,6 @@
 @php
-
     $width = $block->imageAsArray('image', $block->input('orientation'))['width'];
-            $height = $block->imageAsArray('image', $block->input('orientation'))['height'];
+    $height = $block->imageAsArray('image', $block->input('orientation'))['height'];
 @endphp
 
 <div class="w-full mb-16 px-6 lg:px-96">
