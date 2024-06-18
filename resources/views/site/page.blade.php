@@ -1,12 +1,13 @@
-@php
-    $meta = [
-       "title" => "",
-       "description" => "",
-       "thumbnail" => "",
-    ];
-@endphp
+{{
 
-<x-main-layout :meta="$meta">
-    {!! $item->renderBlocks() !!}
-</x-main-layout>
+view('pages.page', [
+    'page' => $item,
+    'meta' => [
+        'title' => $item->meta_title,
+        'description' => $item->description,
+        'thumbnail' => null,
+    ],
+])
+
+}}
 

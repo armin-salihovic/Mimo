@@ -80,7 +80,7 @@ class PageController extends Controller
             'meta' => [
                 'title' => $page->meta_title,
                 'description' => $page->description,
-                'thumbnail' => null,
+                'thumbnail' => $page->image('thumbnail') . '&width=750',
             ],
         ]);
     }
