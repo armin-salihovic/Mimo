@@ -47,6 +47,10 @@ class AppServiceProvider extends ServiceProvider
             NavigationLink::make()->forModule('sculptures')
         );
 
+        TwillNavigation::addLink(
+            NavigationLink::make()->forModule('pages')
+        );
+
 //        Navigation for settings
 
         TwillAppSettings::registerSettingsGroup(

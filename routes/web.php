@@ -8,7 +8,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SculptureController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'homepage'])->name('home');
 Route::get('art', [ArtController::class, 'index'])->name('art');
 
 Route::get('art/2020s', [ArtController::class, 'art2020'])->name('art.2020');

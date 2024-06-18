@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\MessageSent;
 use App\Repositories\ArtRepository;
+use App\Repositories\PageRepository;
 use App\Services\SettingService;
 use App\Traits\Seo;
 use Illuminate\Http\Request;
@@ -14,17 +15,21 @@ class PageController extends Controller
 {
     use Seo;
 
-    private ArtRepository $repository;
+    private ArtRepository $artRepository;
+    private PageRepository $pageRepository;
     private $settings;
 
-    public function __construct(ArtRepository $repository)
-    {
-        $this->repository = $repository;
+    public function __construct(
+        ArtRepository $artRepository,
+        PageRepository $pageRepository
+    ) {
+        $this->artRepository = $artRepository;
+        $this->pageRepository = $pageRepository;
     }
 
-    public function index()
+    public function homepage()
     {
-        $arts = $this->repository->getFeaturedArt();
+        $arts = $this->artRepository->getFeaturedArt();
 
         $this->settings = SettingService::getSettings("home.page");
 
@@ -45,7 +50,7 @@ class PageController extends Controller
 
     public function about()
     {
-        return view('pages.about');
+        return $this->show('about');
     }
 
     public function sendEmail(Request $request)
@@ -62,5 +67,21 @@ class PageController extends Controller
             ->send(new MessageSent($request));
 
         return response()->json('OK!');
+    }
+
+    function show($slug)
+    {
+        $page = $this->pageRepository->forSlug($slug);
+
+        if ($page === null) abort(404);
+
+        return view('pages.page', [
+            'page' => $page,
+            'meta' => [
+                'title' => $page->meta_title,
+                'description' => $page->description,
+                'thumbnail' => null,
+            ],
+        ]);
     }
 }
