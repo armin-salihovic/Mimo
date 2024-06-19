@@ -34,6 +34,10 @@ class NewsController extends BaseModuleController
         );
 
         $form->add(
+            Input::make()->name('content_kicker')->label('Content Kicker')
+        );
+
+        $form->add(
             Medias::make()
                 ->name('cover')
                 ->label(twillTrans('Cover image'))

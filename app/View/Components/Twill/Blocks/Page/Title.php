@@ -18,7 +18,7 @@ class Title extends TwillBlockComponent
     public function getForm(): Form
     {
         return Form::make([
-            Input::make()->name('title'),
+            Input::make()->name('title')->translatable(),
         ]);
     }
 

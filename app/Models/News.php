@@ -20,6 +20,7 @@ class News extends Model implements Sortable
         'description',
         'position',
         'publish_start_date',
+        'content_kicker',
     ];
 
     public $slugAttributes = [

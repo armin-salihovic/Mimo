@@ -22,7 +22,7 @@
     @endpush
 
     <div class="mt-14 max-w-2xl mx-auto px-6 md:px-0">
-        <p class="text-sm uppercase pb-5 font-mono text-red-500">Analysis</p>
+        <p class="text-sm uppercase pb-5 font-mono text-red-500">{{ $news->content_kicker }}</p>
         <h1 class=" paragraph mb-3 title">{{ $news->title }}</h1>
         <p class="paragraph md:text-2xl text-xl mb-16">{{ $news->description }}</p>
     </div>

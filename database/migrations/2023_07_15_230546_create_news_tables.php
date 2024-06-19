@@ -17,6 +17,7 @@ class CreateNewsTables extends Migration
 
             // your generated model and form include a description field, to get you started, but feel free to get rid of it if you don't need it
             $table->text('description')->nullable();
+            $table->string('content_kicker', 200)->nullable();
 
             $table->integer('position')->unsigned()->nullable();
 
