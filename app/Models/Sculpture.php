@@ -3,21 +3,30 @@
 namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
 class Sculpture extends Model implements Sortable
 {
-    use HasBlocks, HasSlug, HasMedias, HasPosition;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'description',
         'position',
+        'year'
+    ];
+
+    public $translatedAttributes = [
+        'title',
+        'description',
+        'active',
     ];
 
     public $slugAttributes = [
@@ -25,27 +34,7 @@ class Sculpture extends Model implements Sortable
     ];
 
     public $mediasParams = [
-        'images' => [
-            'free' => [
-                [
-                    'name' => 'free',
-                    'ratio' => 0,
-                ],
-            ],
-            'default' => [
-                [
-                    'name' => 'default',
-                    'ratio' => 16 / 9,
-                ],
-            ],
-            'mobile' => [
-                [
-                    'name' => 'mobile',
-                    'ratio' => 1,
-                ],
-            ],
-        ],
-        'thumbnail' => [
+        'cover' => [
             'default' => [
                 [
                     'name' => 'default',
@@ -62,6 +51,26 @@ class Sculpture extends Model implements Sortable
                 [
                     'name' => 'default',
                     'ratio' => 1,
+                ],
+            ],
+        ],
+        'images' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 1,
+                ],
+            ],
+            'free' => [
+                [
+                    'name' => 'free',
+                    'ratio' => 0,
                 ],
             ],
         ],
@@ -131,4 +140,5 @@ class Sculpture extends Model implements Sortable
 
         return $arrays;
     }
+
 }

@@ -9,6 +9,7 @@
 <x-main-layout :meta="$meta">
     <x-lightbox/>
     <x-lazy-loading />
+    <x-scroll-to-top />
     <div class="mx-auto">
         <x-page-title :title="$sculpture->title"/>
         <div class="py-24 px-4 sm:px-6">

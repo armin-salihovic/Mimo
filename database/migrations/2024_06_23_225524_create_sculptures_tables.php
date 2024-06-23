@@ -12,27 +12,29 @@ class CreateSculpturesTables extends Migration
             // this will create an id, a "published" column, and soft delete and timestamps columns
             createDefaultTableFields($table);
 
-            // feel free to modify the name of this column, but title is supported by default (you would need to specify the name of the column Twill should consider as your "title" column in your module controller if you change it)
-            $table->string('title', 200)->nullable();
-
-            // your generated model and form include a description field, to get you started, but feel free to get rid of it if you don't need it
-            $table->text('description')->nullable();
-
             $table->integer('position')->unsigned()->nullable();
+            $table->string('year')->nullable();
+        });
 
-            $table->integer('year')->nullable();
+        Schema::create('sculpture_translations', function (Blueprint $table) {
+            createDefaultTranslationsTableFields($table, 'sculpture');
+            $table->string('title', 200)->nullable();
+            $table->text('description')->nullable();
         });
 
         Schema::create('sculpture_slugs', function (Blueprint $table) {
             createDefaultSlugsTableFields($table, 'sculpture');
         });
 
-
+        Schema::create('sculpture_revisions', function (Blueprint $table) {
+            createDefaultRevisionsTableFields($table, 'sculpture');
+        });
     }
 
     public function down()
     {
-
+        Schema::dropIfExists('sculpture_revisions');
+        Schema::dropIfExists('sculpture_translations');
         Schema::dropIfExists('sculpture_slugs');
         Schema::dropIfExists('sculptures');
     }

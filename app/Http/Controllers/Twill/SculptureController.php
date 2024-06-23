@@ -26,22 +26,20 @@ class SculptureController extends BaseModuleController
      */
     public function getForm(TwillModelContract $model): Form
     {
-
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('title')->label('Title')
+            Input::make()->name('description')->label('Description')->translatable()
         );
 
-
         $form->add(
-            Input::make()->name('description')->label('Description')
+            Input::make()->name('year')->label('Year')
         );
 
         $form->add(
             Medias::make()
-                ->name('thumbnail')
-                ->label(twillTrans('Thumbnail'))
+                ->name('cover')
+                ->label(twillTrans('Cover'))
         );
 
         $form->add(
