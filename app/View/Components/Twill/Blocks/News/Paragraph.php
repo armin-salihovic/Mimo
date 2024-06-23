@@ -18,7 +18,7 @@ class Paragraph extends TwillBlockComponent
     public function getForm(): Form
     {
         return Form::make([
-            Wysiwyg::make()->name('text')
+            Wysiwyg::make()->name('text')->translatable()
         ]);
     }
 }

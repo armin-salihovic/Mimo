@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
@@ -12,14 +13,20 @@ use A17\Twill\Models\Model;
 
 class News extends Model implements Sortable
 {
-    use HasBlocks, HasSlug, HasMedias, HasRevisions, HasPosition;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'description',
         'position',
-        'publish_start_date',
+        'content_kicker',
+    ];
+
+    public $translatedAttributes = [
+        'title',
+        'description',
+        'active',
         'content_kicker',
     ];
 

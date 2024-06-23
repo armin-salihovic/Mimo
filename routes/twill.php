@@ -11,3 +11,5 @@ TwillRoutes::module('art');
 TwillRoutes::module('designs');
 TwillRoutes::module('sculptures');
 TwillRoutes::module('pages');
+
+TwillRoutes::module('news');

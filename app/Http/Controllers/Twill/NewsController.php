@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
-use A17\Twill\Services\Forms\Fields\BlockEditor;
-use A17\Twill\Services\Forms\Fields\Medias;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
+use A17\Twill\Services\Forms\Fields\Medias;
+use A17\Twill\Services\Forms\Fields\BlockEditor;
 
 class NewsController extends BaseModuleController
 {
@@ -30,18 +30,17 @@ class NewsController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('description')->label('Description')
+            Input::make()->name('description')->label('Description')->translatable()
         );
 
         $form->add(
-            Input::make()->name('content_kicker')->label('Content Kicker')
+            Input::make()->name('content_kicker')->label('Content Kicker')->translatable()
         );
 
         $form->add(
             Medias::make()
                 ->name('cover')
                 ->label(twillTrans('Cover image'))
-                ->max(5)
         );
 
         $form->add(
