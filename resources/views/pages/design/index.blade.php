@@ -4,8 +4,8 @@
         <x-3x3-grid-list
             :items="$designs"
             route="designs.show"
-            subtitle-name="title"
-            thumbnail-role="thumbnail"
+            subtitle-name="year"
+            thumbnail-role="cover"
         />
     </div>
 </x-main-layout>

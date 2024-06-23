@@ -54,5 +54,11 @@ return [
         'allowed_extensions' => ['svg', 'jpg', 'gif', 'png', 'jpeg'],
         'init_alt_text_from_filename' => true,
         'translated_form_fields' => false,
+        'translatable_metadatas_fields' => [
+            'alt_text',
+            'caption',
+            'credit',
+            'title',
+        ],
     ],
 ];

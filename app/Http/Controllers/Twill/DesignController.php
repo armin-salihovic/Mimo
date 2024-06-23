@@ -2,23 +2,17 @@
 
 namespace App\Http\Controllers\Twill;
 
-use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 use A17\Twill\Models\Contracts\TwillModelContract;
-use A17\Twill\Services\Forms\Fields\Checkbox;
-use A17\Twill\Services\Forms\Fields\Input;
-use A17\Twill\Services\Forms\Fields\Medias;
-use A17\Twill\Services\Forms\Form;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
+use A17\Twill\Services\Forms\Fields\Input;
+use A17\Twill\Services\Forms\Form;
+use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
+use A17\Twill\Services\Forms\Fields\Medias;
 
 class DesignController extends BaseModuleController
 {
     protected $moduleName = 'designs';
-
-    protected $indexOptions = [
-        'reorder' => true,
-    ];
-
     /**
      * This method can be used to enable/disable defaults. See setUpController in the docs for available options.
      */
@@ -35,18 +29,17 @@ class DesignController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('title')->label('Title')
+            Input::make()->name('description')->label('Description')->translatable()
         );
 
-
         $form->add(
-            Input::make()->name('description')->label('Description')
+            Input::make()->name('year')->label('Year')
         );
 
         $form->add(
             Medias::make()
-                ->name('thumbnail')
-                ->label(twillTrans('Thumbnail'))
+                ->name('cover')
+                ->label(twillTrans('Cover'))
         );
 
         $form->add(

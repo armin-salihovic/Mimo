@@ -2,21 +2,31 @@
 
 namespace App\Models;
 
+use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
 class Design extends Model implements Sortable
 {
-    use HasSlug, HasMedias, HasPosition;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'description',
         'position',
+        'year'
+    ];
+
+    public $translatedAttributes = [
+        'title',
+        'description',
+        'active',
     ];
 
     public $slugAttributes = [
@@ -24,13 +34,21 @@ class Design extends Model implements Sortable
     ];
 
     public $mediasParams = [
-        'images' => [
-            'free' => [
+        'cover' => [
+            'default' => [
                 [
-                    'name' => 'free',
-                    'ratio' => 0,
+                    'name' => 'default',
+                    'ratio' => 4 / 5,
                 ],
             ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 1,
+                ],
+            ],
+        ],
+        'images' => [
             'default' => [
                 [
                     'name' => 'default',
@@ -43,18 +61,10 @@ class Design extends Model implements Sortable
                     'ratio' => 1,
                 ],
             ],
-        ],
-        'thumbnail' => [
-            'default' => [
+            'free' => [
                 [
-                    'name' => 'default',
-                    'ratio' => 4 / 5,
-                ],
-            ],
-            'mobile' => [
-                [
-                    'name' => 'mobile',
-                    'ratio' => 1,
+                    'name' => 'free',
+                    'ratio' => 0,
                 ],
             ],
         ],
@@ -124,5 +134,4 @@ class Design extends Model implements Sortable
 
         return $arrays;
     }
-
 }
