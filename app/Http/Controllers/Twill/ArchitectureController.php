@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
-use A17\Twill\Services\Forms\Fields\BlockEditor;
-use A17\Twill\Services\Forms\Fields\Medias;
-use A17\Twill\Services\Forms\Fields\Wysiwyg;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
+use A17\Twill\Services\Forms\Fields\Medias;
+use A17\Twill\Services\Forms\Fields\Wysiwyg;
 
 class ArchitectureController extends BaseModuleController
 {
+    protected $moduleName = 'architectures';
+
     protected $indexOptions = [
         'reorder' => true,
     ];
 
-    protected $moduleName = 'architectures';
     /**
      * This method can be used to enable/disable defaults. See setUpController in the docs for available options.
      */
@@ -35,7 +35,7 @@ class ArchitectureController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('description')->label('Description')
+            Input::make()->name('description')->label('Description')->translatable()
         );
 
         $form->add(
@@ -44,10 +44,11 @@ class ArchitectureController extends BaseModuleController
                 ->toolbarOptions([ [ 'header' => [1, 2, false] ], 'ordered', 'bullet' ])
                 ->maxLength(600)
                 ->note('Intro')
+                ->translatable()
         );
 
         $form->add(
-            Input::make()->name('status')->label('Status')
+            Input::make()->name('status')->label('Status')->translatable()
         );
 
         $form->add(
@@ -59,7 +60,7 @@ class ArchitectureController extends BaseModuleController
         );
 
         $form->add(
-            Input::make()->name('location')->label('Location')
+            Input::make()->name('location')->label('Location')->translatable()
         );
 
         $form->add(
@@ -67,11 +68,6 @@ class ArchitectureController extends BaseModuleController
                 ->name('cover')
                 ->label(twillTrans('Cover image'))
         );
-
-//        $form->add(
-//            BlockEditor::make()
-//                ->blocks(['app-image', 'arch-paragraph'])
-//        );
 
         $form->add(
             Medias::make()

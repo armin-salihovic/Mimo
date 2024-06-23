@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
@@ -12,18 +13,29 @@ use A17\Twill\Models\Model;
 
 class Architecture extends Model implements Sortable
 {
-    use HasBlocks, HasSlug, HasMedias, HasRevisions, HasPosition;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'description',
+        'position',
+        'intro',
+        'status',
         'location',
         'start_year',
         'end_year',
-        'status',
-        'position',
+    ];
+
+    public $translatedAttributes = [
+        'title',
+        'description',
+        'active',
         'intro',
+        'status',
+        'location',
+        'start_year',
+        'end_year',
     ];
 
     public $slugAttributes = [
