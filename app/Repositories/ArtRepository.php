@@ -92,7 +92,10 @@ class ArtRepository extends ModuleRepository
 
     public function prepareFieldsBeforeSave(TwillModelContract $object, array $fields): array
     {
-        $fields['serial_number'] = self::generateSerialNumber($fields);
+        if (self::isSerialNumberDirty($object, $fields)) {
+            $fields['serial_number'] = self::generateSerialNumber($fields);
+        }
+
         return parent::prepareFieldsBeforeSave($object, $fields);
     }
 
@@ -128,6 +131,14 @@ class ArtRepository extends ModuleRepository
         }
         $n = strrev($n);
         return (int)$n;
+    }
+
+    private static function isSerialNumberDirty(Art $art, $fields)
+    {
+        return
+            $art->year !== $fields['year'] ||
+            $art->width !== (int)$fields['width'] ||
+            $art->height !== (int)$fields['height'];
     }
 
 }

@@ -35,6 +35,7 @@ class ArtController extends BaseModuleController
     protected function setUpController(): void
     {
         $this->disablePermalink();
+        $this->setTitleColumnKey('serial_number');
     }
 
     /**
@@ -118,7 +119,6 @@ class ArtController extends BaseModuleController
                 ->label('Width')
                 ->onChange('formatPermalink'),
         ]);
-
     }
 
     protected function getIndexTableColumns(): TableColumns
@@ -175,12 +175,6 @@ class ArtController extends BaseModuleController
                 ->customRender(function (Art $model) {
                     return view('components.twill.is-featured', ['featured' => $model->featured])->render();
             })
-        );
-
-        $columns->add(
-            Text::make()
-                ->field('title')
-                ->title(twillTrans('Title'))
         );
 
         return $columns;
