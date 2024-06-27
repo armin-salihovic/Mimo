@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 
+use A17\Twill\Facades\TwillAppSettings;
 use App\Mail\MessageSent;
 use App\Repositories\ArtRepository;
 use App\Repositories\PageRepository;
-use App\Services\SettingService;
 use App\Traits\Seo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -17,7 +17,6 @@ class PageController extends Controller
 
     private ArtRepository $artRepository;
     private PageRepository $pageRepository;
-    private $settings;
 
     public function __construct(
         ArtRepository $artRepository,
@@ -29,14 +28,9 @@ class PageController extends Controller
 
     public function homepage()
     {
-        $arts = $this->artRepository->getFeaturedArt();
-
-        $this->settings = SettingService::getSettings("home.page");
-
         return view('pages.home', [
-            'arts' => $arts,
-            'meta' => $this->getMetadata(false),
-            'featuredImages' => $this->settings['children'] ?? [],
+            'meta' => $this->getMetadata('home', false),
+            'featuredImages' => TwillAppSettings::getGroupDataForSectionAndName('home','page')->children,
         ]);
     }
 

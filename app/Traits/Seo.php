@@ -2,56 +2,27 @@
 
 namespace App\Traits;
 
-use App\Services\SettingService;
+use A17\Twill\Facades\TwillAppSettings;
 
 trait Seo
 {
+    private ?string $title = null;
 
-    private string $title = '';
-    private string $description = '';
-    private string $thumbnail = '';
-
-    public function getTitle(): string
-    {
-        if ($this->title !== '') {
-            return $this->title;
-        } else if (isset(SettingService::getMetadata($this->settings)['title'])) {
-            return SettingService::getMetadata($this->settings)['title'];
-        }
-        return SettingService::getDefaultTitle();
-    }
-
-    public function getDescription(): string
-    {
-        if ($this->description !== '') {
-            return $this->description;
-        } else if (isset(SettingService::getMetadata($this->settings)['description'])) {
-            return SettingService::getMetadata($this->settings)['description'];
-        }
-        return SettingService::getDefaultDescription();
-    }
-
-    public function getThumbnail(): string
-    {
-        return SettingService::getThumbnail($this->settings);
-    }
-
-    public function setTitle($title = null): void
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
 
-    public function setDescription($description = null): void
+    public function getMetadata(string $group, $prefix = true): array
     {
-        $this->description = $description;
-    }
+        $title = $this->title ?? TwillAppSettings::getTranslated("{$group}.page.title");
+        $description = TwillAppSettings::getTranslated("{$group}.page.description");
+        $block = TwillAppSettings::getGroupDataForSectionAndName("{$group}", 'page');
 
-    public function getMetadata($prefix = true): array
-    {
         return [
-            'title' => $this->getTitle() . ($prefix ? ' | ' . SettingService::getDefaultTitle() : ''),
-            'description' => $this->getDescription(),
-            'thumbnail' => $this->getThumbnail(),
+            'title' => $title . ($prefix ? ' | ' . 'Emir Salihović Mimo' : ''),
+            'description' => $description,
+            'thumbnail' => $block->hasImage('thumbnail') ? $block->socialImage('thumbnail') : null,
         ];
     }
 }

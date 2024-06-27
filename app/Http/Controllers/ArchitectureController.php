@@ -3,15 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ArchitectureRepository;
-use App\Services\SettingService;
 use App\Traits\Seo;
 use Illuminate\Http\Request;
 
 class ArchitectureController extends Controller
 {
     use Seo;
-
-    private $settings;
 
     public function __construct(ArchitectureRepository $repository)
     {
@@ -22,11 +19,9 @@ class ArchitectureController extends Controller
     {
         $architectures = $this->repository->all();
 
-        $this->settings = SettingService::getSettings('architecture.page');
-
         return view('pages.architecture.index', [
             'architectures' => $architectures,
-            'meta' => $this->getMetadata()
+            'meta' => $this->getMetadata('architecture')
         ]);
     }
 

@@ -73,7 +73,7 @@ $links = [
             </div>
             <nav class="hidden space-x-10 md:flex">
                 @foreach($links as $link)
-                    <a href="{{ route($link['route']) }}" class="text-sm uppercase font-medium text-neutral-900 hover:underline {{ Route::is($link['route']) ? 'underline' : '' }}">{{ $link['name'] }}</a>
+                    <a href="{{ route($link['route']) }}" class="text-sm uppercase font-medium text-neutral-900 hover:underline {{ Route::is($link['route']) || request()->is($link['route'] . '/*') ? 'underline' : '' }}">{{ $link['name'] }}</a>
                 @endforeach
             </nav>
             <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 text-neutral-900">

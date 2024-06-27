@@ -30,7 +30,7 @@
         x-transition:leave-start="transform opacity-100 scale-100"
         x-transition:leave-end="transform opacity-0 scale-95"
         x-cloak
-        class="message-box px-5 py-6 sm:px-12 3xl:px-16 4xl:px-24 fixed bottom-0 left-0 mr-auto w-full z-50 bg-neutral-900">
+        class="decade-nav px-5 py-6 sm:px-12 3xl:px-16 4xl:px-24 fixed bottom-0 left-0 mr-auto w-full z-50 bg-neutral-900">
         <div class="flex grid grid-cols-6 gap-4 3xl:gap-5 4xl:gap-8 py-0 lg:py-3 3xl:py-4 4xl:py-6">
             <aside class="md:col-span-2 col-span-6 relative flex justify-end">
                 <h4 @click="closeWindow()"
@@ -46,11 +46,11 @@
             </div>
             <div class="md:col-span-3 col-span-6 mt-4 md:mt-0">
                 <div class="flex flex-col items-center justify-center gap-4">
-                    @foreach($artLinks as $route => $name)
-                        @if(!in_array($route, $exclude))
-                            <a href="{{ route($route) }}" class="text-white block px-4 py-2 {{ Route::currentRouteName() === $route ? 'underline underline-offset-8' : '' }}" role="menuitem"
+                    @foreach($artLinks as $route => $value)
+                        @if(!in_array($route, $exclude) && $value['show_nav'])
+                            <a href="{{ route($route) }}" class="text-white block px-4 py-2 {{ Route::is($route) || Route::is($value['route_detail'])  ? 'underline underline-offset-8' : '' }}" role="menuitem"
                                tabindex="-1"
-                               id="menu-item-0">{{ $name }}</a>
+                               id="menu-item-0">{{ $value['name'] }}</a>
                         @endif
                     @endforeach
                 </div>
@@ -59,24 +59,6 @@
     </div>
 </div>
 
-<script>
-    // function openWindow(open) {
-    //     scrollLock();
-    // }
-    //
-    // function closeWindow(open) {
-    //     scrollUnlock();
-    // }
-    //
-    // function scrollLock() {
-    //     document.body.classList.add('noscroll');
-    // }
-    //
-    // function scrollUnlock() {
-    //     document.body.classList.remove('noscroll');
-    // }
-</script>
-
 <style>
     .icon-cross {
         filter: invert(97%) sepia(0%) saturate(7%) hue-rotate(167deg) brightness(118%) contrast(100%);
@@ -84,18 +66,8 @@
         top: 6px;
     }
 
-    .message-box {
+    .decade-nav {
         height: calc(100% - 76px);
-        /*opacity: 0;*/
-        /*height: 0;*/
-        /*transition: transform 300ms ease, -webkit-transform 300ms ease;*/
-        /*transform: translateY(70px);*/
-    }
-
-    .message-box.message-box__opened {
-        /*opacity: 1;*/
-        /*height: unset;*/
-        /*transform: none;*/
     }
 
     .noscroll { overflow: hidden; }

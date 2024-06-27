@@ -54,10 +54,6 @@ class AppServiceProvider extends ServiceProvider
 //        Navigation for settings
 
         TwillAppSettings::registerSettingsGroup(
-            SettingsGroup::make()->name('setting')->label('Settings')
-        );
-
-        TwillAppSettings::registerSettingsGroup(
             SettingsGroup::make()->name('home')->label('Homepage')
         );
 

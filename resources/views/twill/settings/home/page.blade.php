@@ -9,12 +9,14 @@
     label="Title"
     :maxlength="100"
     :required="true"
+    :translated="true"
 />
 
 <x-twill::input
     name="description"
     label="Description"
     :required="true"
+    :translated="true"
 />
 
 <x-twill::medias

@@ -110,7 +110,7 @@
                     let slides = document.getElementsByClassName("mySlides");
 
                     for (let i = 0; i < slides.length; i++) {
-                        slides[i].classList.remove("active");
+                        slides[i].classList.remove("active", "z-50");
                     }
 
                     slideIndex++;
@@ -119,7 +119,7 @@
                         slideIndex = 1;
                     }
 
-                    slides[slideIndex - 1].classList.add("active");
+                    slides[slideIndex - 1].classList.add("active", "z-50");
                 }
 
                 setTimeout(showSlides, 3000); // Change slide every 3 seconds
@@ -172,11 +172,9 @@
                 </div>
                 <div class="w-full lg:w-1/2">
                         <div class="slideshow-container">
-                            @foreach($featuredImages as $art)
-
+                            @foreach($featuredImages as $featuredImage)
                             @php
-                                $img = $art['block']->image('home_featured_image');
-                                switch ($art['content']['featured_image_type']) {
+                                switch ($featuredImage->content['featured_image_type']) {
                                     case "Architecture":
                                         $route = route('architecture');
                                         break;
@@ -195,12 +193,12 @@
                             @endphp
                                 <a href="{{ $route }}">
                                     <div class="mySlides">
-                                        <img data-type="{{ $art['content']['featured_image_type'] }}"
-                                             src="{{ $img . '&width=768' }}"
-                                             alt="Slide {{ $art['block']->imageAltText('home_featured_image') }}"
+                                        <img data-type="{{ $featuredImage->content['featured_image_type'] }}"
+                                             src="{{ $featuredImage->image('home_featured_image') . '&width=768' }}"
+                                             alt="Slide {{ $featuredImage->imageAltText('home_featured_image') }}"
                                              srcset=""
                                         >
-                                        <div class="slideshow-overlay">{{ $art['content']['featured_image_type'] }}</div>
+                                        <div class="slideshow-overlay">{{ $featuredImage->content['featured_image_type'] }}</div>
                                     </div>
                                 </a>
                             @endforeach

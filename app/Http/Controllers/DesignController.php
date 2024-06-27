@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\ArchitectureRepository;
 use App\Repositories\DesignRepository;
-use App\Services\SettingService;
 use App\Traits\Seo;
 use Illuminate\Http\Request;
 
 class DesignController extends Controller
 {
     use Seo;
-
-    private $settings;
 
     public function __construct(DesignRepository $repository)
     {
@@ -23,11 +19,9 @@ class DesignController extends Controller
     {
         $designs = $this->repository->all();
 
-//        $this->settings = SettingService::getSettings('design.page');
-
         return view('pages.design.index', [
             'designs' => $designs,
-            'meta' => $this->getMetadata()
+            'meta' => $this->getMetadata('design')
         ]);
     }
 

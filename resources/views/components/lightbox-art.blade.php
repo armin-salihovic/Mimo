@@ -230,20 +230,6 @@
         }
 
         function setStatus(status) {
-            switch (status) {
-                case 1:
-                    status = "Available"
-                    break;
-                case 2:
-                    status = "Not available"
-                    break;
-                case 3:
-                    status = "Sold"
-                    break;
-                default:
-                    status = "Not Available"
-            }
-
             document.getElementById('art-status').innerHTML = status;
         }
 

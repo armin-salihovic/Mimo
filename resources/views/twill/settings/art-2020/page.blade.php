@@ -9,6 +9,7 @@
     label="Title"
     :maxlength="100"
     :required="true"
+    :translated="true"
 />
 
 <x-twill::input
@@ -16,6 +17,7 @@
     label="Description"
     :maxlength="100"
     :required="true"
+    :translated="true"
 />
 
 <x-twill::medias
