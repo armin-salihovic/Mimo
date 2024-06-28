@@ -82,8 +82,6 @@
 
         const activeFirst = lightbox.classList.contains('active-first');
 
-        const lightboxItems = document.querySelectorAll(".lightbox-item");
-
         // Logic
 
         [...gallery.getElementsByClassName('gallery-item')].forEach((child, index) => {
@@ -109,6 +107,8 @@
                 lightboxList.appendChild(figure);
             }
         });
+
+        const lightboxItems = document.querySelectorAll(".lightbox-item");
 
         // Controls event listeners
 
@@ -149,6 +149,7 @@
 
         function showImage(index, rewrite = true) {
             const item = lightboxItems[index];
+            console.log(lightboxItems);
             item.dataset.active = true;
             load(item);
             preload(index);
