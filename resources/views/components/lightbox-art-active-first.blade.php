@@ -20,12 +20,14 @@
                 data-width="{{$art->width}}"
                 data-status="{{$art->status}}"
                 data-sn="{{$art->serial_number}}"
+                style="background-image: url({{ $art->lowQualityImagePlaceholder('image', 'free') }})"
             ><img
                 class="lightbox-item-img"
                 data-src="{{ $art->image('image', 'free') }}"
                 alt=""
                 src="{{ $art->serial_number === $sn ? $art->image('image', 'free') : '' }}"
                 data-loaded="true"
+                style="aspect-ratio: {{ $art->getAspectRatioFormatted('image') }};"
             >
             <div class="lightbox-item-title">
                 <h3>{{ $art->size }}</h3>

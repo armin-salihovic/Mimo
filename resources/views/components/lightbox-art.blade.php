@@ -492,6 +492,9 @@
             /* todo: figure out the transition between slides */
             /* transition: opacity 400ms cubic-bezier(0.2, 0.6, 0.3, 1); */
             width:100%; /* check if this is okay */
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
         }
 
         .lightbox-item[data-active="true"] {
