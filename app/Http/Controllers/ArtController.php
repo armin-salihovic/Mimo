@@ -191,7 +191,7 @@ class ArtController extends Controller
             ArtStatus::AVAILABLE => "Available",
             ArtStatus::NOT_AVAILABLE => "Not Available",
             ArtStatus::SOLD => "Sold",
-            default => '',
+            default => 'No Information',
         };
     }
 
@@ -199,11 +199,13 @@ class ArtController extends Controller
     {
         $arts = $arts->map(function ($art) {
             $art['status'] = self::artStatusToName($art->status);
+            $art['size'] = $art->width . 'x' . $art->height . 'cm';
             return $art;
         });
 
         if ($art != null) {
             $art->status = self::artStatusToName($art->status);
+            $art['size'] = $art->width . 'x' . $art->height . 'cm';
         }
     }
 }

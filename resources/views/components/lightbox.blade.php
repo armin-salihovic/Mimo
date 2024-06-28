@@ -79,6 +79,8 @@
     }
 
     function setTitlePosition() {
+        if (activeItem === null) return;
+
         const containerHeight = activeItem.querySelectorAll('.lightbox-item-container')[0].offsetHeight;
         const [width, height] = getContainedSize(activeItem.getElementsByTagName('img')[0]);
 

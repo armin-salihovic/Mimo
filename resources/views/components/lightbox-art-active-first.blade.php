@@ -21,12 +21,16 @@
                 data-status="{{$art->status}}"
                 data-sn="{{$art->serial_number}}"
             ><img
-                    class="lightbox-item-img"
-                    data-src="{{ $art->image('image', 'free') }}"
-                    alt=""
-                    src="{{ $art->serial_number === $sn ? $art->image('image', 'free') : '' }}"
-                    data-loaded="true"
-                >
+                class="lightbox-item-img"
+                data-src="{{ $art->image('image', 'free') }}"
+                alt=""
+                src="{{ $art->serial_number === $sn ? $art->image('image', 'free') : '' }}"
+                data-loaded="true"
+            >
+            <div class="lightbox-item-title">
+                <h3>{{ $art->size }}</h3>
+                <h3>{{ $art->year }}</h3>
+            </div>
             </figure>
         @endforeach
     </x-slot>

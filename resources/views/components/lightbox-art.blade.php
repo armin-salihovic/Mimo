@@ -1,6 +1,6 @@
 <div id="lightbox" class="lightbox {{ isset($activeFirst) && $activeFirst ? 'active-first' : '' }}">
     <div class="h-full flex flex-col md:flex-row">
-        <div class="w-full md:w-1/3 relative flex items-center">
+        <div class="hidden md:flex md:w-1/3 relative items-center">
             <div class="absolute z-[200] pt-96 md:pt-0">
                 <div class="text-xl md:text-xl flex gap-24 md:mb-0 md:top-[268%]">
                     <div class="flex flex-col">
@@ -22,9 +22,9 @@
                 </div>
             </div>
         </div>
-        <div class="h-full w-full md:w-2/3 pt-[50%] md:pt-0">
+        <div class="h-full w-full md:w-2/3 md:pt-0">
             <div class="lightbox-background"></div>
-            <div class="lightbox-header">
+            <div class="lightbox-header hidden md:flex">
                 <h2 class="text-4xl md:text-5xl">MIMO</h2>
                 <button type="button" class="lightbox-close lightbox-controls__btn">
                     <img src="{{ asset('assets/img/icon-cross.svg') }}" alt="" />
@@ -32,6 +32,12 @@
             </div>
 
             <div class="lightbox-wrapper h-full">
+                <div class="md:hidden flex justify-between">
+                    <h2 class="text-4xl md:text-5xl">MIMO</h2>
+                    <button type="button" class="lightbox-close lightbox-controls__btn">
+                        <img src="{{ asset('assets/img/icon-cross.svg') }}" alt="" />
+                    </button>
+                </div>
                 <div class="lightbox-list">
                     {{ $lightboxList ?? '' }}
                 </div>
@@ -59,11 +65,14 @@
 @push('scripts')
     <script>
         "use strict";
+
+        // Variables
+
         const gallery = document.getElementById("gallery");
 
         const lightbox = document.getElementById("lightbox");
         const lightboxList = document.querySelector(".lightbox-list");
-        const lightboxCloseBtn = document.querySelector(".lightbox-close");
+        const lightboxCloseButtons = document.getElementsByClassName("lightbox-close");
         const controlsPrevious = document.querySelector(".lightbox-controls__previous");
         const controlsNext = document.querySelector(".lightbox-controls__next");
 
@@ -72,6 +81,10 @@
         let opened = false;
 
         const activeFirst = lightbox.classList.contains('active-first');
+
+        const lightboxItems = document.querySelectorAll(".lightbox-item");
+
+        // Logic
 
         [...gallery.getElementsByClassName('gallery-item')].forEach((child, index) => {
 
@@ -85,13 +98,17 @@
             if(!activeFirst) {
                 const figure = createFigure(child);
                 const img = createImg(child);
+                const titleContainer = createTitleContainer();
+                const size = createH3SizeElement(child);
+                const year = createH3YearElement(child);
+                titleContainer.appendChild(size);
+                titleContainer.appendChild(year);
                 figure.appendChild(img);
+                figure.appendChild(titleContainer);
 
                 lightboxList.appendChild(figure);
             }
         });
-
-        const lightboxItems = document.querySelectorAll(".lightbox-item");
 
         // Controls event listeners
 
@@ -110,9 +127,11 @@
             document.title = 'Art ' + lastSegment;
         }
 
-        lightboxCloseBtn.addEventListener("click", () => {
-            closeLightbox();
-        });
+        for (const lightboxCloseBtn of lightboxCloseButtons) {
+            lightboxCloseBtn.addEventListener("click", () => {
+                closeLightbox();
+            });
+        }
 
         controlsPrevious.addEventListener("click", () => {
             if (currentIndex - 1 < 0) return;
@@ -138,7 +157,16 @@
             activeItem = item;
             if(rewrite) rewriteUrl(item);
             document.title = item.dataset.sn;
+
+            const imgElement = item.getElementsByTagName('img')[0];
+            imgElement.onload = () => {
+                setTitlePosition();
+            };
         }
+
+        onresize = () => {
+            setTitlePosition();
+        };
 
         // creates a figure which wraps the image
         function createFigure(child) {
@@ -159,6 +187,47 @@
             img.classList.add("lightbox-item-img");
             img.dataset.src = child.href;
             return img;
+        }
+
+        function createTitleContainer() {
+            const element = document.createElement("div");
+            element.classList.add("lightbox-item-title");
+            return element;
+        }
+
+        function createH3SizeElement(child) {
+            const element = document.createElement("h3");
+            element.innerHTML = child.dataset.width + 'x' + child.dataset.height + 'cm';
+            return element;
+        }
+
+        function createH3YearElement(child) {
+            const element = document.createElement("h3");
+            element.innerHTML = child.dataset.year;
+            return element;
+        }
+
+        function setTitlePosition() {
+            if (activeItem === null) return;
+
+            const containerHeight = activeItem.offsetHeight;
+            const [width, height] = getContainedSize(activeItem.getElementsByTagName('img')[0]);
+            const titlePx = (containerHeight + height)/2 + 10;
+            const title = activeItem.getElementsByClassName('lightbox-item-title')[0];
+
+            title.style.top = titlePx + 'px';
+            title.style.opacity = 1;
+        }
+
+        function getContainedSize(img) {
+            const ratio = img.naturalWidth/img.naturalHeight
+            let width = img.height*ratio
+            let height = img.height
+            if (width > img.width) {
+                width = img.width
+                height = img.width/ratio
+            }
+            return [width, height]
         }
 
         function load(item) {
@@ -303,6 +372,10 @@
 
         function init() {
             setActiveItemIndex();
+            const imgElement = activeItem.getElementsByTagName('img')[0];
+            imgElement.onload = () => {
+                setTitlePosition();
+            };
             preload(currentIndex);
             scrollLock();
             opened = true;
@@ -469,7 +542,7 @@
             top: 0;
             right: 0;
             left: 0;
-            display: flex;
+            /*display: flex;*/
             justify-content: space-between;
             padding: 1.5vw 1.5vw 0;
             z-index: 200;
@@ -479,7 +552,23 @@
             width: 30px;
         }
 
+        .lightbox-item-title {
+            opacity: 0;
+            position: absolute;
+            font-size: 24px;
+            z-index: 200;
+            display: none;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         /* Responsive designs */
+
+        @media (max-width: 767px) {
+            .lightbox-item-title {
+                display: flex;
+            }
+        }
 
         @media (max-width: 575px) {
             .lightbox-controls {
@@ -496,6 +585,10 @@
 
             .lightbox-header {
                 padding: 12.5vw 1.5vw 0;
+            }
+
+            .lightbox-item-title {
+                font-size: 16px !important;
             }
         }
 
