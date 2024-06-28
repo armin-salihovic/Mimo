@@ -136,9 +136,14 @@
         activeItem = item;
 
         const imgElement = item.getElementsByTagName('img')[0];
-        imgElement.onload = () => {
+
+        if (imgElement.complete) {
             setTitlePosition();
-        };
+        } else {
+            imgElement.onload = () => {
+                setTitlePosition();
+            };
+        }
     }
 
     onresize = () => {

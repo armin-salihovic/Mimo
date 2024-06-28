@@ -373,9 +373,15 @@
         function init() {
             setActiveItemIndex();
             const imgElement = activeItem.getElementsByTagName('img')[0];
-            imgElement.onload = () => {
+
+            if (imgElement.complete) {
                 setTitlePosition();
-            };
+            } else {
+                imgElement.onload = () => {
+                    setTitlePosition();
+                };
+            }
+
             preload(currentIndex);
             scrollLock();
             opened = true;
