@@ -31,6 +31,9 @@ class ArchitectureController extends Controller
 
         if (!$architecture) abort(404);
 
-        return view('pages.architecture.details', compact('architecture'));
+        return view('pages.architecture.details', [
+            'architecture' => $architecture,
+            'meta' => $this->getMetadataDetail($architecture),
+        ]);
     }
 }

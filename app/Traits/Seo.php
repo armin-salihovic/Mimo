@@ -25,4 +25,25 @@ trait Seo
             'thumbnail' => $block->hasImage('thumbnail') ? $block->socialImage('thumbnail') : null,
         ];
     }
+
+    public function getMetadataDetail($object, $prefix = true): array
+    {
+        $thumbnail = null;
+
+        if ($object->hasImage('thumbnail')) {
+            $thumbnail = $object->socialImage('thumbnail');
+        } else if ($object->hasImage('cover')) {
+            $thumbnail = $object->socialImage('cover');
+        } else if ($object->hasImage('image')) {
+            $thumbnail = $object->socialImage('image');
+        }
+
+        return [
+            'title' => $object->title . ($prefix ? ' | ' . 'Emir Salihović Mimo' : ''),
+            'description' => $object->description,
+            'thumbnail' => $thumbnail,
+        ];
+    }
+
+
 }
