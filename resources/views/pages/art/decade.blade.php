@@ -1,12 +1,12 @@
 @php
     $seen = [];
     $filteredArtsByYears = [];
-    foreach($arts as $art) {
-        if (!array_key_exists($art->year, $filteredArtsByYears)) {
-            $filteredArtsByYears[$art->year] = [];
+    foreach($arts as $item) {
+        if (!array_key_exists($item->year, $filteredArtsByYears)) {
+            $filteredArtsByYears[$item->year] = [];
         }
 
-        $filteredArtsByYears[$art->year][] = $art;
+        $filteredArtsByYears[$item->year][] = $item;
     }
     krsort($filteredArtsByYears);
 @endphp
