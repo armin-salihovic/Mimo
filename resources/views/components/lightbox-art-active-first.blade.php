@@ -7,6 +7,7 @@
         <span id="art-year">{{ $art->year }}</span>
         <span id="art-height">{{ rtrim(rtrim(number_format($art->height, 2, '.', ''), '0'), '.') }}cm</span>
         <span id="art-width">{{ rtrim(rtrim(number_format($art->width, 2, '.', ''), '0'), '.') }}cm</span>
+        <span id="art-technique">{{ $art->technique ?? 'No Information' }}</span>
         <span id="art-status">{{ $art->status }}</span>
     </x-slot>
     <x-slot name="lightboxList">
@@ -20,6 +21,7 @@
                 data-width="{{$art->width}}"
                 data-status="{{$art->status}}"
                 data-sn="{{$art->serial_number}}"
+                data-technique="{{ $art->technique ?? 'No Information' }}"
                 style="background-image: url({{ $art->lowQualityImagePlaceholder('image', 'free') }})"
             ><img
                 class="lightbox-item-img"
@@ -30,8 +32,8 @@
                 style="aspect-ratio: {{ $art->getAspectRatioFormatted('image') }};"
             >
             <div class="lightbox-item-title">
-                <h3>{{ $art->year }} | {{ $art->size }}</h3>
-                <h3>{{ $loop->index+1 }}/{{ count($arts) }}</h3>
+                <h3>{{ $art->generateTitle() }}</h3>
+                <h3>{{ $loop->index+1 }} of {{ count($arts) }}</h3>
             </div>
             </figure>
         @endforeach

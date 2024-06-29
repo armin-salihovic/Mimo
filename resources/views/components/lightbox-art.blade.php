@@ -7,6 +7,7 @@
                         <h3>Year</h3>
                         <h3>Height</h3>
                         <h3>Width</h3>
+                        <h3>Technique</h3>
                         <h3>Status</h3>
                     </div>
                     <div class="flex flex-col">
@@ -16,13 +17,14 @@
                             <span id="art-year"></span>
                             <span id="art-height"></span>
                             <span id="art-width"></span>
+                            <span id="art-technique"></span>
                             <span id="art-status"></span>
                         @endif
                     </div>
                 </div>
             </div>
             <div class="self-end justify-self-end absolute z-[200]">
-                <span id="photoCount"></span>/<span id="photoCounts"></span>
+                <span id="photoCount"></span> of <span id="photoCounts"></span>
             </div>
         </div>
         <div class="h-full w-full md:w-2/3 md:pt-0">
@@ -159,7 +161,6 @@
 
         function showImage(index, rewrite = true) {
             const item = lightboxItems[index];
-            console.log(lightboxItems);
             item.dataset.active = true;
             load(item);
             preload(index);
@@ -189,6 +190,7 @@
             figure.dataset.year = child.dataset.year;
             figure.dataset.width = child.dataset.width;
             figure.dataset.height = child.dataset.height;
+            figure.dataset.technique = child.dataset.technique;
             figure.dataset.status = child.dataset.status;
             figure.dataset.sn = child.dataset.sn;
             figure.classList.add("lightbox-item");
@@ -210,13 +212,13 @@
 
         function createH3SizeElement(child) {
             const element = document.createElement("h3");
-            element.innerHTML = `${child.dataset.year} | ${child.dataset.width}x${child.dataset.height}cm`;
+            element.innerHTML = `${child.title}`;
             return element;
         }
 
         function createH3YearElement(index) {
             const element = document.createElement("h3");
-            element.innerHTML = `${index+1}/${galleryItems.length}`;
+            element.innerHTML = `${index+1} of ${galleryItems.length}`;
             return element;
         }
 
@@ -311,6 +313,11 @@
             document.getElementById('art-width').innerHTML = width.toString().replace(/\.00$/, '') + 'cm';
         }
 
+        function setTechnique(technique) {
+            console.log(technique);
+            document.getElementById('art-technique').innerHTML = technique;
+        }
+
         function setStatus(status) {
             document.getElementById('art-status').innerHTML = status;
         }
@@ -319,6 +326,8 @@
             setYear(item.dataset.year);
             setWidth(item.dataset.width);
             setHeight(item.dataset.height);
+            console.log(item.dataset);
+            setTechnique(item.dataset.technique);
             setStatus(item.dataset.status);
         }
 

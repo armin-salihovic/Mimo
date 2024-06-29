@@ -69,4 +69,9 @@ class Art extends Model implements Sortable
         $height = $this->imageAsArray($role, $crop)['height'];
         return "$width/$height";
     }
+
+    public function generateTitle(): string
+    {
+        return ($this->technique ?? "Painting") . ", " . $this->width . "x" . "$this->height" . "cm, " . "$this->year" . ".";
+    }
 }

@@ -20,15 +20,16 @@
                                             <x-lazy-loading-wrapper :lqip="$art2->lowQualityImagePlaceholder('image', 'free')">
                                                 <a class="gallery-item"
                                                    href="{{ $art2->image('image', 'free') }}"
-                                                   title="{{ $art2->imageAltText('image') }}"
+                                                   title="{{ $art2->generateTitle() }}"
                                                    data-year="{{ $art2->year }}"
                                                    data-width="{{ $art2->width }}"
                                                    data-height="{{ $art2->height }}"
                                                    data-status="{{ $art2->status }}"
+                                                   data-technique="{{ $art2->technique ?? 'No Information' }}"
                                                    data-sn="{{ $art2->serial_number }}"
                                                 >
                                                     <x-image-art class="mb-4"
-                                                                 :alt="$art2->imageAltText('image')"
+                                                                 :alt="$art2->generateTitle()"
                                                                  :img="$art2->image('image', 'free')"
                                                                  :aspect-ratio="$art2->getAspectRatioFormatted('image', 'free')"
                                                     />

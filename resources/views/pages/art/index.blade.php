@@ -11,15 +11,16 @@
                             <x-lazy-loading-wrapper :lqip="$art->lowQualityImagePlaceholder('image', 'free')">
                                 <a class="gallery-item"
                                    href="{{ $art->image('image', 'free') }}"
-                                   title="some title"
+                                   title="{{ $art->generateTitle() }}"
                                    data-year="{{ $art->year }}"
                                    data-width="{{ $art->width }}"
                                    data-height="{{ $art->height }}"
                                    data-status="{{ $art->status }}"
+                                   data-technique="{{ $art->technique ?? 'No Information' }}"
                                    data-sn="{{ $art->serial_number }}"
                                 >
                                     <x-image-art class="mb-4"
-                                                 :alt="$art->imageAltText('image')"
+                                                 :alt="$art->generateTitle()"
                                                  :img="$art->image('image', 'free')"
                                                  :aspect-ratio="$art->getAspectRatioFormatted('image', 'free')"
                                     />
