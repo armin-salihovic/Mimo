@@ -1,8 +1,25 @@
+@push('styles')
+    <style>
+        .custom-grid {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: stretch;
+            align-content: flex-start;
+            gap: 1rem 1rem;
+        }
+
+        .custom-grid-item {
+            flex: 0 0 calc(33.33% - (1rem * 2) / 3);
+        }
+    </style>
+@endpush
+
 <div class="w-full">
     <div class="h-full">
-        <div class="columns-1 md:columns-2 lg:columns-3">
+        <div class="{{ count($arts) < 3 ? 'custom-grid' : 'columns-1 md:columns-2 lg:columns-3' }}">
             @foreach($arts as $art)
-                <x-lazy-loading-wrapper :lqip="$art->lowQualityImagePlaceholder('image', 'free')">
+                <x-lazy-loading-wrapper :class="count($arts) < 3 ? 'custom-grid-item' : ''" :lqip="$art->lowQualityImagePlaceholder('image', 'free')">
                     <a class="gallery-item"
                        href="{{ $art->image('image', 'free') }}"
                        title="{{ $art->generateTitle() }}"
