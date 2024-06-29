@@ -30,8 +30,8 @@
                 style="aspect-ratio: {{ $art->getAspectRatioFormatted('image') }};"
             >
             <div class="lightbox-item-title">
-                <h3>{{ $art->size }}</h3>
-                <h3>{{ $art->year }}</h3>
+                <h3>{{ $art->year }} | {{ $art->size }}</h3>
+                <h3>{{ $loop->index+1 }}/{{ count($arts) }}</h3>
             </div>
             </figure>
         @endforeach

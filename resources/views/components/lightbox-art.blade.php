@@ -21,6 +21,9 @@
                     </div>
                 </div>
             </div>
+            <div class="self-end justify-self-end absolute z-[200]">
+                <span id="photoCount"></span>/<span id="photoCounts"></span>
+            </div>
         </div>
         <div class="h-full w-full md:w-2/3 md:pt-0">
             <div class="lightbox-background"></div>
@@ -81,11 +84,13 @@
         let opened = false;
 
         const activeFirst = lightbox.classList.contains('active-first');
+        let photoCounts = 0;
 
         // Logic
 
-        [...gallery.getElementsByClassName('gallery-item')].forEach((child, index) => {
+        const galleryItems = [...gallery.getElementsByClassName('gallery-item')];
 
+        galleryItems.forEach((child, index) => {
             child.addEventListener("click", function (e) {
                 e.preventDefault();
                 currentIndex = index;
@@ -98,7 +103,7 @@
                 const img = createImg(child);
                 const titleContainer = createTitleContainer();
                 const size = createH3SizeElement(child);
-                const year = createH3YearElement(child);
+                const year = createH3YearElement(index);
                 titleContainer.appendChild(size);
                 titleContainer.appendChild(year);
                 figure.appendChild(img);
@@ -106,8 +111,13 @@
 
                 lightboxList.appendChild(figure);
             }
+
+            photoCounts++;
         });
 
+        const photoCountsElement = document.getElementById('photoCounts');
+        const photoCountElement = document.getElementById('photoCount');
+        photoCountsElement.innerHTML = photoCounts.toString();
         const lightboxItems = document.querySelectorAll(".lightbox-item");
 
         // Controls event listeners
@@ -163,6 +173,8 @@
             imgElement.onload = () => {
                 setTitlePosition();
             };
+
+            photoCountElement.innerHTML = index+1;
         }
 
         onresize = () => {
@@ -198,13 +210,13 @@
 
         function createH3SizeElement(child) {
             const element = document.createElement("h3");
-            element.innerHTML = child.dataset.width + 'x' + child.dataset.height + 'cm';
+            element.innerHTML = `${child.dataset.year} | ${child.dataset.width}x${child.dataset.height}cm`;
             return element;
         }
 
-        function createH3YearElement(child) {
+        function createH3YearElement(index) {
             const element = document.createElement("h3");
-            element.innerHTML = child.dataset.year;
+            element.innerHTML = `${index+1}/${galleryItems.length}`;
             return element;
         }
 
@@ -332,7 +344,7 @@
         addEventListener("popstate", (event) => {
             const parts = window.location.toString().split('/');
 
-            if(parts.length < 6) {
+            if(!parts[parts.length-1].startsWith('M-')) {
                 closeLightbox(false);
                 return;
             }
@@ -366,6 +378,7 @@
                 if(lightboxItems[i].dataset.active === 'true') {
                     activeItem = lightboxItems[i];
                     currentIndex = i;
+                    photoCountElement.innerHTML = (i+1).toString();
                     break;
                 }
             }

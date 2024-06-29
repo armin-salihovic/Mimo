@@ -57,11 +57,11 @@ class ArtController extends BaseModuleController
         );
 
         $form->add(
-            Input::make()->name('height')->label('Height')
+            Input::make()->name('width')->label('Width')
         );
 
         $form->add(
-            Input::make()->name('width')->label('Width')
+            Input::make()->name('height')->label('Height')
         );
 
         $form->add(
@@ -111,12 +111,12 @@ class ArtController extends BaseModuleController
                 ->label('Year')
                 ->onChange('formatPermalink'),
             Input::make()
-                ->name('height')
-                ->label('Height')
-                ->onChange('formatPermalink'),
-            Input::make()
                 ->name('width')
                 ->label('Width')
+                ->onChange('formatPermalink'),
+            Input::make()
+                ->name('height')
+                ->label('Height')
                 ->onChange('formatPermalink'),
         ]);
     }
