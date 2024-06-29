@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" href="https://use.typekit.net/ywf6bom.css">
 
-    <link rel="icon" href="https://cdn.mimo.ba/img/favicon.png">
+    <link rel="icon" href="{{ asset('img/favicon.png') }}">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
