@@ -25,6 +25,7 @@ class Art extends Model implements Sortable
         'serial_number',
         'price',
         'featured',
+        'technique',
     ];
 
     public $slugAttributes = [

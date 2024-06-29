@@ -136,9 +136,10 @@ class ArtRepository extends ModuleRepository
     private static function isSerialNumberDirty(Art $art, $fields)
     {
         return
+            $art->serial_number === null ||
             $art->year !== $fields['year'] ||
-            $art->width !== (int)$fields['width'] ||
-            $art->height !== (int)$fields['height'];
+            (int)$art->width !== (int)$fields['width'] ||
+            (int)$art->height !== (int)$fields['height'];
     }
 
 }

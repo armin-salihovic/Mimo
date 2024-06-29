@@ -65,6 +65,10 @@ class ArtController extends BaseModuleController
         );
 
         $form->add(
+            Input::make()->name('technique')->label('Technique')
+        );
+
+        $form->add(
             Input::make()->name('price')->label('Price')
         );
 
@@ -80,7 +84,7 @@ class ArtController extends BaseModuleController
                 ->options(
                     Options::make([
                         Option::make(ArtStatus::AVAILABLE->value, 'Available'),
-                        Option::make(ArtStatus::NOT_AVAILABLE->value, 'Sold'),
+                        Option::make(ArtStatus::NOT_AVAILABLE->value, 'Not available'),
                         Option::make(ArtStatus::SOLD->value, 'Sold'),
                     ])
                 )
@@ -118,6 +122,9 @@ class ArtController extends BaseModuleController
                 ->name('height')
                 ->label('Height')
                 ->onChange('formatPermalink'),
+            Input::make()
+                ->name('technique')
+                ->label('Technique')
         ]);
     }
 
