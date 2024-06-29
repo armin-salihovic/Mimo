@@ -34,8 +34,6 @@ class Architecture extends Model implements Sortable
         'intro',
         'status',
         'location',
-        'start_year',
-        'end_year',
     ];
 
     public $slugAttributes = [

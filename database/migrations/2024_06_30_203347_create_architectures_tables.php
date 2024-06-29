@@ -13,6 +13,8 @@ class CreateArchitecturesTables extends Migration
             createDefaultTableFields($table);
 
             $table->integer('position')->unsigned()->nullable();
+            $table->string('start_year')->nullable();
+            $table->string('end_year')->nullable();
         });
 
         Schema::create('architecture_translations', function (Blueprint $table) {
@@ -22,8 +24,6 @@ class CreateArchitecturesTables extends Migration
             $table->text('intro')->nullable();
             $table->string('status')->nullable();
             $table->string('location')->nullable();
-            $table->smallInteger('start_year')->nullable();
-            $table->smallInteger('end_year')->nullable();
         });
 
         Schema::create('architecture_slugs', function (Blueprint $table) {

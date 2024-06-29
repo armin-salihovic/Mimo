@@ -73,7 +73,7 @@ class ArchitectureController extends BaseModuleController
             Medias::make()
                 ->name('images')
                 ->label(twillTrans('Images'))
-                ->max(20)
+                ->max(40)
         );
 
         return $form;
