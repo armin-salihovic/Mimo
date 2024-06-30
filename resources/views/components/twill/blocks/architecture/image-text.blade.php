@@ -28,64 +28,38 @@
                 @foreach($block->imagesAsArraysWithCrops('blockImages') as $img)
                     @if (!$loop->last || $nOfImages % 2 === 0)
                         <x-lazy-loading-wrapper>
-                            <a class="gallery-item h-full" href="{{ $img['free']['src'] }}"
-                               title="{{$img['mobile']['alt']}}">
-                                <x-image-arch class="h-full" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']"
-                                              aspect-ratio="1/1"/>
+                            <a class="gallery-item h-full"
+                               href="{{ $img['free']['src'] }}"
+                               title="{{$img['mobile']['alt'] === '' ? $block->translatedInput('title') : ''}}"
+                            >
+                                <x-image-arch class="h-full"
+                                              :img="$img['mobile']['src']"
+                                              :alt="$img['mobile']['alt']"
+                                              aspect-ratio="1/1"
+                                />
                             </a>
                         </x-lazy-loading-wrapper>
                     @endif
                 @endforeach
             </div>
             @if($nOfImages % 2 !== 0)
-                @php
-                    $imgsArray = $block->imagesAsArraysWithCrops('blockImages');
-                    $img = array_pop($imgsArray);
-                    $hasFrame = $block->medias->last()->getMetadata('frame');
-
-                    $heightTooSmall = $img['free']['height'] < 776;
-                    $sizeClass = $heightTooSmall ? 'w-full' : 'h-full';
-                    $centerClass = $heightTooSmall ? 'items-center' : 'justify-center';
-                    $divStyle = ($heightTooSmall ? 'padding: 3.77% 0;' : 'height: 776px;') . ' background-color: #e6e6e6;';
-                @endphp
-
-                @if($hasFrame)
-                    <div class="hidden lg:flex {{ $centerClass }} mt-8" style="{{ $divStyle }}">
-                        <x-lazy-loading-wrapper class="{{$sizeClass}}">
-                            <a class="gallery-item {{$sizeClass}}" href="{{ $img['free']['src'] }}"
-                               title="{{$img['free']['alt']}}">
-                                <x-image-arch class="{{$sizeClass}}"
-                                              :img="$img['free']['src']"
-                                              :alt="$img['free']['alt']"
-
-                                />
-                            </a>
-                        </x-lazy-loading-wrapper>
-                    </div>
-                    <x-lazy-loading-wrapper class="w-full lg:hidden">
-                        <a class="gallery-item w-full" href="{{ $img['free']['src'] }}"
-                           title="{{$img['free']['alt']}}">
-                            <x-image-arch class="w-full"
-                                          :img="$img['free']['src']"
-                                          :alt="$img['free']['alt']"
-
-                            />
-                        </a>
-                    </x-lazy-loading-wrapper>
-
-                @else
-                    <x-lazy-loading-wrapper class="w-full mt-8">
-                        <a class="gallery-item h-full w-full" href="{{ $img['free']['src'] }}"
-                           title="{{$img['free']['alt']}}">
-                            <x-image-arch class="hidden lg:block h-full w-full" :img="$img['default']['src']"
-                                          :alt="$img['default']['alt']" aspect-ratio="239/100"/>
-                            <x-image-arch class="lg:hidden w-full"
-                                          :img="$img['mobile']['src']"
-                                          :alt="$img['mobile']['alt']"
-                            />
-                        </a>
-                    </x-lazy-loading-wrapper>
-                @endif
+                <x-lazy-loading-wrapper class="w-full mt-8">
+                    <a class="gallery-item h-full w-full"
+                       href="{{ $img['free']['src'] }}"
+                       title="{{$img['free']['alt'] === '' ? $block->translatedInput('title') : '' }}"
+                    >
+                        <x-image-arch class="hidden lg:block h-full w-full"
+                                      :img="$img['default']['src']"
+                                      :alt="$img['default']['alt']"
+                                      aspect-ratio="239/100"
+                        />
+                        <x-image-arch class="lg:hidden w-full"
+                                      :img="$img['mobile']['src']"
+                                      :alt="$img['mobile']['alt']"
+                                      aspect-ratio="1/1"
+                        />
+                    </a>
+                </x-lazy-loading-wrapper>
             @endif
         </div>
     </div>
