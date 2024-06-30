@@ -40,7 +40,7 @@ class PageController extends BaseModuleController
 
         $form->add(
             Medias::make()
-                ->name('Thumbnail')
+                ->name('thumbnail')
                 ->label(twillTrans('Thumbnail'))
         );
 

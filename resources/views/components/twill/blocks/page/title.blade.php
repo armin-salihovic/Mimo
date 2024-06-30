@@ -1,1 +1,1 @@
-<x-page-title title="{{ $block->input('title') }}" />
+<x-page-title title="{{ $block->translatedInput('title') }}" />
