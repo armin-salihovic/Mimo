@@ -1,74 +1,3 @@
-@php
-    $meta = [
-       "title" => "Monument and Memorial Centre, Žuč | Emir Salihović Mimo",
-       "description" => "A monument and museum commemorating the fallen soldiers and fighters of the Battles of Žuč.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-zuc-thumbnail.jpg",
-    ];
-
-    $gallery = [
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/1.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/1_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/2.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/2_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/3.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/3_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/4.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/4_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/5.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/5_thumbnail.jpg",
-        ],
-//        [
-//            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/6.jpg",
-//            "title" => "Monument and Memorial Centre, Žuč",
-//            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/6_thumbnail.jpg",
-//        ],
-//        [
-//            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/7.jpg",
-//            "title" => "Monument and Memorial Centre, Žuč",
-//            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/7_thumbnail.jpg",
-//        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/12.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/12_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/8.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/8_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/9.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/9_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/10.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/10_thumbnail.jpg",
-        ],
-        [
-            "img" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/11.jpg",
-            "title" => "Monument and Memorial Centre, Žuč",
-            "thumb" => "https://cdn.mimo.ba/img/architecture/monument-and-memorial-centre-zuc/thumbnails/11_thumbnail.jpg",
-        ],
-    ];
-@endphp
-
 @push('scripts')
     <script>
         var introContent = document.getElementById('intro-content');
@@ -99,7 +28,7 @@
 <x-main-layout :meta="$meta">
     <x-lazy-loading/>
     <x-scroll-to-top/>
-    <div class="mx-auto px-6">
+    <div class="mx-auto px-4 sm:px-6">
         <div class="">
             <div class="py-32 lg:py-64" id="intro-content">
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
@@ -121,6 +50,13 @@
                     <div class="text-xl leading-7 lg:leading-10 custom-wysiwyg">{!! $architecture->intro !!}</div>
                 </div>
             </div>
+
+            @if($architecture->renderBlocks() !== '')
+                <div id="gallery">
+                    {!! $architecture->renderBlocks() !!}
+                </div>
+            @endif
+
             <div id="arch-gallery" class="w-full pb-32 lg:pb-64">
                 <div class="mb-4">
                     <div id="gallery" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
