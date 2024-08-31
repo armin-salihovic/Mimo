@@ -30,18 +30,26 @@ trait Seo
     {
         $thumbnail = null;
 
-        if ($object->hasImage('thumbnail')) {
-            $thumbnail = $object->socialImage('thumbnail');
-        } else if ($object->hasImage('cover')) {
-            $thumbnail = $object->socialImage('cover');
-        } else if ($object->hasImage('image')) {
-            $thumbnail = $object->socialImage('image');
+        $imageTypes = [
+            ['thumbnail', 'social'],
+            ['cover', 'social'],
+            ['image', 'social'],
+            ['thumbnail'],
+            ['cover'],
+            ['image'],
+        ];
+
+        foreach ($imageTypes as $type) {
+            if ($object->hasImage(...$type)) {
+                $thumbnail = $object->socialImage(...$type);
+                break;
+            }
         }
 
         return [
-            'title' => $object->title . ($prefix ? ' | ' . 'Emir Salihović Mimo' : ''),
-            'description' => $object->description,
-            'thumbnail' => $thumbnail,
+            'title'         => $object->title . ($prefix ? ' | ' . 'Emir Salihović Mimo' : ''),
+            'description'   => $object->description,
+            'thumbnail'     => $thumbnail,
         ];
     }
 

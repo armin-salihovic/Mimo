@@ -53,6 +53,12 @@ class Sculpture extends Model implements Sortable
                     'ratio' => 1,
                 ],
             ],
+            'social' => [
+                [
+                    'name' => 'social',
+                    'ratio' => 16 / 9,
+                ],
+            ],
         ],
         'images' => [
             'default' => [
@@ -84,13 +90,13 @@ class Sculpture extends Model implements Sortable
 
         if ($media) {
             return [
-                'src' => $this->image($role, $crop, $params, false, false, $media),
-                'width' => $media->pivot->crop_w ?? $media->width,
-                'height' => $media->pivot->crop_h ?? $media->height,
-                'alt' => $this->imageAltText($role, $media),
-                'caption' => $this->imageCaption($role, $media),
-                'video' => $this->imageVideo($role, $media),
-                'lqip'  => $media->pivot->lqip_data,
+                'src'       => $this->image($role, $crop, $params, false, false, $media),
+                'width'     => $media->pivot->crop_w ?? $media->width,
+                'height'    => $media->pivot->crop_h ?? $media->height,
+                'alt'       => $this->imageAltText($role, $media),
+                'caption'   => $this->imageCaption($role, $media),
+                'video'     => $this->imageVideo($role, $media),
+                'lqip'      => $media->pivot->lqip_data,
             ];
         }
 

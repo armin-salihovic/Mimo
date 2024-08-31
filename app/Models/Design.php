@@ -47,6 +47,12 @@ class Design extends Model implements Sortable
                     'ratio' => 1,
                 ],
             ],
+            'social' => [
+                [
+                    'name' => 'social',
+                    'ratio' => 16 / 9,
+                ],
+            ],
         ],
         'images' => [
             'default' => [

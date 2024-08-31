@@ -29,6 +29,9 @@ class SculptureController extends Controller
 
         if (!$sculpture) abort(404);
 
-        return view('pages.sculpture.details', compact('sculpture'));
+        return view('pages.sculpture.details', [
+            'sculpture' => $sculpture,
+            'meta'      => $this->getMetadataDetail($sculpture)
+        ]);
     }
 }

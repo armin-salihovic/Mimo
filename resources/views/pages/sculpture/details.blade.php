@@ -1,11 +1,3 @@
-@php
-    $meta = [
-        'title' => $sculpture->title,
-        'description' => $sculpture->description,
-        'thumbnail' => $sculpture->image('thumbnail')
-    ];
-@endphp
-
 <x-main-layout :meta="$meta">
     <x-lightbox/>
     <x-lazy-loading />

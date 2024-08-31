@@ -72,9 +72,9 @@ class PageController extends Controller
         return view('pages.page', [
             'page' => $page,
             'meta' => [
-                'title' => $page->meta_title,
-                'description' => $page->description,
-                'thumbnail' => $page->image('thumbnail') . '&width=750',
+                'title'         => $page->meta_title,
+                'description'   => $page->description,
+                'thumbnail'     => $page->socialImage('thumbnail'),
             ],
         ]);
     }

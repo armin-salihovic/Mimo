@@ -31,11 +31,7 @@ class NewsController extends Controller
 
         return view('pages.news.details', [
             'news' => $news,
-            'meta' => [
-                'title' => $news->title . ' | Emir Salihović Mimo',
-                'description' => $news->description,
-                'thumbnail' => $news->image('cover') . '&width=750',
-            ]
+            'meta' => $this->getMetadataDetail($news)
         ]);
     }
 }

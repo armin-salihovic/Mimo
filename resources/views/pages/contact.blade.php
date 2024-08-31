@@ -1,8 +1,8 @@
 @php
     $meta = [
-       "title" => "Monument and Memorial Centre, Žuč | Emir Salihović Mimo",
-       "description" => "A monument and museum commemorating the fallen soldiers and fighters of the Battles of Žuč.",
-       "thumbnail" => "https://cdn.mimo.ba/img/og-architecture-zuc-thumbnail.jpg",
+       "title"          => "Contact | Emir Salihović Mimo",
+       "description"    => "Follow Emir Salihović Mimo on Facebook and Instagram. Email at info@mimo.ba.",
+       "thumbnail"      => "https://mimo-local.imgix.net/local/og-contact-thumbnail.jpg?auto=compress%2Cformat&crop=entropy&fit=crop&fm=jpg&h=470&q=80&rect=0%2C0%2C1280%2C720&w=900",
     ];
 @endphp
 
