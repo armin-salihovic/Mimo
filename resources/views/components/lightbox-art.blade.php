@@ -193,6 +193,7 @@
             figure.dataset.technique = child.dataset.technique;
             figure.dataset.status = child.dataset.status;
             figure.dataset.sn = child.dataset.sn;
+            figure.style = `background-image: url(${child.dataset.lqip})`;
             figure.classList.add("lightbox-item");
             return figure;
         }
@@ -201,6 +202,7 @@
             const img = document.createElement("img");
             img.classList.add("lightbox-item-img");
             img.dataset.src = child.href;
+            img.style.aspectRatio = child.dataset.aspectRatio;
             return img;
         }
 
@@ -314,7 +316,6 @@
         }
 
         function setTechnique(technique) {
-            console.log(technique);
             document.getElementById('art-technique').innerHTML = technique;
         }
 
@@ -326,7 +327,6 @@
             setYear(item.dataset.year);
             setWidth(item.dataset.width);
             setHeight(item.dataset.height);
-            console.log(item.dataset);
             setTechnique(item.dataset.technique);
             setStatus(item.dataset.status);
         }

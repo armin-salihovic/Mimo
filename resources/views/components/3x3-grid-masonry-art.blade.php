@@ -29,6 +29,8 @@
                        data-status="{{ $art->status }}"
                        data-technique="{{ $art->technique ?? 'No Information' }}"
                        data-sn="{{ $art->serial_number }}"
+                       data-lqip="{{ $art->lowQualityImagePlaceholder('image', 'free') }}"
+                       data-aspect-ratio="{{ $art->getAspectRatioFormatted('image', 'free') }}"
                     >
                         <x-image-art class="mb-4"
                                      :alt="$art->generateTitle()"
