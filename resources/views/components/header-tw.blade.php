@@ -43,10 +43,10 @@ $links = [
         'name' => 'Contact',
         'route' => 'contact'
     ],
-    [
-        'name' => 'News',
-        'route' => 'news'
-    ],
+//    [
+//        'name' => 'News',
+//        'route' => 'news'
+//    ],
 ];
 @endphp
 
