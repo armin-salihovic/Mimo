@@ -36,7 +36,7 @@
                 style="aspect-ratio: {{ $news->getAspectRatioFormatted('cover') }};"
             >
         </x-lazy-loading-wrapper>
-        <figcaption class="text-xs text-neutral-500 font-mono mt-2 px-6 lg:px-0">Getty; The Atlantic</figcaption>
+        <figcaption class="text-xs text-neutral-500 font-mono mt-2 px-6 lg:px-0">{{ $news->imageCaption('cover') }}</figcaption>
     </div>
 
     <div class="mt-14 uppercase font-mono px-6 md:px-0 text-sm max-w-2xl mx-auto mb-9">
