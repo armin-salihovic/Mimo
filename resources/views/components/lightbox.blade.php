@@ -55,7 +55,7 @@
         });
 
         const figure = createFigure(child);
-        const imgContainer = createImgContainer();
+        const imgContainer = createImgContainer(child);
         const img = createImg(child);
         const title = createH3TitleElement(child);
 
@@ -66,8 +66,9 @@
         lightboxList.appendChild(figure);
     });
 
-    function createImgContainer() {
+    function createImgContainer(child) {
         const element = document.createElement("div");
+        element.style = `background-image: url(${child.dataset.lqip})`;
         element.classList.add("lightbox-item-container");
         return element;
     }
@@ -163,6 +164,7 @@
         const img = document.createElement("img");
         img.classList.add("lightbox-item-img");
         img.dataset.src = child.href;
+        img.style.aspectRatio = child.dataset.aspectRatio;
         return img;
     }
 

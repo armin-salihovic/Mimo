@@ -62,7 +62,13 @@
                     <div id="gallery" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         @foreach($architecture->imagesAsArraysWithCrops('images') as $img)
                             <x-lazy-loading-wrapper :lqip="$img['mobile']['lqip']">
-                                <a class="gallery-item h-full" href="{{ $img['free']['src'] }}" title="{{$img['mobile']['alt']}}">
+                                <a
+                                    class="gallery-item h-full"
+                                    href="{{ $img['free']['src'] }}"
+                                    title="{{$img['mobile']['alt']}}"
+                                    data-lqip="{{ $img['free']['lqip'] }}"
+                                    data-aspect-ratio="{{ $img['free']['width'] . '/' .  $img['free']['height'] }}"
+                                >
                                     <x-image-arch class="h-full" :img="$img['mobile']['src']" :alt="$img['mobile']['alt']" aspect-ratio="1/1"/>
                                 </a>
                             </x-lazy-loading-wrapper>
