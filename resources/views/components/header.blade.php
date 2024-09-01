@@ -15,7 +15,7 @@
                     <a class="nav-link {{ Route::is('art.*', 'art') ? 'nav-active' : 'text-dark' }}" href="{{ route('art') }}">Art</a>
                 </li>
                 <li class="nav-item pr-3">
-                    <a class="nav-link {{ Route::is('design') ? 'nav-active' : 'text-dark' }}" href="{{ route('design') }}">Design</a>
+                    <a class="nav-link {{ Route::is('designs') ? 'nav-active' : 'text-dark' }}" href="{{ route('designs') }}">Design</a>
                 </li>
                 <li class="nav-item pr-3">
                     <a class="nav-link {{ Route::is('sculpture') ? 'nav-active' : 'text-dark' }}" href="{{ route('sculpture') }}">Sculpture</a>
