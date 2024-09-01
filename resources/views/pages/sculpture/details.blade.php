@@ -11,6 +11,8 @@
                         <a class="gallery-item"
                            href="{{ $image['src'] }}"
                            title="{{ $image['alt'] }}"
+                           data-lqip="{{ $image['lqip'] }}"
+                           data-aspect-ratio="{{ $image['width'] . '/' .  $image['height'] }}"
                         >
                             <x-image-art class=""
                                          :alt="$image['alt']"
