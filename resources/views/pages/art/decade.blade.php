@@ -14,7 +14,7 @@
     <x-slot name="gallery">
         <div id="gallery">
             @foreach($filteredArtsByYears as $year => $filteredArtsByYear)
-                <div class="flex flex-col mb-24 px-6">
+                <div class="flex flex-col mb-24 px-4 sm:px-6">
                     <x-gallery-title :title="$year"/>
                     <x-3x3-grid-masonry-art :arts="$filteredArtsByYear" />
                 </div>

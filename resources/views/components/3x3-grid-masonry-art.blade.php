@@ -15,13 +15,13 @@
 
         @media (max-width: 1023px) {
             .custom-grid-item {
-                flex: 0 0 calc(50% - (1rem * 2) / 2);
+                flex: 1 0 calc(50% - (1rem * 2) / 2);
             }
         }
 
         @media (max-width: 767px) {
             .custom-grid-item {
-                flex: 0 0 calc(100% - (1rem * 2) / 1);
+                flex: 1 0 calc(100% - (1rem * 2) / 1);
             }
         }
 
