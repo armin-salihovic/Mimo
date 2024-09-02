@@ -15,7 +15,7 @@
 <x-twill::input
     name="description"
     label="Description"
-    :maxlength="100"
+    :maxlength="155"
     :required="true"
     :translated="true"
 />
