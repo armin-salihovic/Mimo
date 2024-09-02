@@ -68,7 +68,7 @@
 
     function createImgContainer(child) {
         const element = document.createElement("div");
-        element.style = `background-image: url(${child.dataset.lqip})`;
+        // element.style = `background-image: url(${child.dataset.lqip})`;
         element.classList.add("lightbox-item-container");
         return element;
     }

@@ -13,7 +13,7 @@
 
         <div class="flex flex-col lg:gap-10 pb-48 items-center">
             <div class="w-full pb-12 lg:pb-24 lg:w-5/12 px-6 mb-12 text-lg md:text-xl text-center mb-16">
-                <p class="mb-12 text-3xl">If you have any questions or comments for Mimo, please reach out via email, or send a message using the contact form below.</p>
+                <p class="mb-20 text-2xl md:text-3xl">If you have any questions or comments for Mimo, please reach out via email, or send a message using the contact form below.</p>
                 <div class="flex flex-col text-2xl md:text-3xl" id="email-address"></div>
             </div>
             <div class="w-full lg:w-6/12">
