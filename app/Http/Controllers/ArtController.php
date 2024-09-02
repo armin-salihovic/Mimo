@@ -87,11 +87,19 @@ class ArtController extends Controller
     {
         self::formatArtStatuses($arts, $art);
 
+        if ($art) {
+            $meta['title'] = $art->serial_number . ' | ' . 'Emir Salihović Mimo';
+            $meta['description'] = 'A painting by Emir Salihović Mimo from the year ' . $art->year . ' with a serial number ' . $art->serial_number . '.';
+            $meta['thumbnail'] = $art->socialImage('image');
+        } else {
+            $meta = $this->getMetadata('art');
+        }
+
         return view('pages.art.index', [
             'art' => $art,
             'arts' => $arts,
             'artLinks' => self::getArtLinks(),
-            'meta' => $this->getMetadata('art'),
+            'meta' => $meta,
         ]);
     }
 
@@ -109,11 +117,19 @@ class ArtController extends Controller
 
         self::formatArtStatuses($arts, $art);
 
+        if ($art) {
+            $meta['title'] = $art->serial_number . ' | ' . 'Emir Salihović Mimo';
+            $meta['description'] = 'A painting by Emir Salihović Mimo from the year ' . $art->year . ' with a serial number ' . $serial_number . '.';
+            $meta['thumbnail'] = $art->socialImage('image');
+        } else {
+            $meta = $this->getMetadata($group);
+        }
+
         return view('pages.art.decade', [
             'art' => $art,
             'arts' => $arts,
             'artLinks' => self::getArtLinks(),
-            'meta' => $this->getMetadata($group),
+            'meta' => $meta,
         ]);
     }
 
