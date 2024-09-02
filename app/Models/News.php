@@ -21,6 +21,8 @@ class News extends Model implements Sortable
         'description',
         'position',
         'content_kicker',
+        'publish_start_date',
+        'publish_end_date',
     ];
 
     public $translatedAttributes = [
@@ -32,6 +34,11 @@ class News extends Model implements Sortable
 
     public $slugAttributes = [
         'title',
+    ];
+
+    public $casts = [
+        'publish_start_date' => 'datetime',
+        'publish_end_date' => 'datetime'
     ];
 
     public $mediasParams = [
@@ -51,7 +58,7 @@ class News extends Model implements Sortable
         ],
     ];
 
-    public function getDate()
+    public function getDate(): string
     {
         return date('F d, Y', strtotime($this->publish_start_date));
     }

@@ -52,5 +52,5 @@ Route::prefix('architecture')->group(function () {
 //    Route::get('yugoslav-pavilion-proposal', [PageController::class, 'yugoslavPavilion'])->name('yugoslav-pavilion');
 });
 
-//Route::get('news', [NewsController::class, 'index'])->name('news');
-//Route::get('news/{news}', [NewsController::class, 'show'])->name('news.show');
+Route::get('news', [NewsController::class, 'index'])->name('news');
+Route::get('news/{news}', [NewsController::class, 'show'])->name('news.show');

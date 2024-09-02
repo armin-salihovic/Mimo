@@ -45,7 +45,7 @@ class NewsController extends BaseModuleController
 
         $form->add(
             BlockEditor::make()
-                ->blocks(['app-image', 'app-paragraph'])
+                ->blocks(['news-image', 'app-paragraph'])
         );
 
         return $form;
