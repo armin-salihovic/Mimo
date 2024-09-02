@@ -227,7 +227,7 @@
                 submitted = false;
 
                 try {
-                    const response = await fetch('http://mimo.test/api/send-email', {
+                    const response = await fetch(`${window.location.origin}/api/send-email`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
