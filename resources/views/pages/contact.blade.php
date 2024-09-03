@@ -2,7 +2,7 @@
     $meta = [
        "title"          => "Contact | Emir Salihović Mimo",
        "description"    => "Follow Emir Salihović Mimo on Facebook and Instagram. Email at info@mimo.ba.",
-       "thumbnail"      => "https://mimo-local.imgix.net/local/og-contact-thumbnail.jpg?auto=compress%2Cformat&crop=entropy&fit=crop&fm=jpg&h=470&q=80&rect=0%2C0%2C1280%2C720&w=900",
+       "thumbnail"      => "https://mimo.imgix.net/mimo/og-contact-thumbnail.jpg?auto=compress%2Cformat&crop=entropy&fit=crop&fm=jpg&h=470&q=80&rect=0%2C0%2C1280%2C720&w=900",
     ];
 @endphp
 
