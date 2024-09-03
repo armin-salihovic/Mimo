@@ -140,6 +140,31 @@
                 });
             });
         </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sarajevo, Bosnia and Herzegovina",
+                "addressRegion": "BA",
+                "postalCode": "71000"
+            },
+            "email": "info@mimo.ba",
+            "image": "https://mimo.imgix.net/mimo/e85f027b-c840-4ebf-a5b0-ae311a10a8c3/mimo-portrait.jpg",
+            "jobTitle": "Professor at The Academy of Fine Arts in Sarajevo",
+            "name": "Emir Salihović",
+            "alumniOf": "Faculty of Architecture | University of Sarajevo",
+            "birthPlace": "Sarajevo, BA",
+            "birthDate": "1960-11-09",
+            "height": "184cm",
+            "gender": "male",
+            "nationality": "Bosnian",
+            "url": "https://www.mimo.ba",
+            "sameAs" : [ "https://www.instagram.com/mimoarchitect/", "https://www.facebook.com/mimo.1960" ]
+        }
+    </script>
     @endpush
 
     @push('styles')
@@ -171,42 +196,40 @@
                     </nav>
                 </div>
                 <div class="w-full lg:w-1/2">
-                        <div class="slideshow-container">
-                            @foreach($featuredImages as $featuredImage)
-                            @php
-                                switch ($featuredImage->content['featured_image_type']) {
-                                    case "Architecture":
-                                        $route = route('architecture');
-                                        break;
-                                    case "Sculpture":
-                                        $route = route('sculpture');
-                                        break;
-                                    case "Design":
-                                        $route = route('designs');
-                                        break;
-                                    case "Art":
-                                        $route = route('art');
-                                        break;
-                                    default:
-                                        $route = route('art');
-                                }
-                            @endphp
-                                <a href="{{ $route }}">
-                                    <div class="mySlides">
-                                        <img data-type="{{ $featuredImage->content['featured_image_type'] }}"
-                                             src="{{ $featuredImage->image('home_featured_image') . '&width=768' }}"
-                                             alt="Slide {{ $featuredImage->imageAltText('home_featured_image') }}"
-                                             srcset=""
-                                        >
-                                        <div class="slideshow-overlay">{{ $featuredImage->content['featured_image_type'] }}</div>
-                                    </div>
-                                </a>
-                            @endforeach
-                            <!-- Add more images as needed -->
-                        </div>
+                    <div class="slideshow-container">
+                        @foreach($featuredImages as $featuredImage)
+                        @php
+                            switch ($featuredImage->content['featured_image_type']) {
+                                case "Architecture":
+                                    $route = route('architecture');
+                                    break;
+                                case "Sculpture":
+                                    $route = route('sculpture');
+                                    break;
+                                case "Design":
+                                    $route = route('designs');
+                                    break;
+                                case "Art":
+                                    $route = route('art');
+                                    break;
+                                default:
+                                    $route = route('art');
+                            }
+                        @endphp
+                            <a href="{{ $route }}">
+                                <div class="mySlides">
+                                    <img data-type="{{ $featuredImage->content['featured_image_type'] }}"
+                                         src="{{ $featuredImage->image('home_featured_image') . '&width=768' }}"
+                                         alt="Slide {{ $featuredImage->imageAltText('home_featured_image') }}"
+                                         srcset=""
+                                    >
+                                    <div class="slideshow-overlay">{{ $featuredImage->content['featured_image_type'] }}</div>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </x-main-layout>
