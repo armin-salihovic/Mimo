@@ -18,6 +18,11 @@
     <meta property="og:image" content="{{ $meta['thumbnail'] }}" />
     <meta property="og:description" content="{{ $meta['description'] }}" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ $meta['title'] }}" />
+    <meta name="twitter:description" content="{{ $meta['description'] }}" />
+    <meta name="twitter:image" content="{{ $meta['thumbnail'] }}" />
+
     <title>{{ $meta['title'] }}</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
