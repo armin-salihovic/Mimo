@@ -57,9 +57,8 @@ $links = [
         <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="{{ route('home') }}">
-                    <span class="sr-only">Your Company</span>
+                    <span class="sr-only">Emir Salihović Mimo</span>
                     <span class="h-8 w-auto sm:h-10 text-xl text-neutral-900 logo">MIMO</span>
-{{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">--}}
                 </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
@@ -130,12 +129,12 @@ $links = [
                 </div>
             </div>
             <div class="space-y-6 py-6 px-5">
-                <a href="#" class="-m-3 flex items-center p-3 hover:bg-gray-50">
+                <a href="https://www.facebook.com/mimo.1960" class="-m-3 flex items-center p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/chart-bar -->
                     <i class="fa fa-facebook-official text-xl" aria-hidden="true"></i>
                     <span class="ml-3 text-base font-medium text-gray-900">Facebook</span>
                 </a>
-                <a href="#" class="-m-3 flex items-center p-3 hover:bg-gray-50">
+                <a href="https://www.instagram.com/mimoarchitect/" class="-m-3 flex items-center p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/chart-bar -->
                     <i class="fa fa-instagram text-xl" aria-hidden="true"></i>
 
