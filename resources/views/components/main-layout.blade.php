@@ -14,7 +14,7 @@
 
     <meta property="og:title" content="{{ $meta['title'] }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mimo.ba" />
+    <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:image" content="{{ $meta['thumbnail'] }}" />
     <meta property="og:description" content="{{ $meta['description'] }}" />
 
