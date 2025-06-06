@@ -17,7 +17,7 @@
          x-transition:leave-start="transform opacity-100 scale-100"
          x-transition:leave-end="transform opacity-0 scale-95"
          x-cloak
-         class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-gray-50 shadow-lg"
+         class="absolute right-0 z-10 mt-2 w-64 origin-top-right rounded-md bg-gray-50 shadow-lg"
          role="menu"
          aria-orientation="vertical"
          aria-labelledby="menu-button"
@@ -25,10 +25,7 @@
     >
         <div class="py-1 flex" role="none">
             <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">FB</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">TW</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">LNK</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">ML</a>
+            <x-social-media-share :title="$title"></x-social-media-share>
         </div>
     </div>
 </div>

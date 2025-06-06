@@ -1,6 +1,7 @@
 <x-main-layout :meta="$meta">
     <x-lazy-loading />
     <x-scroll-to-top />
+    <x-message-box-simple />
     @push('styles')
         <style>
             .title {
@@ -21,7 +22,7 @@
         </style>
     @endpush
 
-    <div class="mt-14 max-w-2xl mx-auto px-6 md:px-0">
+    <div class="mt-14 max-w-2xl mx-auto px-4 sm:px-6 md:px-0">
         <p class="text-sm uppercase pb-5 font-mono text-red-500">{{ $news->content_kicker }}</p>
         <h1 class=" paragraph mb-3 title">{{ $news->title }}</h1>
         <p class="paragraph md:text-2xl text-xl mb-16">{{ $news->description }}</p>
@@ -39,10 +40,10 @@
         <figcaption class="text-xs text-neutral-500 font-mono mt-2 px-6 lg:px-0">{{ $news->imageCaption('cover') }}</figcaption>
     </div>
 
-    <div class="mt-14 uppercase font-mono px-6 md:px-0 text-sm max-w-2xl mx-auto mb-9">
+    <div class="mt-14 uppercase font-mono px-4 sm:px-6 md:px-0 text-sm max-w-2xl mx-auto mb-9">
         <div class="border-b pb-9 flex justify-between">
             <time>{{ $news->getDate() }}</time>
-            <x-share-dropdown></x-share-dropdown>
+            <x-share-dropdown :title="$news->title"></x-share-dropdown>
         </div>
     </div>
 
