@@ -32,6 +32,7 @@
         <a href="{{ route('sculpture') }}">Sculpture</a>
         <a href="{{ route('about') }}">About</a>
         <a href="{{ route('contact') }}">Contact</a>
+        <a href="{{ route('news') }}">News</a>
     </div>
 </main>
 </body>

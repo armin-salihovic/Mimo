@@ -26,6 +26,9 @@
                 <li class="nav-item pr-3">
                     <a class="nav-link {{ Route::is('contact') ? 'nav-active' : 'text-dark' }}" href="{{ route('contact') }}">Contact</a>
                 </li>
+                <li class="nav-item pr-3">
+                    <a class="nav-link {{ Route::is('news') ? 'nav-active' : 'text-dark' }}" href="{{ route('contact') }}">News</a>
+                </li>
             </ul>
         </div>
     </nav>
